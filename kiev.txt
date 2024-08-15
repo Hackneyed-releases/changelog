@@ -1,0 +1,7 @@
+====================
+     07-08-2024    
+====================
+* device/motorola/sm7250-common
+- Tune powerhint for better performance
+- Fix moto prop denials
+
