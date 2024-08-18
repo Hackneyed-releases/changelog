@@ -1,7 +1,14 @@
 ====================
-     07-08-2024    
+     18-08-2024    
 ====================
 * device/motorola/sm7250-common
-- Tune powerhint for better performance
-- Fix moto prop denials
+457d137f9 sm7250-common: Switch hwcomposer to foreground CPU set
+a13d1d075 sm7250-common: Use foreground cpuset/uclamp for gralloc
+87174374b sm7250-common: Extend audio offload buffer size to 256kb
+bc82715b2 sm7250-common: properties: Use HintManager for HWUI
+49fa370f2 sm7250-common: display: Set debug.sf.auto_latch_unsignaled to 0
+3f19aea62 sm7250-common: Switch from schedtune to uclamp
 
+* kernel/motorola/sm7250
+622077b0d drivers: Import and build KernelSU
+3edd1e1cf Android: Add empty Android.mk file
