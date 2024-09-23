@@ -1,10 +1,41 @@
 ====================
-     07-08-2024    
+     24-09-2024    
 ====================
 * device/realme/sm6375-common
-6da92aa39 sm6375-common: Correct dynamic and super partition sizes [vivekachooz]
-8f2a0b4fa sm6375-common: Reserve more space on /product [luk1337 ]
-c283d3eb9 sm6375-common: Inherit common partition reserved sizes [mikeNG]
+7df2934 sm6375-common: Disable ISunlightEnhancement via soong option [LuK1337]
+0a903ef sm6375-common: set debug.sf.layer_caching_active_layer_timeout_ms to 1000 [Long Ling]
+2d7e096 sm6375-common: overlay: Allign PinnerServiceFiles with RUI [Vivekachooz]
+2e992c2 sm6375-common: powerhint: Boost cpus for EXPENSIVE_RENDERING [Vivekachooz]
+685d994 sm6375-common: powerhint: Boost little cluster to max upon interaction [Vivekachooz]
+78a979f Revert "sm6375-common: props: Set 3 frame render ahead" [Vivekachooz]
+7afd541 sm6375-common: Set hwc min duration to 17ms [Vivekachooz]
+435e261 Revert "sm6375-common: Opt-out common partition reserved sizes" [Vivekachooz]
+f130c99 sm6375-common: Decommonize dynamic and super partition sizes [Vivekachooz]
+2c901a5 sm6375-common: Add missing IMS libs [Michael Bestas]
 
-* Platform
-db5101d1b Aperture: change to FlashMode.OFF before switching usecases [Demon000]
+* device/realme/oscar
+9a77d57 oscar: Decommonize dynamic and super partition sizes [Vivekachooz]
+
+* vendor/realme/sm6375-common
+5112afa sm6375-common: Add missing IMS libs [Michael Bestas]
+
+* frameworks/base
+dd6f26c SwipeToScreenshot: Import MIUI implementation [Henrique Silva]
+75aa0e0 Improvements for swipe to screenshot [Henrique Silva]
+c898d9f base: Add three-fingers-swipe to screenshot [1/2] [1/2 ghbhaha]
+59b0133 BiometricScheduler: Cancel operation if not idle [SagarMakhar]
+9b2fab5 SystemUI: biometrics: Follow user setting to confirm face unlock [Pranav Vashi]
+59cac6f SystemUI: Use proper tint for face unlock icon [Pranav Vashi]
+e66dc98 SystemUI: Implement face unlock recognition animation and text [minaripenguin]
+5db2cf2 SystemUI: Disable FaceUnlock Lockouts [minaripenguin]
+1c40667 FaceService: Conditionally add ParanoidSense [someone5678]
+c39aa1d base: Initial SenseProvider for FaceSense service [Chris Crump]
+
+* packages/apps/Settings
+87e8798 Settings: Add three-fingers-swipe to screenshot [2/2] [2/2 ghbhaha]
+f49b1a2 Settings: Import missing Face Unlock animation [Chris Crump]
+685c897 Add Face Unlock with ParanoidSense [Chris Crump]
+
+* vendor/lineage
+84f6687 faceunlock [Vivekachooz]
+
