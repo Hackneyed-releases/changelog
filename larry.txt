@@ -1,0 +1,34 @@
+====================
+     02-10-2024    
+====================
+* device/oneplus/sm6375-common
+f91b065 sm6375-common: powerhint: Re-tune powerhint for efficiency [Vivekachooz]
+b7fca42 sm6375-common:powerhint: Decrease launch boost to 3sec [DennySPB]
+8b3a43a sm6375-common: powerhint: Set 1 second timeout for interaction boosts [daniml3]
+4366758 sm6375-common: Switch from sf offsets to durations [Vivekachooz]
+6f621d4 sm6375-common: Tone down useless oplus edits from kernel postboot scripts [Vivekachooz]
+0fa61d5 sm6375-common: set debug.sf.layer_caching_active_layer_timeout_ms to 1000 [Long Ling]
+579467f sm6375-common: Reserve more space on /product [LuK1337]
+071dd80 sm6375-common: Inherit common partition reserved sizes [Michael Bestas]
+27fced8 sm6375-common: Decommonize dynamic and super partition sizes [Vivekachooz]
+a357f0f sm6375-common: Add missing IMS libs [Michael Bestas]
+ab2d7e3 sm6375-common: Decommonize sensors blob fixup [Vivekachooz]
+9310a11 sm6375-common: overlay: Allign PinnerServiceFiles with OOS [Vivekachooz]
+ebe04fc sm6375-common: powerhint: Boost cpus for EXPENSIVE_RENDERING [Vivekachooz]
+ec45dda sm6375-common: powerhint: Boost little cluster to max upon interaction [Vivekachooz]
+0f3af92 sm6375-common: Set hwc min duration to 17ms [Vivekachooz]
+18b567f sm6375-common: Return to stock IMS system stack [Bruno Martins]
+09f9698 sm6375-common: Switch to stock radio stack [Vivekachooz]
+
+* device/oneplus/larry
+91a67b9 larry: Decommonize dynamic and super partition sizes [Vivekachooz]
+ec5a434 larry: Move variant detection logic to common [Vivekachooz]
+c00582d larry: Sync extract scripts with templates [Michael Bestas]
+
+* vendor/oneplus/sm6375-common
+e55a948 sm6375-common: Add missing IMS libs [Michael Bestas]
+926e6e3 sm6375-common: Return to stock IMS system stack [Bruno Martins]
+6d20416 sm6375-common: Switch to stock radio stack [Vivekachooz]
+
+* vendor/oneplus/larry
+bc92d78 larry: Add xml suffix to prebuilt_etc_xml modules [Michael Bestas]
