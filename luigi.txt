@@ -1,4 +1,259 @@
 ====================
-     11-08-2024    
+     12-11-2024    
 ====================
-* Initial build
+
+* .repo/manifests
+2af1fc8 manifest: November 2024 Security Update [Michael [Bestas]
+
+* android
+2af1fc8 manifest: November 2024 Security Update [Michael [Bestas]
+
+* bionic
+e896f6b Revert "linker: Add support for dynamic SHIM libraries" [Nolen [Johnson]
+
+* build/make
+cbbde02 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* build/soong
+681549f Add vendor/lineage to kotlin plugins neverallow [Luca [Stefani]
+
+* device/google/contexthub
+8e258d9 Revert "Removed unused Android.mk under device/google/contexthub" [Nolen [Johnson]
+
+* device/lineage/atv
+80bd511 fixup! atv: idc: Make remotes all not wake by default [Aaron [Kling]
+
+* device/qcom/sepolicy
+a21fe12 Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* device/qcom/sepolicy-legacy-um
+a3126b0 common: Switch to AIDL USB HALs [Michael [Bestas]
+
+* device/qcom/sepolicy_vndr/legacy-um
+626d4de fixup! Remove vendor_service. [Michael [Bestas]
+
+* device/qcom/sepolicy_vndr/sm8450
+d0253f7 Merge tag 'LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0' into staging/lineage-22.0_merge-LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0 [Michael [Bestas]
+
+* device/qcom/sepolicy_vndr/sm8550
+8a517e8 sepolicy: Allow USB HAL to rw usb_data_enabled nodes [LuK1337]
+
+* device/realme/luigi
+f38eee3 luigi: Update from RMX3660_14.0.0.1100(EX01) [Vivekachooz]
+ef816eb luigi: Use common lib_fixups [LuK1337]
+f0b4628 luigi: ELF checks are enabled by default [Michael [Bestas]
+
+* device/realme/sm6375-common
+007a2b4 sm6375-common: Update from RMX3471_14.0.0.900(EX01) [Vivekachooz]
+c6a9056 sm6375-common: Use common lib_fixups [LuK1337]
+391d5c0 sm6375-common: ELF checks are enabled by default [Michael [Bestas]
+57eb86c sm6375-common: Specify vendor.usb.device [Tommy [Webb]
+0d07778 sm6375-common: Switch back to qti usb hal [Vivekachooz]
+
+* external/kotlinc
+c3434db Add a target for kotlin-serialize-compiler [Luca [Stefani]
+
+* external/kotlinx.serialization
+8f4c5d9 Export r8 rules to users [Luca [Stefani]
+
+* frameworks/base
+96ea263 SystemUI: Add support for udfps dim layer [pjgowtham]
+
+* frameworks/native
+c6fd302 surfaceflinger: Allow ZOrder override for UDFPS dim layer [pjgowtham]
+
+* frameworks/opt/telephony
+6f74d80 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* hardware/google/gchips
+39efe73 Convert libVendorVideoApi to soong [yangbill]
+
+* hardware/google/graphics/common
+dbdd700 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* hardware/lineage/compat
+7ac87c6 libhidlbase-v32: Mark as recovery_available [Tommaso [Fonda]
+
+* hardware/oplus
+ecfd5da fingerprint: Set dim layer zOrder [pjgowtham]
+
+* hardware/qcom-caf/sdm660/media
+82b8867 Merge tag 'LA.UM.12.2.1.r1-04000-sdm660.0' into staging/lineage-21.0_merge-LA.UM.12.2.1.r1-04000-sdm660.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8150/media
+2befa21 fixup! conf_files: Remove software OMX blobs [basamaryan]
+
+* hardware/qcom-caf/sm8350/audio
+b8006e8 Merge tag 'LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0' into staging/lineage-21.0_merge-LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8450/audio/pal
+f9669f6 Merge tag 'LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0' into staging/lineage-21.0_merge-LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8450/audio/primary-hal
+ead1803 Merge tag 'LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0' into staging/lineage-22.0_merge-LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8550/audio/agm
+c6a803d Merge tag 'AUDIO.LA.8.0.r1-11600-KAILUA.0' into staging/lineage-22.0_merge-AUDIO.LA.8.0.r1-11600-KAILUA.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8550/audio/pal
+d169604 Merge tag 'AUDIO.LA.8.0.r1-11600-KAILUA.0' into staging/lineage-22.0_merge-AUDIO.LA.8.0.r1-11600-KAILUA.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8550/audio/primary-hal
+abf6353 Merge tag 'AUDIO.LA.8.0.r1-11600-KAILUA.0' into staging/lineage-22.0_merge-AUDIO.LA.8.0.r1-11600-KAILUA.0 [Michael [Bestas]
+
+* hardware/qcom-caf/wlan
+dd4208e Merge tag 'LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0' into staging/lineage-22.0_merge-LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0 [Michael [Bestas]
+
+* hardware/qcom/display
+ae3b069 msm8998{6,8}: libgralloc1: Drop unecessary libcxx include [Nolen [Johnson]
+
+* kernel/realme/sm6375
+8138344 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.0 [Vivekachooz]
+d72549f Merge tag 'ASB-2024-11-05_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael [Bestas]
+ca48ea8 Merge tag 'android11-5.4.284_r00' into android11-5.4 [Greg [Kroah-Hartman]
+
+* lineage-sdk
+5a577dc sdk: Make it REUSE compatible [Michael [Bestas]
+
+* packages/apps/Aperture
+950a507 Aperture: Update CameraX to 1.5.0-alpha03 [LuK1337]
+
+* packages/apps/AudioFX
+2b4fad3 Remove values-lu [Michael [W]
+
+* packages/apps/Backgrounds
+2920955 Automatic translation import [LineageOS [Infra]
+
+* packages/apps/Contacts
+7b4b626 Contacts: Remove navigation bar divider [Michael [Bestas]
+
+* packages/apps/DeskClock
+423acc6 Automatic translation import [LineageOS [Infra]
+
+* packages/apps/Dialer
+39bea13 Dialer: CallLogFragment: Move Un-registering call log observer to destroy [Varun [Date]
+
+* packages/apps/DocumentsUI
+bd011ef Automatic translation import [LineageOS [Infra]
+
+* packages/apps/Eleven
+3a01ff6 Remove values-lu [Michael [W]
+
+* packages/apps/Etar
+cfc7f1d Remove values-lu [Michael [W]
+
+* packages/apps/ExactCalculator
+b10a222 ExactCalculator: Setup for edge to edge support [Aayush [Gupta]
+
+* packages/apps/FMRadio
+be7524a FMRadio: Remove unused string [Michael [Bestas]
+
+* packages/apps/Gallery2
+9c5801d Remove values-lu [Michael [W]
+
+* packages/apps/Glimpse
+42ab488 Glimpse: Use AOSP material [Luca [Stefani]
+
+* packages/apps/Jelly
+215e423 Jelly: Don't change immersive mode on focus change [Luca [Stefani]
+
+* packages/apps/LineageParts
+80fb24c Automatic translation import [LineageOS [Infra]
+
+* packages/apps/Messaging
+2663c4e Automatic translation import [LineageOS [Infra]
+
+* packages/apps/Profiles
+7edbf3a Remove values-lu [Michael [W]
+
+* packages/apps/Recorder
+824dc49 Recorder: grant read permissions for apps requesting recordings [Alexander [Martinz]
+
+* packages/apps/Settings
+86aae56 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/apps/SetupWizard
+6a8260b Remove values-lu [Michael [W]
+
+* packages/apps/ThemePicker
+eae1403 Automatic translation import [LineageOS [Infra]
+
+* packages/apps/Trebuchet
+6d584f3 Automatic translation import [LineageOS [Infra]
+
+* packages/apps/Updater
+ed36157 Updater: Set SYSTEM_UPDATE_SETTINGS priority higher than GMS [Giovanni [Ricca]
+
+* packages/inputmethods/LatinIME
+23c3241 Automatic translation import [LineageOS [Infra]
+
+* packages/modules/Bluetooth
+077e740 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/modules/Connectivity
+00c8ef7 BpfHandler: Add kver checks around V BPF attach program checks [LuK1337]
+
+* packages/modules/Wifi
+1e0094e Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/overlays/Lineage
+789826a BlackTheme: Rework shades of system container [Pranav [Vashi]
+
+* packages/providers/DownloadProvider
+3b899e2 Automatic translation import [LineageOS [Infra]
+
+* packages/providers/MediaProvider
+3bb8947 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/resources/devicesettings
+da6e556 Remove values-lu [Michael [W]
+
+* packages/services/Car
+b2c492c car_product: Guard APN copy with LINEAGE_BUILD [Nolen [Johnson]
+
+* packages/services/Mms
+9ef3eac Automatic translation import [LineageOS [Infra]
+
+* prebuilts/extract-tools
+fac6a80 linux-x86: Import patchelf 0.18 [Nolen [Johnson]
+
+* system/core
+3f2d09e Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* tools/extract-utils
+34010ec extract_utils: allow `call()` to accept arbitrary arguments [LuK1337]
+
+* vendor/crowdin
+6675f30 Automatic translation import [LineageOS [Infra]
+
+* vendor/lineage
+0941edf vars: Update qcom tags [Michael [Bestas]
+
+* vendor/qcom/opensource/audio-hal/st-hal
+b2a0060 Merge tag 'LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0' into staging/lineage-21.0_merge-LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/commonsys-intf/bluetooth
+eeba1c7 Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/commonsys-intf/display
+f32767c Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/commonsys/fm
+41adf54 FM: Add backward compatiblity support for oreo FM configs [Erfan [Abdi]
+
+* vendor/qcom/opensource/interfaces
+78890ac Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/power
+5a96e66 Merge tag 'LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0' into staging/lineage-22.0_merge-LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/usb
+321ee36 usb: Use DFP/UFP mode for non-power role source/sink [Vivekachooz]
+57f28ae Merge tag 'LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0' into staging/lineage-22.0_merge-LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0 [Michael [Bestas]
+
+* vendor/realme/luigi
+338ecf8 luigi: Update from RMX3660_14.0.0.1100(EX01) [Vivekachooz]
+
+* vendor/realme/sm6375-common
+9ce9d21 sm6375-common: Update from RMX3471_14.0.0.900(EX01) [Vivekachooz]
+
