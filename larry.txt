@@ -1,34 +1,169 @@
 ====================
-     02-10-2024    
+     12-11-2024    
 ====================
-* device/oneplus/sm6375-common
-f91b065 sm6375-common: powerhint: Re-tune powerhint for efficiency [Vivekachooz]
-b7fca42 sm6375-common:powerhint: Decrease launch boost to 3sec [DennySPB]
-8b3a43a sm6375-common: powerhint: Set 1 second timeout for interaction boosts [daniml3]
-4366758 sm6375-common: Switch from sf offsets to durations [Vivekachooz]
-6f621d4 sm6375-common: Tone down useless oplus edits from kernel postboot scripts [Vivekachooz]
-0fa61d5 sm6375-common: set debug.sf.layer_caching_active_layer_timeout_ms to 1000 [Long Ling]
-579467f sm6375-common: Reserve more space on /product [LuK1337]
-071dd80 sm6375-common: Inherit common partition reserved sizes [Michael Bestas]
-27fced8 sm6375-common: Decommonize dynamic and super partition sizes [Vivekachooz]
-a357f0f sm6375-common: Add missing IMS libs [Michael Bestas]
-ab2d7e3 sm6375-common: Decommonize sensors blob fixup [Vivekachooz]
-9310a11 sm6375-common: overlay: Allign PinnerServiceFiles with OOS [Vivekachooz]
-ebe04fc sm6375-common: powerhint: Boost cpus for EXPENSIVE_RENDERING [Vivekachooz]
-ec45dda sm6375-common: powerhint: Boost little cluster to max upon interaction [Vivekachooz]
-0f3af92 sm6375-common: Set hwc min duration to 17ms [Vivekachooz]
-18b567f sm6375-common: Return to stock IMS system stack [Bruno Martins]
-09f9698 sm6375-common: Switch to stock radio stack [Vivekachooz]
+
+* .repo/manifests
+2af1fc8 manifest: November 2024 Security Update [Michael [Bestas]
+
+* android
+2af1fc8 manifest: November 2024 Security Update [Michael [Bestas]
+
+* build/make
+cbbde02 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* device/google/contexthub
+8e258d9 Revert "Removed unused Android.mk under device/google/contexthub" [Nolen [Johnson]
 
 * device/oneplus/larry
-91a67b9 larry: Decommonize dynamic and super partition sizes [Vivekachooz]
-ec5a434 larry: Move variant detection logic to common [Vivekachooz]
-c00582d larry: Sync extract scripts with templates [Michael Bestas]
+2cd95bc larry: Update from CPH2467_14.0.0.930(EX01) [Vivekachooz]
+89ba35e larry: Use common lib_fixups [LuK1337]
+368bbde larry: ELF checks are enabled by default [Michael [Bestas]
+23c8680 larry: Pass display ID to sensor location [LuK1337]
 
-* vendor/oneplus/sm6375-common
-e55a948 sm6375-common: Add missing IMS libs [Michael Bestas]
-926e6e3 sm6375-common: Return to stock IMS system stack [Bruno Martins]
-6d20416 sm6375-common: Switch to stock radio stack [Vivekachooz]
+* device/oneplus/sm6375-common
+14eb9c8 sm6375-common: Decommonize liblvimfs_wrapper blob fixup [Vivekachooz]
+03b7599 sm6375-common: Update from CPH2467_14.0.0.930(EX01) [Vivekachooz]
+26acb86 sm6375-common: Setup variant handling for oscaro [Vivekachooz]
+47274ad sm6375-common: Add oscaro to build guard [Vivekachooz]
+2f80d58 sm6375-common: Use common lib_fixups [LuK1337]
+3f9740c sm6375-common: ELF checks are enabled by default [Michael [Bestas]
+30f05b5 sm6375-common: Specify vendor.usb.device [Tommy [Webb]
+
+* device/qcom/sepolicy
+a21fe12 Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* device/qcom/sepolicy-legacy-um
+a3126b0 common: Switch to AIDL USB HALs [Michael [Bestas]
+
+* device/qcom/sepolicy_vndr/legacy-um
+626d4de fixup! Remove vendor_service. [Michael [Bestas]
+
+* device/qcom/sepolicy_vndr/sm8450
+d0253f7 Merge tag 'LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0' into staging/lineage-22.0_merge-LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0 [Michael [Bestas]
+
+* device/qcom/sepolicy_vndr/sm8550
+8a517e8 sepolicy: Allow USB HAL to rw usb_data_enabled nodes [LuK1337]
+
+* frameworks/base
+96ea263 SystemUI: Add support for udfps dim layer [pjgowtham]
+
+* frameworks/native
+c6fd302 surfaceflinger: Allow ZOrder override for UDFPS dim layer [pjgowtham]
+
+* frameworks/opt/telephony
+6f74d80 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* hardware/google/gchips
+39efe73 Convert libVendorVideoApi to soong [yangbill]
+
+* hardware/google/graphics/common
+dbdd700 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* hardware/lineage/compat
+7ac87c6 libhidlbase-v32: Mark as recovery_available [Tommaso [Fonda]
+
+* hardware/oplus
+ecfd5da fingerprint: Set dim layer zOrder [pjgowtham]
+
+* hardware/qcom-caf/sdm660/media
+82b8867 Merge tag 'LA.UM.12.2.1.r1-04000-sdm660.0' into staging/lineage-21.0_merge-LA.UM.12.2.1.r1-04000-sdm660.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8350/audio
+b8006e8 Merge tag 'LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0' into staging/lineage-21.0_merge-LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8450/audio/pal
+f9669f6 Merge tag 'LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0' into staging/lineage-21.0_merge-LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8450/audio/primary-hal
+ead1803 Merge tag 'LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0' into staging/lineage-22.0_merge-LA.VENDOR.1.0.r1-26700-WAIPIO.QSSI14.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8550/audio/agm
+c6a803d Merge tag 'AUDIO.LA.8.0.r1-11600-KAILUA.0' into staging/lineage-22.0_merge-AUDIO.LA.8.0.r1-11600-KAILUA.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8550/audio/pal
+d169604 Merge tag 'AUDIO.LA.8.0.r1-11600-KAILUA.0' into staging/lineage-22.0_merge-AUDIO.LA.8.0.r1-11600-KAILUA.0 [Michael [Bestas]
+
+* hardware/qcom-caf/sm8550/audio/primary-hal
+abf6353 Merge tag 'AUDIO.LA.8.0.r1-11600-KAILUA.0' into staging/lineage-22.0_merge-AUDIO.LA.8.0.r1-11600-KAILUA.0 [Michael [Bestas]
+
+* hardware/qcom-caf/wlan
+dd4208e Merge tag 'LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0' into staging/lineage-22.0_merge-LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0 [Michael [Bestas]
+
+* kernel/oneplus/sm6375
+2452231 drivers/input: ilitek7807s: Don't ignore first irq [Sugakesshaa]
+c27c1bf Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.0 [Vivekachooz]
+d72549f Merge tag 'ASB-2024-11-05_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael [Bestas]
+
+* lineage-sdk
+5a577dc sdk: Make it REUSE compatible [Michael [Bestas]
+
+* packages/apps/Contacts
+7b4b626 Contacts: Remove navigation bar divider [Michael [Bestas]
+
+* packages/apps/Dialer
+39bea13 Dialer: CallLogFragment: Move Un-registering call log observer to destroy [Varun [Date]
+
+* packages/apps/ExactCalculator
+b10a222 ExactCalculator: Setup for edge to edge support [Aayush [Gupta]
+
+* packages/apps/Recorder
+824dc49 Recorder: grant read permissions for apps requesting recordings [Alexander [Martinz]
+
+* packages/apps/Settings
+86aae56 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/apps/Updater
+ed36157 Updater: Set SYSTEM_UPDATE_SETTINGS priority higher than GMS [Giovanni [Ricca]
+
+* packages/modules/Bluetooth
+077e740 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/modules/Connectivity
+00c8ef7 BpfHandler: Add kver checks around V BPF attach program checks [LuK1337]
+
+* packages/modules/Wifi
+1e0094e Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/providers/MediaProvider
+3bb8947 Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* packages/services/Car
+b2c492c car_product: Guard APN copy with LINEAGE_BUILD [Nolen [Johnson]
+
+* system/core
+3f2d09e Merge tag 'android-15.0.0_r5' into staging/lineage-22.0_merge-android-15.0.0_r5 [Michael [Bestas]
+
+* tools/extract-utils
+34010ec extract_utils: allow `call()` to accept arbitrary arguments [LuK1337]
+
+* vendor/lineage
+0941edf vars: Update qcom tags [Michael [Bestas]
 
 * vendor/oneplus/larry
-bc92d78 larry: Add xml suffix to prebuilt_etc_xml modules [Michael Bestas]
+bd5cd94 larry: Update from CPH2467_14.0.0.930(EX01) [Vivekachooz]
+
+* vendor/oneplus/sm6375-common
+e65afab sm6375-common: Update from CPH2467_14.0.0.930(EX01) [Vivekachooz]
+
+* vendor/qcom/opensource/audio-hal/st-hal
+b2a0060 Merge tag 'LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0' into staging/lineage-21.0_merge-LA.UM.9.14.r1-25000.02-LAHAINA.QSSI14.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/commonsys-intf/bluetooth
+eeba1c7 Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/commonsys-intf/display
+f32767c Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/commonsys/fm
+41adf54 FM: Add backward compatiblity support for oreo FM configs [Erfan [Abdi]
+
+* vendor/qcom/opensource/interfaces
+78890ac Merge tag 'LA.QSSI.15.0.r1-11400-qssi.0' into staging/lineage-22.0_merge-LA.QSSI.15.0.r1-11400-qssi.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/power
+5a96e66 Merge tag 'LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0' into staging/lineage-22.0_merge-LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0 [Michael [Bestas]
+
+* vendor/qcom/opensource/usb
+321ee36 usb: Use DFP/UFP mode for non-power role source/sink [Vivekachooz]
+57f28ae Merge tag 'LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0' into staging/lineage-22.0_merge-LA.VENDOR.14.3.0.r1-17600-lanai.QSSI15.0 [Michael [Bestas]
+
