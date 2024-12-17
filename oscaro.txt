@@ -1,0 +1,463 @@
+====================
+     17-12-2024    
+====================
+
+* android_packages_apps_TvSettings
+86241c9 Reapply: Allow disabling Frame Rate settings [Timi]
+9e19aa6 TvSettings: Check for null HdmiControlManager [Timi]
+5aadc74 TvSettings: Remove unused java file [Timi]
+7b4d6c9 [Realtek][TV][Accessibility] :Check the Shortcut service option, it is on by default, go back to Accessibility and check the Shortcut service again, it is off. [jiachen_zhu]
+28ca0b4 Support using USB keyboard to update device name [lin_yiwen]
+a6fd18d Fix that when selecting a SlicePreference item by mouse, the corresponding preview page was not loaded properly, resulting in a crash [allenlin]
+67aab15 Prevent crash on "Manage Keyboards" [Oleg Kibirev]
+5b791bd Fix default focus in list fragment [Tuan Le Anh]
+8f07b54 Fix the problem that "forget" does not return to the previous level UI, bugId: b/341040773 [meiy.yang]
+2c86972 TvSettings: Bring in the new icon [Asher Simonds]
+df126eb Allow disabling Frame Rate settings [Aaron Kling]
+d3fa740 Implement Trust menu [Timi Rautamäki]
+bfe6450 Revert "Enable optimized_shrink_resources r8 flag for TvSettings" [Christian Hoffmann]
+
+* android_packages_services_Mms
+c614f8f Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Eleven
+cd8bc53 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_AudioFX
+99168e3 Automatic translation import [LineageOS Infra]
+167e798 AudioFX: Remove tests [Michael Bestas]
+01b99df AudioFX: Make top and bottom colors the same [Michael W]
+629c00e AudioFX: Fixes for Edge-To-Edge [Michael W]
+5129591 AudioFX: Add missing newlines at the end of files [Michael Bestas]
+0f42813 AudioFX: Remove MaxxAudio support [Michael Bestas]
+12dbe39 AudioFX: Remove DTS support [Michael Bestas]
+75c33bc AudioFX: Fix line out icon color [Michael Bestas]
+1d9d76a AudioFX: Add and fix copyrights [Michael W]
+a7b5120 AudioFX: Cleanup [Michael W]
+a402860 AudioFX: Make the device selection rounded [Michael W]
+6d17ef5 AudioFX: Target sdk 35 [Michael W]
+9910b07 AudioFX: Use MaterialSwitch [Michael W]
+468a090 AudioFX: Round the ends of RadialKnob [Michael W]
+4eafe0c AudioFX: Remove shadows [Michael W]
+69b61a9 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_SetupWizard
+28bd97d Automatic translation import [LineageOS Infra]
+205d2e0 Automatic translation import [LineageOS Infra]
+b5133a4 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Profiles
+57410d9 Automatic translation import [LineageOS Infra]
+b12e986 Profiles: Set default_applicable_licenses [Michael Bestas]
+edc3abf Profiles: Make it REUSE compatible [Michael Bestas]
+83d1220 Profiles: Rename privapp xml [Michael Bestas]
+3a89bce Automatic translation import [LineageOS Infra]
+010d2e3 Profiles: (Pre-)Grant BLUETOOTH_CONNECT [Michael W]
+bc94435 Profiles: Use BluetoothManager.getAdapter() [Michael W]
+
+* android_packages_apps_Messaging
+0895e55 Automatic translation import [LineageOS Infra]
+23527d7 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_ExactCalculator
+3ba7fcc ExactCalculator: Update actions/* [LuK1337]
+
+* android_build
+a618737 Conditionally use Unix epoch time for build incremental [Michael Bestas]
+
+* android_packages_apps_DeskClock
+eaf6d78 Automatic translation import [LineageOS Infra]
+d6535ad Automatic translation import [LineageOS Infra]
+e7bf2a1 DeskClock: Match navigation bar color with the app [DarkJoker360]
+5752305 DeskClock: Adjust accent colors [DarkJoker360]
+bf62a8c DeskClock: Use the new material switch to match with settings [Ido Ben-Hur]
+63d8d52 DeskClock: Align timer section with others [Michael W]
+7e5eda0 DeskClock: Remove shared preference migration [Greg Ross]
+c2ed9aa DeskClock: Simplify action menu [Greg Ross]
+146db08 DeskClock: Add screensaver display options [Greg Ross]
+50f6f3a DeskClock: Fix screensaver style [Michael W]
+15facc7 DeskClock: Fix display of AM/PM on screensaver [Greg Ross]
+39a833d DeskClock: Add preview image to screensaver [Greg Ross]
+
+* android_packages_apps_Contacts
+b4597b4 Contacts: Pass correct account for `cancel` action [LuK1337]
+0bcea94 Automatic translation import [LineageOS Infra]
+
+* android_packages_providers_DownloadProvider
+0b7accc Automatic translation import [LineageOS Infra]
+635b85f Automatic translation import [LineageOS Infra]
+
+* android_packages_inputmethods_LatinIME
+8e6b955 LatinIME: Correct SDK versions [Michael Bestas]
+69f8241 Fix bug: AOSP keyboard is shown incompletely in Android V landscape mode [Ziqi Chen]
+a73d18e LatinIME: Bump gradle compileSdk to 35 [Luca Stefani]
+41c50fb Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Trebuchet
+a207446 Automatic translation import [LineageOS Infra]
+58cec02 trust: Respect filtered components when showing apps list [Bruno Martins]
+
+* android_hardware_samsung
+ac076a6 Automatic translation import [LineageOS Infra]
+dbf51b3 Automatic translation import [LineageOS Infra]
+6b55511 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_FMRadio
+e7f3c17 Automatic translation import [LineageOS Infra]
+cef0d2d Automatic translation import [LineageOS Infra]
+
+* android_frameworks_base
+2df219d Allow spoofing signingInfo for microG Companion/Services [Jonathan Klee]
+39d16e1 Automatic translation import [LineageOS Infra]
+a84c7ef Make default permissions updates tied to version incremental [Luca Stefani]
+f529a67 Automatic translation import [LineageOS Infra]
+5bc3c70 Enable backup service by default for all users [Oliver Scott]
+c5148af Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Settings
+4921d79 Automatic translation import [LineageOS Infra]
+c087d56 Settings: Backup: Apply insets properly [Michael W]
+0e0d1a5 Automatic translation import [LineageOS Infra]
+8efb335 Settings: Set key order during rebind [AnierinB]
+13affa0 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Dialer
+6e2bc49 Automatic translation import [LineageOS Infra]
+881b1c4 Automatic translation import [LineageOS Infra]
+d363507 Dialer: Fix some weird inset behavior [Michael W]
+118e485 Dialer: Disable forceDarkAllowed for contact pictures [Michael W]
+027a4e2 Dialer: Handle system insets [Ido Ben-Hur]
+93adec3 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_EmergencyInfo
+fa2065d EmergencyInfo: Apply insets [Michael W]
+
+* android_packages_resources_devicesettings
+f2b92f1 Automatic translation import [LineageOS Infra]
+b85b0a8 Automatic translation import [LineageOS Infra]
+
+* android
+e4efa33 manifest: Track camelot [LuK1337]
+aaf09ae manifest: Eleven -> Twelve [LuK1337]
+
+* android_packages_apps_FlipFlap
+926258a Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Recorder
+23e5b29 Automatic translation import [LineageOS Infra]
+b205124 Recorder: Remove aapt_version_code_defaults [Luca Stefani]
+96814d4 Automatic translation import [LineageOS Infra]
+d48d7da Recorder: Update actions/* [LuK1337]
+5a7f765 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Jelly
+5e314df Automatic translation import [LineageOS Infra]
+621fbd2 Automatic translation import [LineageOS Infra]
+6d159c0 Jelly: Update actions/* [LuK1337]
+7d6d3a2 Automatic translation import [LineageOS Infra]
+
+* android_build_soong
+f90cf26 Conditionally use Unix epoch time for build incremental [Michael Bestas]
+c9e0562 Make include_dirs and local_include_dirs configurable [Cole Faust]
+588f62f Add configurable property support to neverallow [Cole Faust]
+
+* android_vendor_lineage
+4dafa48 apns: Remove defunct "Eagle Mobile" carrier. [Andrea Toska]
+ed831e4 apns: Remove defunct Albanian carrier [Andrea Toska]
+be60f23 repopick: Use add_mutually_exclusive_group() where possible [LuK1337]
+8e7b779 repopick: Add support for hashtags [Michael Bestas]
+87edd14 Zap aapt_version_code_defaults [Luca Stefani]
+ffd584f apns: Update all Canadian carriers [Patrick Gaskin]
+621f14f lineage: products: Add ATV x86_64 emulator targets [Christian Hoffmann]
+00ca937 lineage: products: Use 6.1 for atv x86 [Christian Hoffmann]
+8e47b88 roomservice: check all device repositories [Alexander Martinz]
+2adbe41 common: Build Camelot [LuK1337]
+7158f85 vars: Update barbet to final build [Michael Bestas]
+819ccd2 apns-conf: Add DIGI PT APN settings [Bruno Martins]
+6b123f7 common: Eleven -> Twelve [LuK1337]
+6bdd847 Revert "kernel: Use CPATH for including host headers" [Aaron Kling]
+
+* android_device_lineage_sepolicy
+441ac05 sepolicy: Label `ro.recovery.supported_fs` property [Yumi Yukimura]
+
+* android_hardware_interfaces
+04b72f4 fixup! audio: aidl: default: primary: Read LatencyMs from prop [LuK1337]
+f18155e audio: aidl: default: primary: Read LatencyMs from prop [Yumi Yukimura]
+
+* android_packages_apps_LineageParts
+1c673bb Automatic translation import [LineageOS Infra]
+150b419 LineageParts: Remove reference to UPDATE_POWER_MENU broadcast [Bruno Martins]
+68fec9d Automatic translation import [LineageOS Infra]
+51530fb Automatic translation import [LineageOS Infra]
+
+* android_lineage-sdk
+b503f5c Automatic translation import [LineageOS Infra]
+b9a622a sdk: Remove no longer used ACTION_UPDATE_POWER_MENU intent [Bruno Martins]
+1a4083a Automatic translation import [LineageOS Infra]
+eed35b8 Automatic translation import [LineageOS Infra]
+
+* android_system_core
+409de40 fs_mgr: Get additional supported fs from prop in recovery [Yumi Yukimura]
+78e10df Revert "fs_mgr: Add virtiofs to supported fs list" [Yumi Yukimura]
+
+* android_device_lineage_atv
+cb695ac atv: Switch to SPDX license identifiers [Michael Bestas]
+1993382 atv: convert to blueprint [Thomas Makin]
+7307162 atv: Don't include scaling rc by hand [Nolen Johnson]
+
+* android_packages_apps_Backgrounds
+4ce1fa9 Backgrounds: Set default_applicable_licenses [Michael Bestas]
+62cf991 Backgrounds: Convert to Android.bp [Michael Bestas]
+6bbb3dc Backgrounds: Use 1440p wallpapers for all devices [Michael Bestas]
+92b01e5 Automatic translation import [LineageOS Infra]
+
+* android_hardware_qcom-caf_common
+91d6de0 qcom: Add soong config for libgrallocutils [EndCredits]
+
+* android_vendor_qcom_opensource_fm-commonsys
+bb15f60 Automatic translation import [LineageOS Infra]
+
+* android_hardware_xiaomi
+263cc79 interfaces: com.fingerprints: Add `IFpcFingerprintAuthenticator` [Giovanni Ricca]
+
+* android_hardware_sony_SonyOpenTelephony
+958fb4b Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Etar
+b4a63c5 Automatic translation import [LineageOS Infra]
+aabbad2 DynamicTheme: Setup theme and activites for edge to edge support [Aayush Gupta]
+9262ea3 Automatic translation import [LineageOS Infra]
+afb57d4 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Seedvault
+22f76a9 Merge tag '15-5.1' of https://github.com/seedvault-app/seedvault into HEAD [Chirayu Desai]
+7f8279e Merge pull request #801 from lucasmz-dev/bump-to-15-5.1 [Torsten Grote]
+5605974 Bump version to 15-5.1 [LucasMZ]
+25e88ca Merge pull request #784 from grote/check-storage [Torsten Grote]
+8a00a29 Merge pull request #785 from grote/check-app-backup [Torsten Grote]
+417531f Don't treat HashMismatchException as a fatal error when restoring [Torsten Grote]
+
+* android_packages_apps_ElmyraService
+6d00b02 Automatic translation import [LineageOS Infra]
+0960cf4 ElmyraService: Move enable switch to MainSwitchPreference [someone5678]
+598cff3 ElmyraService: Enable use_resource_processor for all sysui deps [Peter Kalauskas]
+1d01e17 ElmyraService: Migrate MainSwitchBar and Switch to Material3 [Bruno Martins]
+f1a8bf1 ElmyraService: Move to SwitchPreferenceCompat [someone5678]
+8cdfb64 Automatic translation import [LineageOS Infra]
+
+* android_tools_extract-utils
+1d27e6d extract_utils: implement clear_symbol_version() blob fixup [LuK1337]
+9d6037e extract_utils: add support for EXTRACT_ONLY flag [Cosmin Tanislav]
+d1de2e8 extract_utils: simplify package / copy logic [Cosmin Tanislav]
+27c8331 extract_utils: simplify MAKE_COPY_RULE_ONLY check [Cosmin Tanislav]
+d425254 extract_utils: fix empty shared_libs for libraries without any [Alexander Koskovich]
+19cfa2c extract_utils: add shortcircuit to extract all files from zip [Cosmin Tanislav]
+9559bbc extract_utils: allow standlone script to extract additional partitions [Cosmin Tanislav]
+c169461 extract_utils: add star firmware regex [Cosmin Tanislav]
+dd45e75 extract_utils: switch from functools.cache() to functools.lru_cache() [LuK1337]
+a2c7ea3 extract_utils: migrate away from `typing.Self` [LuK1337]
+5351979 extract_utils: "type | None" -> "Optional[type]" [LuK1337]
+9226599 extract_utils: update ruff to v0.8.0 [LuK1337]
+fdd422e extract_utils: implement CERTIFICATE [Michael Bestas]
+a1c41a0 extract_utils: fix generated proprietary file extraction [Cosmin Tanislav]
+d595610 extract_utils: fix call function example [Cosmin Tanislav]
+85d4364 extract_utils: fix standalone extractor [Cosmin Tanislav]
+9f29b0b extract_utils: provide defaults for ExtractCtx [Cosmin Tanislav]
+6a34315 extract_utils: skip parsing generated proprietary file when section is specified [Cosmin Tanislav]
+71f352e extract_utils: refactor partition extraction to support alternate partitions [Cosmin Tanislav]
+75f3d1b extract_utils: refactor super.img finding [Cosmin Tanislav]
+9be19cf extract_utils: return success and fail data from parallel subprocesses [Cosmin Tanislav]
+6209adc extract_utils: allow any iterable in remove_file_paths [Cosmin Tanislav]
+1d9b047 extract_utils: refactor extract functions handling [Cosmin Tanislav]
+a171cea extract_utils: fix pylint issues [Cosmin Tanislav]
+3ad32e4 extract_utils: do not print files found in zip [Cosmin Tanislav]
+c87c492 extract_utils: allow all partitions to be sparse raw [Cosmin Tanislav]
+1768702 extract_utils: hardcode payload.bin when calling find_payload_paths [Cosmin Tanislav]
+8cbf9fd extract_utils: merge finding files with magic or ext [Cosmin Tanislav]
+db50e39 extract_utils: use magic bytes in their more common form [Cosmin Tanislav]
+52f29d9 extract_utils: move SaR before trying to move alternate paths [Cosmin Tanislav]
+
+* android_hardware_oneplus
+3ad55a2 Automatic translation import [LineageOS Infra]
+
+* android_hardware_nvidia_platform_t19x_jakku_kernel-dts
+e4f1c7d Disable kexec dt [Aaron Kling]
+
+* android_vendor_crowdin
+0586329 Automatic translation import [LineageOS Infra]
+23d87d6 Automatic translation import [LineageOS Infra]
+1d3f1e3 Automatic translation import [LineageOS Infra]
+
+* android_hardware_oplus
+d168819 vintf: Add version 1.0 for vendor.oplus.hardware.cameraMDM [patr_]
+77522b8 Automatic translation import [LineageOS Infra]
+9bb70db sepolicy: qti: Allow sensors to read /proc/oplusVersion/* [LuK1337]
+3899884 oplus: Add README file with Soong options documentation [LuK1337]
+60f641a vibrator: Migrate to select() [LuK1337]
+8b3ffd3 livedisplay: Migrate to select() [LuK1337]
+5acd642 touch: Migrate to select() [LuK1337]
+
+* android_hardware_sony
+904ef35 SonyEuicc: Switch to PackageManager.getApplicationInfo() [LuK1337]
+2877677 sepolicy: Allow audio HAL to access tee/secd props and services [Luofan Chen]
+e3a7c08 sepolicy: Allow audio HAL to access gpu device [Luofan Chen]
+
+* android_hardware_lineage_compat
+21deeda compat: Add copy libs script for vndk libs [LuK1337]
+0cb5ab0 compat: Provide libutils-v33 [Marc Bourgoin]
+bf2a4fc compat: Squashed import of libaudioproxy_shim [Nolen Johnson]
+cbc7753 compat: Squashed import of libdemangle shim [Nolen Johnson]
+
+* android_packages_apps_Aperture
+84f17b0 Automatic translation import [LineageOS Infra]
+bfe57f6 Aperture: Update CameraX to 1.5.0-alpha04 [LuK1337]
+4b2c584 Aperture: Update media3 to 1.5.0 [Luca Stefani]
+ee59719 Aperture: Update gradle-generatebp [Luca Stefani]
+46749b1 Aperture: Remove aapt_version_code_defaults [Luca Stefani]
+a3c47cb Automatic translation import [LineageOS Infra]
+31a32ed Aperture: Update actions/* [LuK1337]
+8030a23 Automatic translation import [LineageOS Infra]
+
+* android_hardware_lge
+bb6232c dac_panel: Remove aapt_version_code_defaults [Luca Stefani]
+
+* android_hardware_samsung_slsi-linaro_config
+36fdce3 exynos9610 (non samsung): add c2 to namespaces [Stricted]
+a6f4c56 exynos9610: set HWJPEG_ANDROID_VERSION to 10 for non samsung vendors [Stricted]
+
+* android_hardware_samsung_slsi-linaro_exynos
+0dee009 exynos: convert libcsc and libswconverter to blueprint [Stricted]
+d5c3d67 exynos-thermal: make nolog actually work [Stricted]
+7f49f89 thermal: add vintf fragment [Francescodario Cuzzocrea]
+fee1f00 exynos: add exynos-thermal [Jan Altensen]
+608b447 kinibi410: update mobicore.rc from kane [Stricted]
+fa4204d Convert libexynosv4l2 to soong [borbelyvince]
+02d2227 Fix include path for videodev2{,_exynos_media}.h [Daniel Mentz]
+02c2ae6 Convert libexynosutils to soong [borbelyvince]
+ef953fa exynos: tee: import kinibi410 [Stricted]
+
+* android_hardware_samsung_slsi-linaro_graphics
+2b89d0d graphics: convert libscaler to blueprint [Stricted]
+daa1df0 libhwjpeg: drop guard version for constructor [Stricted]
+69131b1 Convert giantmscl to soong [borbelyvince]
+d002992 Convert libhwjpeg to soong [borbelyvince]
+d09d674 Revert "base: Convert libgiantmscl to Blueprint" [Nolen Johnson]
+9d129e6 base: Convert libgiantmscl to Blueprint [Nolen Johnson]
+
+* android_bootable_tianocore_edk2-nvidia-lineage
+8ef7416 Add lineage dependencies [Aaron Kling]
+
+* android_hardware_samsung_slsi-linaro_interfaces
+710ab0a interfaces: add gnss interface [Stricted]
+
+* android_hardware_intel_sensors-iio
+84c4829 sensors: switch to blueprint [Thomas Makin]
+
+* android_packages_apps_Glimpse
+7c35a95 Glimpse: Remove aapt_version_code_defaults [Luca Stefani]
+09bbf4e Glimpse: `values()` -> `entries` [Sebastiano Barezzi]
+ac3edfd Glimpse: The great catchup [Sebastiano Barezzi]
+8e169fd Glimpse: Update actions/* [LuK1337]
+17bcc1c Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Twelve
+6298914 Automatic translation import [LineageOS Infra]
+cab5746 Twelve: Use AOSP material [Luca Stefani]
+3dbc25f Twelve: Full OpenSubsonic and Navidrome coverage [Sebastiano Barezzi]
+1eaf800 Twelve: Add missing CC-BY-SA-4.0 license [Luca Stefani]
+dbdfb01 Twelve: Pass projection as array [Luca Stefani]
+b87c5e1 Twelve: Remove aapt_version_code_defaults [Luca Stefani]
+f740fa5 Twelve: Add Jellyfin provider [Luca Stefani]
+e2efecf Automatic translation import [LineageOS Infra]
+ce785fc Twelve: LocalDataSource: Move volume name to constructor parameter [Sebastiano Barezzi]
+19afe0b Twelve: Don't support nullable audios in playlist [Luca Stefani]
+4265a30 Twelve: Introduce MediaError.DESERIALIZATION [Luca Stefani]
+4c4ef92 Twelve: Allow passing a throwable to RequestStatus.Error [Luca Stefani]
+f90ba98 Twelve: Update media3 & coil [Luca Stefani]
+25c50ae Twelve: Add HTTP cache [Luca Stefani]
+370814b Twelve: Handle MediaStore unknown strings [Sebastiano Barezzi]
+c9df309 Twelve: Add library commands to session commands [Luca Stefani]
+16e8374 Twelve: MainFragment: Fix nav bar view item position [Sebastiano Barezzi]
+f62295a Twelve: Full screen search view [Sebastiano Barezzi]
+93d7097 Twelve: Support genre thumbnails [Luca Stefani]
+9eb0cce Twelve: Support playlist thumbnails [Luca Stefani]
+a03ec83 Twelve: Audio: Use long with durationMs [Sebastiano Barezzi]
+c349427 Twelve: Fix subsonic connection leak [Luca Stefani]
+6396d2e Twelve: Update gradle-generatebp to v1.15 [LuK1337]
+7ae0e8d Twelve: Update actions/* [LuK1337]
+5839598 Twelve: How about we just let Coil understand Thumbnail [Sebastiano Barezzi]
+743540a Twelve: Reformat code [Sebastiano Barezzi]
+9977df3 Twelve: Add tooltips for now playing bottom bar buttons [LuK1337]
+34d4c3e Twelve: Show and hide keyboard in search fragment automatically [LuK1337]
+9651832 Twelve: Fix searching on Subsonic demo server [Sebastiano Barezzi]
+50b46de Twelve: Fix lint warnings [Sebastiano Barezzi]
+
+* android_external_mesa
+b3516d4 LINEAGE: vmwgfx: Import patches from OpenFyde (FydeOS) [hmtheboy154]
+5475af1 Merge tag 'mesa-24.3.0' of https://gitlab.freedesktop.org/mesa/mesa into lineage-22.0 [Yumi Yukimura]
+f1f246c VERSION: bump for 24.3.0 release [Dylan Baker]
+ae339fb docs: add release notes for 24.3.0 [Dylan Baker]
+0bf0f66 anv: prevent access to destroyed vk_sync objects post submission [Lionel Landwerlin]
+faacd80 nir/lcssa: fix premature exit of loop after rematerializing derefs [Rhys Perry]
+8790de1 nir/algebraic: check bit sizes in lowered unpack(pack()) optimization [Rhys Perry]
+4af6a47 nir/algebraic: fix iabs(ishr(iabs(a), b)) optimization [Rhys Perry]
+b3cb911 frontends/va: Use compositor blit with different number of planes [David Rosca]
+ca6cccf frontends/va: Create surfaces with correct fourcc for RT format [David Rosca]
+5ad7548 nir: Get correct number of components [Matt Turner]
+5cb4c5b radeonsi: fix gl_FrontFace elimination when one side is culled [Marek Olšák]
+185ae19 radv: add a new drirc option to disable DCC for mips and enable it for RDR2 [Samuel Pitoiset]
+49e5090 ac/gpu_info: Fix missing prototype mingw error [Michel Zou]
+bc1c6a1 freedreno: Fix resource tracking on repeated map with discard [Vldly]
+5a8be9c ir3,tu: include ir3 debug flags in shader hash key [Job Noorman]
+e3f886a radeonsi/vcn: Use correct frame context buffer for preencode on VCN5 [David Rosca]
+a3543eb .pick_status.json: Update to 9b779068c3a7a8ded00f1d2519fd01dd1d05f3d8 [Dylan Baker]
+f35c690 intel/fs/xe2: Fix up subdword integer region restriction with strided byte src and packed byte dst. [Francisco Jerez]
+7dc34f1 anv: fix missing push constant reallocation [Lionel Landwerlin]
+8e45bd6 brw: Fix try_rebuild_source's ult32/ushr handling to use unsigned types [Kenneth Graunke]
+9728a90 vtn: handle struct kernel arguments passed by value [Karol Herbst]
+f4d83eb glx: avoid null-deref [Erik Faye-Lund]
+3567dac bi: Execute nir_opt_algebraic after nir_lower_pack [Mary Guillemard]
+d857c4a anv: fix incorrect aspect flag for depth/stencil formats [Lionel Landwerlin]
+a3a064b vulkan: Avoid pointer aliasing [Matt Turner]
+de9faec panvk/csf: Fix a wait-LS operation in finish_cs() [Boris Brezillon]
+1c6b2f7 rusticl/kernel: fix kernel variant selection [Karol Herbst]
+436e5c0 v3d: Support SAND128 base modifier [Robert Mader]
+922a339 util: Fixed crash in HEVC encoding on 32-bit systems [Sam Lantinga]
+
+* android_hardware_nvidia_t132_lineage
+e1ddf4a Add stubbed out makefile [Aaron Kling]
+
+* android_hardware_nvidia_t114_lineage
+3028172 Add stubbed out makefile [Aaron Kling]
+
+* android_packages_apps_Camelot
+f513278 Automatic translation import [LineageOS Infra]
+5222ca9 Camelot: Actually make it REUSE compliant [Michael Bestas]
+af530ed Camelot: Make it REUSE compliant [Luca Stefani]
+af50977 Camelot: Fix insets once for all [Sebastiano Barezzi]
+f676c4b Camelot: Fix FAB padding [Sebastiano Barezzi]
+e48ef23 Camelot: Immersive mode [Sebastiano Barezzi]
+cda0318 Camelot: Enable home/back button [Sebastiano Barezzi]
+afb2b91 Camelot: Add app icon [Asher Simonds]
+f7b0fa0 Camelot: Fix double fd close while printing [Luca Stefani]
+cd8e23c Camelot: Add filename to download action [Luca Stefani]
+4f84bb1 Camelot: Apply bottom inset marging to edit fab as well [Luca Stefani]
+1b3299d Camelot: Use filename for print job name if available [LuK1337]
+de05561 Camelot: Pass URI to CamelotPdfDocumentAdapter [Luca Stefani]
+4ed966b Revert "Camelot: Use setDataAndType for send action" [LuK1337]
+70571f5 Camelot: Reformat code [Sebastiano Barezzi]
+d4e8aee Camelot: Show file name on toolbar [Sebastiano Barezzi]
+7d4bf50 Camelot: Reorganize Gradle version catalog [Sebastiano Barezzi]
+29cbc5c Camelot: Abstract away documentUri [Luca Stefani]
+3ad9929 Camelot: Use setDataAndType for send action [Luca Stefani]
+3cb12c7 Camelot: Use kotlin.cast [Luca Stefani]
+fb630f3 Camelot: Add print action [Luca Stefani]
+05ba3b1 Camelot: Activity title is set from manifest [Sebastiano Barezzi]
+f58b03f Camelot: Little code cleanup [Sebastiano Barezzi]
+c7e8610 Camelot: Set activity title rather than just toolbar [Sebastiano Barezzi]
+3ba6668 Camelot: Add more actions [Luca Stefani]
+d863f27 Camelot: Handle open with action [LuK1337]
+a97ae84 Camelot: Allow only local scheme [Sebastiano Barezzi]
+f316c0f Camelot: Use RequiresExtension instead of lint suppression [Luca Stefani]
+6e620ff Camelot: Add stub menu actions [Luca Stefani]
+60737c6 Camelot: Use view from setOnApplyWindowInsetsListener() callback [LuK1337]
