@@ -1,232 +1,149 @@
 ====================
-     25-12-2024    
+     31-12-2024    
 ====================
 
-* android_packages_apps_SetupWizard
-28bd97d Automatic translation import [LineageOS Infra]
+* android_device_realme_oscar
+4d12f25 oscar: Update from RMX3471_14.0.0.1100(EX01) [Vivekachooz]
 
-* android_packages_apps_Profiles
-57410d9 Automatic translation import [LineageOS Infra]
+* android_device_realme_sm6375-common
+fb745c7 sm6375-common: Address missing libbinder symbols in libwfdnative [Nick Reuter]
+64607bb sm6375-common: Bump libwfdservice to android.media.audio.common.types-V4 [Nick Reuter]
+72971b0 sm6375-common: Update from RMX3471_14.0.0.1100(EX01) [Vivekachooz]
 
-* android_packages_apps_Messaging
-0895e55 Automatic translation import [LineageOS Infra]
+* android_kernel_realme_sm6375
+6771d68 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
+e348512 power: oplus: Fix comparison of different enum types [pjgowtham]
+c8ff3ec arm64: configs: disable CONFIG_MSM_PERFORMANCE [Rick Yiu]
 
-* android_build
-40145f3 Revert "Drop legacy vboot support." [Nolen Johnson]
-
-* android_packages_apps_DeskClock
-a956204 Make java_sdk_library dependencies explicit [Jihoon Kang]
-eaf6d78 Automatic translation import [LineageOS Infra]
-
-* android_packages_providers_DownloadProvider
-4cf0101 Merge tag 'android-15.0.0_r6' into staging/lineage-22.0_merge-android-15.0.0_r6 [Michael Bestas]
-0b7accc Automatic translation import [LineageOS Infra]
-
-* android_hardware_qcom_camera
-b42f465 msm8998: Import easel headers [Christian Hoffmann]
-
-* android_hardware_samsung
-c4c9b35 Revert "fingerprint: Use device kernel headers" [Nolen Johnson]
-dca8eba fingerprint: Use device kernel headers [Atakan]
-b22e45c fingerprint: add additional gralloc bits for FOD [Michael Benedict]
-02dbe51 fingerprint: Set dim layer zOrder [pjgowtham]
-f42484e fingerprint: Fix sde_drm.h include path on 5.4+ kernel [LuK1337]
-082a0b2 fingerprint: Add surfaceflinger extension lib [Abhishek Aggarwal]
-ac076a6 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FMRadio
-e7f3c17 Automatic translation import [LineageOS Infra]
-
-* android_frameworks_base
-d5385ff fixup! base: Allow disabling turbulence noise after clicking the play button [Ido Ben-Hur]
-6211ff7 fw/b: Add setting to allow tethering to use VPN upstreams [Oliver Scott]
-83b217d Allow BAL for usb debugging notifications [Christian Hoffmann]
-b5d61d9 fixup! SystemUI: Clock position customization [LuK1337]
-f3569d6 fixup! Screenshot: Append app name to filename [LuK1337]
-ceb1898 fixup! SystemUI: add FloatingRotationButton for hw-key devices [LuK1337]
-b9717a5 fixup! Forward port CM Screen Security settings (1/2) [LuK1337]
-4442c00 fixup! SystemUI: Dismiss keyguard on boot if disabled by current profile [LuK1337]
-5fbab0d fixup! fw/b: Add support for runtime toggle of navbar [LuK1337]
-0937e49 fixup! SystemUI: screenshot: Add delete action chip intent [LuK1337]
-1ea2338 Revert "SystemUI: show ime switcher + cursor keys if we have space" [Michael Bestas]
-c35b58d Revert "SystemUI: fix missing rotate suggestion in 2 button nav mode" [Michael Bestas]
-9d0bb61 fixup! SystemUI: add left and right virtual buttons while typing [Michael Bestas]
-415a5cb Merge tag 'android-15.0.0_r6' into staging/lineage-22.0_merge-android-15.0.0_r6 [Michael Bestas]
-2df219d Allow spoofing signingInfo for microG Companion/Services [Jonathan Klee]
-39d16e1 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Settings
-0e4260f Settings: Migrate VPN upstreams to AOSP settings [Luca Stefani]
-9212bba Fix the NPE in the tryToFetchUsageData() method [YK Hung]
-1e271bc Merge tag 'android-15.0.0_r6' into staging/lineage-22.0_merge-android-15.0.0_r6 [Michael Bestas]
-4921d79 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Dialer
-7aa50e2 Merge tag 'android-15.0.0_r6' into staging/lineage-22.0_merge-android-15.0.0_r6 [Michael Bestas]
-6e2bc49 Automatic translation import [LineageOS Infra]
-
-* android_packages_resources_devicesettings
-f2b92f1 Automatic translation import [LineageOS Infra]
+* android_device_realme_luigi
+83d52fc luigi: Update from RMX3660_14.0.0.1200(EX01) [Vivekachooz]
 
 * android
-851baa6 manifest: Track android15-release for vboot_reference [Nolen Johnson]
-5e78a32 manifest: Stop tracking coreboot [Nolen Johnson]
-ee56d1f manifest: Switch to our fork of system/chre [Michael Bestas]
-ec9490b manifest: Update legacy AOSP repo list [Michael Bestas]
-b6e27c8 manifest: December 2024 Quarterly Platform Release and Security update [Michael Bestas]
-b47f626 LineageOS 22.1 [Michael Bestas]
+0f178dc manifest: Track external/wpa_supplicant_8 [Tim Zimmermann]
 
-* android_packages_apps_Recorder
-23e5b29 Automatic translation import [LineageOS Infra]
+* android_build
+0dcc651 Export TARGET_BOARD_PLATFORM to soong [Bill Yang]
+
+* android_external_wpa_supplicant_8
+e38a523 wpa_supplicant: add support for bcmdhd SAE authentication offload [Tim Zimmermann]
+
+* android_frameworks_base
+ce4a66e fixup! Introduce high touch polling rate feature control [Michael Bestas]
+ef033bb fixup! Add high touch sensitivity and hovering to InputService [Chirayu Desai]
+d130f25 SystemUI: Don't remove keyguard slice view [LuK1337]
+be5657d SystemUI: Fix constraints for keyguard slice view [LuK1337]
+593a115 fixup! Add an option to force pre-O apps to use full screen aspect ratio [someone5678]
+
+* android_hardware_amlogic_kernel-modules_media-pie
+87c3bf3 Squashed Revert: Bring Android.mk rules back [Nolen Johnson]
+
+* android_hardware_amlogic_kernel-modules_optee-pie
+89e9c57 Revert "optee: Remove Android makefile with old-style build rules" [Nolen Johnson]
+
+* android_hardware_amlogic_kernel-modules_rtk_btusb
+d96ce06 rtk_btusb: Hardcode as module [Nolen Johnson]
+
+* android_hardware_amlogic_kernel-modules_rtl8822bs
+51e1eba rtl8822bs: Fix compilation using kbuild [Bruno Martins]
+a7d5f6f rtl8822bs: Remove Android makefile with old-style build rules [Bruno Martins]
+
+* android_hardware_amlogic_kernel-modules_rtl8822cs
+95f1b71 rtl8822cs: Fix compilation using kbuild [Bruno Martins]
+4b48c88 rtl8822cs: Remove Android makefile with old-style build rules [Bruno Martins]
+
+* android_hardware_oplus
+8691a35 sepolicy: qti: Move some SM8150/SM8250 wakeup nodes to qcom sepolicy [patr_]
+
+* android_hardware_sony
+a79b6b3 sepolicy: remove duplicated wakeup node labels [dianlujitao]
+
+* android_hardware_xiaomi
+dc4e80c xiaomi: Run bpfix [basamaryan]
+
+* android_packages_apps_Glimpse
+e88669a Glimpse: Sync up with Twelve [Sebastiano Barezzi]
 
 * android_packages_apps_Jelly
 7fdca2a Jelly: Resize main activity if IME is visible [SaeedDev94]
-6c5e814 Jelly: Update org.jetbrains.kotlin.android to 1.9.22 [SaeedDev94]
-2723b5e Jelly: Remove Version/4.0 from UA [SaeedDev94]
-ab14dab Jelly: Update desktop UA to the latest Linux google-chrome-stable [SaeedDev94]
-5e314df Automatic translation import [LineageOS Infra]
 
-* android_packages_apps_Updater
-1d33cc3 Updater: push-update: unroot on exit if zip exists [Timi]
+* android_packages_apps_Messaging
+6cdd458 Messaging: Tint recipient field properly [Michael W]
+8ae3809 Messaging: Style ViewPagerTabStrip's underline properly [Michael W]
+edb2686 Messaging: Get rid of storage permissions [Michael W]
+161c3e9 Messaging: Remove VisibleForTesting [Michael W]
+bbf9033 Messaging: Style the subject line properly [Michael W]
+e11745a Messaging: Style the attachment choosers properly [Michael W]
+3788b9d Messaging: Style the attachments properly [Michael W]
+6e9a803 Messaging: Handle default SMS app setting properly [Michael W]
+241b4cf Messaging: Style even more dialogs properly [Michael W]
+0aa08c0 Messaging: Finish after no more contacts are blocked [Michael W]
+e5eb059 Messaging: Rename in german [Michael W]
+68a3707 Messaging: Get rid of deprecated PhoneStateListener [Michael W]
+590243f Messaging: ContactMediaChooser: Remove permission requesting [Michael W]
+c73fdc5 Messaging: Replace permission requests with launchers [Michael W]
+7f464b4 Messaging: Replace own camera handling with pickers [Michael W]
+6cc0e38 Messaging: Get rid of onActivityResult() [Michael W]
+06bb0cc Messaging: Auto-format the manifest [Michael W]
+d940ab7 Messaging: Fix a few android related things [Michael W]
+e128bff Messaging: Language cleanup [Michael W]
+e335f6b Messaging: Use ActivityResultContracts for media and contacts [Michael W]
+7f9087a Messaging: Properly hide and show FAB [Michael W]
+d4ac014 Messaging: Use an extended FAB [Michael W]
+056cf5f Messaging: Fix navigation bar theming [Pranav Vashi]
+b12a4f8 Messaging: Fix loader not auto-restarting [Michael W]
+6d11a66 Messaging: Fix C-style array declarations [Michael W]
+5403d02 Messaging: Fix javadoc [Michael W]
+e29b158 Messaging: Remove unused code [Michael W]
+0069df8 Messaging: Replace explicit types [Michael W]
+9538179 Messaging: Use try-with-resource [Michael W]
+2a09fa3 Messaging: Fix indicated issues in layouts [Michael W]
+bd46716 Messaging: Remove unused static libs [Michael W]
+f31b198 Messaging: Remove usages of DataUsageStatUpdater [Michael W]
+5ed268c Messaging: Style the SwitchPreferences [Michael W]
+1914db5 Messaging: Convert further parts to androidx [Michael W]
+d430161 Messaging: Fix warnings about drawables and colors [Michael W]
+fd63d5f Messaging: Use StandardCharsets where possible [Michael W]
+a2f67b4 Messaging: Remove GServices [Michael W]
+7f22a3e Messaging: Remove low storage handling [Michael W]
+d43b6ff Messaging: Let there be lambdas [Michael W]
+c1b4aa4 Messaging: Nullability [Michael W]
+e35d385 Messaging: Remove unnecessary toString() and String.valueOf() calls [Michael W]
+21cb2b6 Messaging: Fix modifiers [Michael W]
+37d6d70 Messaging: Prevent broadcast spoofing [Michael W]
+101b31e Messaging: Remove unused resources [Michael W]
+3b7f05b Messaging: Replace ExifInterface with its androidx counterpart [Michael W]
+d869533 Messaging: Use xml drawables [Michael W]
+4ecf5bc Messaging: Fix wrong icons [Michael W]
+7c55a6d Messaging: Remove compatibility for old android versions [Michael W]
+9bbc7a8 Messaging: Fix file permissions [Michael W]
+a65de2a Messaging: Rename androidx.appcompat.mms [Michael W]
+009df43 Messaging: Remove cell broadcasts [Michael W]
+6a10100 Messaging: Properly style dialogs [Michael W]
+bc93ce3 Messaging: Bump sdk (>=33, <=34) [Michael W]
+f3863c9 Messaging: Remove tests [Michael W]
 
-* android_vendor_lineage
-36c29e8 vars: 22.0 -> 22.1 [LuK1337]
-0c5aab2 repopick: unquote URL [Chirayu Desai]
-5bbc612 fixup! build: Add `privateremote` helper [Michael Bestas]
-e73fac8 flag_values: Enable AVF Custom VM support [Yumi Yukimura]
-4c6891d LineageOS 22.1 [Michael Bestas]
-a9e1b5e kernel: Update default clang version to clang-r530567 [Michael Bestas]
-9062d8e Revert^3 "config: Build NavigationBarMode2ButtonOverlay" [Michael Bestas]
-5319975 soong: generator: Update for AP4A [Michael Bestas]
-43c1a8b release: Bump aconfig flags extension to AP4A [Michael Bestas]
-fa4d7b7 vars: December 2024 Quarterly Platform Release and Security update [Michael Bestas]
-7cefcff build: Add `privateremote` helper [Michael Bestas]
+* android_packages_apps_Settings
+dc1856d Revert "Settings: Use display version for, well, displayed version" [Michael Bestas]
 
-* android_hardware_interfaces
-2a6684e Revert "Partial revert "Remove mapper from composer2.1 VTS"" [Michael Bestas]
-
-* android_packages_apps_LineageParts
-ba15fb4 Regenerate contributors cloud (2024-12-22) [Kevin F. Haggerty]
-0dfe810 LineageParts: Import ObservablePreferenceFragment from Settings [Michael Bestas]
-1c673bb Automatic translation import [LineageOS Infra]
-
-* android_lineage-sdk
-59c2643 LineageSettingsProvider: Migrate tethering_allow_vpn_upstreams to AOSP [LuK1337]
-1963836 Deprecate org.lineageos.platform.lineagesettings [Luca Stefani]
-4e9ea61 TrustInterfaceService: Allow BAL [Christian Hoffmann]
-b503f5c Automatic translation import [LineageOS Infra]
-
-* android_hardware_lineage_interfaces
-c0e0a19 power-libperfmgr: PowerHAL: fix deadlock while PowerHintSession calls to DoHint [jimmyshiu]
-c196adf revert revert power-libperfmgr: PowerHAL: fix native crash when switching different profiles in a binder call [jimmyshiu]
-3b415ee Revert "power-libperfmgr: PowerHAL: fix native crash when switching different profiles in a binder call" [Jimmy Shiu]
-9d1440a power-libperfmgr: Powerhal: fix the spamming debug log. [guibing]
-eb33fb3 power-libperfmgr: PowerHAL: fix native crash when switching different profiles in a binder call [jimmyshiu]
-1ca9b79 power-libperfmgr: PowerHAL: PowerHintSession to get profile by its tag [jimmyshiu]
-4134bd1 power-libperfmgr: HintManager: Handle ADPF tag profile with EventNode [Jimmy Shiu]
-a7a39c5 power-libperfmgr: PowerHAL: add session tag in dump log [jimmyshiu]
-52a7373 power-libperfmgr: Adpf: Add heuristic boost mode distribution statistics to dump log. [guibing]
-e829a79 power-libperfmgr: Adpf: Multitier heuristic boost based on janky status levels [guibing]
-fa09c26 power-libperfmgr: Add hint session tracker [Matt Buckley]
-5ed8fac power-libperfmgr: Make sure we mark session as closed [Matt Buckley]
-fd5f6d8 power-libperfmgr: Refactoring PowerHAL to allow for better testing [Matt Buckley]
-afd51bf power-libperfmgr: perfmgr: Teach GTest how to print quantities [Bruno BELANYI]
-a73c8ae power-libperfmgr: perfmgr: Use 'SessionTaskMap::add{,Gpu}Vote' [Bruno BELANYI]
-60d44db power-libperfmgr: Add implementation for Power Efficiency mode [Matt Buckley]
-0976d95 power-libperfmgr: adpf: Track different adpf session votes in separate traces. [guibing]
-da69ee3 power-libperfmgr: adpf: rename AdpfHintType to AdpfVoteType. [guibing]
-3fd7aee power-libperfmgr: adpf: fix the typo from "junk" to "jank" [guibing]
-01bbdfa power-libperfmgr: adpf: Add a target duration scale factor for hboost junk frame detection [guibing]
-c5989d3 power-libperfmgr: PowerHAL: Add LoadUp LoadReset specific profile values [Jimmy Shiu]
-67abd24 power-libperfmgr: Adpf: Add heuristic boost to adpf sessions. [guibing]
-b12f321 power-libperfmgr: Adpf: Add session status history recorder. [guibing]
-d6a8f41 power-libperfmgr: Use UclampMinInit for CPU LOAD UP/RESET hint [Jimmy Shiu]
-f9c595f power-libperfmgr: perfmgr: implement GPU_LOAD_UP [Bruno BELANYI]
-1c29e33 power-libperfmgr: perfmgr: Allow voting for different GPU hint types [Bruno BELANYI]
-cc55236 power-libperfmgr: perfmgr: Report sum of GPU capacity and load votes [Bruno BELANYI]
-3410df6 power-libperfmgr: perfmgr: Loop over sessions to report GPU capacity [Bruno BELANYI]
-d90b67c power-libperfmgr: perfmgr: Correct deletion of assignment. [Kevin DuBois]
-68888d9 power-libperfmgr: perfmgr: add trace and dumping for GPU boost. [Kevin DuBois]
-
-* android_hardware_qcom_sdm845_gps
-9e08be7 gps: Remove usage of std::shared_ptr<T>::unique() [Michael Bestas]
-
-* android_prebuilts_tools-lineage
-5003f4a tools-lineage: Import vboot_signer as of 15 release [Nolen Johnson]
-
-* android_hardware_qcom-caf_common
-3362b5b libqti-perfd-client: Remove undesired logging [someone5678]
-eb0e825 libqti-perfd-client: Define dummy perf_hint_renew method [someone5678]
-79e9554 libqti-perfd-client: Correct report values and types of methods [someone5678]
-
-* android_packages_apps_Etar
-2c578c6 Etar: Include as a preinstalled package in Private Space [Oliver Scott]
-275a5d5 Make java_sdk_library dependencies explicit [Jihoon Kang]
-b4a63c5 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_ElmyraService
-6d00b02 Automatic translation import [LineageOS Infra]
-
-* android_tools_extract-utils
-55822a5 extract_utils: add built-in extract fns to standalone extractor [Cosmin Tanislav]
-f2a475a extract_utils: implement strip_debug_sections() blob fixup [Alexander Winkowski]
-
-* android_prebuilts_extract-tools
-01a49a4 apktool: Update to v2.9.3-1-e3f0be1e-SNAPSHOT [LuK1337]
-9cd456c apktool: Update to version 2.9.3 [Sevenrock]
-
-* android_vendor_crowdin
-0586329 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Aperture
-84f17b0 Automatic translation import [LineageOS Infra]
-
-* android_hardware_samsung_slsi-linaro_interfaces
-1610021 interfaces: kill a2dp@1.0 ExynosA2DPOffload@2.0 [Stricted]
-9d37fbc interfaces: a2dp: android.hardware.bluetooth.a2dp@1.0 -> android.hardware.bluetooth.audio@2.0 [Nolen Johnson]
-
-* android_packages_apps_Glimpse
-cc93a0c Glimpse: Add android:largeHeap="true" [Luca Stefani]
-7bd7606 Glimpse: Reformat manifest [Sebastiano Barezzi]
-e387c35 Glimpse: Include as a preinstalled package in Private Space [Oliver Scott]
+* android_packages_apps_Trebuchet
+8498dd6 Launcher3: Address taskbar crash on fold devices [Pranav Vashi]
 
 * android_packages_apps_Twelve
-6298914 Automatic translation import [LineageOS Infra]
+a7c8487 Twelve: Handle timeout in remote clients [Joey]
+a689363 Twelve: Add album arts to AlbumsFragment [Joey]
+ccad876 Twelve: SubsonicDataSource: Remove useless toString call for playlist ID [Sebastiano Barezzi]
+508ef8e Twelve: LocalDataSource: Implement random suggestions [Joey]
+ce99120 Twelve: Animated play / pause icon [Joey]
+06d40cd Twelve: Contextual dialog for all media items [Sebastiano Barezzi]
+fae91b2 Twelve: Hide progress bar by default in widget layout [Joey]
+fe503c7 Twelve: Persist sorting preferences [Joey]
+f63581e Twelve: Add sort by artist to albums [Joey]
 
-* android_packages_apps_Camelot
-f513278 Automatic translation import [LineageOS Infra]
+* android_packages_apps_Updater
+a2e31f1 Revert "Updater: 20 and up are integers!" [Michael Bestas]
+b31dd16 Revert "Updater: Handle NumberFormatException" [Michael Bestas]
 
-* android_system_chre
-0df0621 Revert "Remove unused Android.mk for `chre`" [Michael Bestas]
-
-* android_packages_apps_Catapult
-c7925be Catapult: Don't override TvLauncher [Nolen Johnson]
-4a1f158 Catapult: Wire up Bluetooth button [Timi]
-abc6658 Catapult: Remove viewInflaterClass theme definition [Timi]
-28a5f7b Catapult: Update card popup menu visual [Timi]
-64716b1 Catapult: Refactor network button logic [Timi]
-a7dfde3 Catapult: Rename 'other apps' to 'all apps' [Timi]
-93456d2 Catapult: Disable uninstall button on certain packages [Timi]
-88938ca Catapult: Remove debug toast on app launch [Timi]
-5e28c0c Catapult: Ignore back key press in MainActivity [Timi]
-35d797d Catapult: Update suggestion titles [Timi]
-9bc2858 Catapult: Update add favorite view [Timi]
-73fab91 Catapult: Set app card banner background transparent [Timi]
-8588735 Catapult: Update top bar search title text size [Timi]
-6fcf163 Catapult: Create style for top bar buttons [Timi]
-e21c0b7 Catapult: Fix dismiss action on onGoing notifications [Timi]
-be1fb7d Catapult: Only unbind notification service if bind [Timi]
-6f9773e Catapult: Display over other apps [Timi]
-e892df5 Catapult: Add android.jar for system API [Timi]
-c81d3b9 Catapult: Override GMS launcher [Timi]
-5a520ac Catapult: Fix return from onKey [Timi]
-5562907 Catapult: Hide actions that require priv-app permissions [Timi]
-e54a2fd Catapult: Add default permissions [Timi]
-6a3bef7 Catapult: Setup sleep & power buttons [Timi]
-c2aab9b Catapult: Set up building on AOSP platform api [Timi]
-7e1b095 Catapult: Use platform api [Timi]
-5ba7ba3 Catapult: Set WIFI status disconnected if WifiInfo is null [Timi]
-5f226f8 Catapult: Convert service connection to flow [Luca Stefani]
-ed1fa0f Catapult: Use network object passes from callback [Luca Stefani]
-847d7a9 Catapult: Migrate NetworkCallback to flows [Luca Stefani]
-326c092 Catapult: Remove QueryFlow.flowCursor [Luca Stefani]
+* android_vendor_lineage
+292ca28 kernel: Block HIP detection through HIP_PATH=none [voidanix]
+33c2bee overlay: Change 5G+ -> 5G UC for T-Mobile [Alexander Koskovich]
+539b51c common: Disable continuous transaction tracing on userdebug builds [SamarV-121]
