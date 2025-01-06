@@ -1,149 +1,189 @@
 ====================
-     31-12-2024    
+     06-01-2025    
 ====================
 
-* android_device_realme_oscar
-4d12f25 oscar: Update from RMX3471_14.0.0.1100(EX01) [Vivekachooz]
-
-* android_device_realme_sm6375-common
-fb745c7 sm6375-common: Address missing libbinder symbols in libwfdnative [Nick Reuter]
-64607bb sm6375-common: Bump libwfdservice to android.media.audio.common.types-V4 [Nick Reuter]
-72971b0 sm6375-common: Update from RMX3471_14.0.0.1100(EX01) [Vivekachooz]
-
-* android_kernel_realme_sm6375
-6771d68 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
-e348512 power: oplus: Fix comparison of different enum types [pjgowtham]
-c8ff3ec arm64: configs: disable CONFIG_MSM_PERFORMANCE [Rick Yiu]
-
-* android_device_realme_luigi
-83d52fc luigi: Update from RMX3660_14.0.0.1200(EX01) [Vivekachooz]
+* android_kernel_oneplus_sm6375
+90bcda9 power: oplus: Fix comparison of different enum types [pjgowtham]
+e668327 arm64: configs: disable CONFIG_MSM_PERFORMANCE [Rick Yiu]
+404420f drivers/input: ilitek7807s: Don't ignore first irq [Sugakesshaa]
+e2d2880 oplus_touchscreen_v2: NT36672C_noflash: Set spi cs pin to high for normal boot [Vivekachooz]
+cef5b46 techpack: camera: Introduce OPLUS_FEATURE_CAMERA_GUNNAR [Albert Tang]
+4d4943d power: oplus: Fix incorrect EN_GPIO_MAX value [Vivekachooz]
+d7058ad drivers: oplus_discrete_charger: Resolve extra tokens warning [Albert Tang]
+a5df4da drivers: tcpc: Resolve unused variable warnings [Albert Tang]
+a947745 drivers: fsa4480-i2c: Fix misleading indentation warning [Albert Tang]
+b98c08d drivers: oplus_sm5602: Fix misleading indentation warning [Albert Tang]
+a656fd2 techpack: display: oplus: Resolve return value warnings [Albert Tang]
+3b7d6de drivers: oplus_p922x: Resolve return value warnings [LuK1337]
+3f5c759 drivers: Handle -Wvoid-pointer-to-int-cast warning [Albert Tang]
+52bae1c techpack: display: Fix uninitialized variable warnings [Michael Bestas]
+e9d092b oplus_touchscreen_v2: Fix unused variable warning [Albert Tang]
+c607930 treewide: Remove oplus makefile warnings [Michael Bestas]
+2ea88d6 OplusKernelEnvConfig.mk: Disable KEVENT_UPLOAD [Albert Tang]
+40303c7 oplus_touchscreen_v2: Force import FT3681 firmware [Albert Tang]
+1190639 drivers/power: oplus_discrete_charger: Add support for battery cycle count [Sugakesshaa]
+7e509f4 discrete_charger: Report design capacity correctly [Albert Tang]
+a2e1758 power: oplus: Report discharging status on ui soc update [LuK1337]
+050520e techpack: camera: Lower OPE max limit and stripe on oplus only [Albert Tang]
+d41b5d3 treewide: Fix more compilation errors [Albert Tang]
+501070c drivers: cmdline_parser: Fix malformed Kconfig [Bruno Martins]
+952cdb1 oplus_touchpanel_v2: Fix game mode not restoring on wakeup [LibXZR]
+d287af9 oplus_touchscreen_v2: Always enable gestures and assign unique keycodes [LuK1337]
+2efe7d2 oplus_touchscreen_v2: Add software only black gesture indep support [LuK1337]
+68c6524 display: oplus: Add fp_state sysfs [LuK1337]
+6e6fae1 msm/sde: prevent double register of input handler [Prashant Singh]
+77850a4 cnss2: Propagate WLAN MAC to cnss utils [LuK1337]
+670abf2 drivers, techpack: Resolve more clang-17 errors [Albert Tang]
+3a99c8f treewide: oplus: Address clang-17 build warnings [LuK1337]
+5b52328 treewide: Fix various compilation errors [Albert Tang]
+fbf2c76 configs: Generate holi-qgki_defconfig [Albert Tang]
+ca41286 oplus_QGKI.config: Enable CONFIG_IP_NF_TARGET_TTL [Aleksey Gavrilov]
+7ac1664 oplus_QGKI.config: Enable QCACLD and CONFIG_BUILD_ARM64_DT_OVERLAY [Albert Tang]
+97bc161 scripts: gki: Add additional oplus_Q/GKI.config fragments [Alexander Koskovich]
+2436cd0 arm64: configs: vendor: Import minimal oplus_Q/GKI fragments [Alexander Koskovich]
+bef9d33 techpack: camera: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
+70d4768 techpack: display: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
+7eb028c techpack: audio: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
+eaad0ae dts: vendor: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
+f71fcac treewide: Import changes from CPH2513_14.0.0.700 [Albert Tang]
 
 * android
-0f178dc manifest: Track external/wpa_supplicant_8 [Tim Zimmermann]
+821fba9 Fork device/generic/goldfish [Luca Stefani]
 
-* android_build
-0dcc651 Export TARGET_BOARD_PLATFORM to soong [Bill Yang]
-
-* android_external_wpa_supplicant_8
-e38a523 wpa_supplicant: add support for bcmdhd SAE authentication offload [Tim Zimmermann]
+* android_build_soong
+8e5eae4 Disable source map id usage in eng builds [Jared Duke]
+3dbe719 Allow selective R8 optimization for eng test_suites [Jared Duke]
 
 * android_frameworks_base
-ce4a66e fixup! Introduce high touch polling rate feature control [Michael Bestas]
-ef033bb fixup! Add high touch sensitivity and hovering to InputService [Chirayu Desai]
-d130f25 SystemUI: Don't remove keyguard slice view [LuK1337]
-be5657d SystemUI: Fix constraints for keyguard slice view [LuK1337]
-593a115 fixup! Add an option to force pre-O apps to use full screen aspect ratio [someone5678]
+d180fd7 SystemUI: Update UdfpsTouchOverlay sensorRect on updating overlay params [Dhina17]
+8f2b06f fixup! SystemUI: Fix constraints for keyguard slice view [LuK1337]
+eef5777 Automatic translation import [LineageOS Infra]
 
-* android_hardware_amlogic_kernel-modules_media-pie
-87c3bf3 Squashed Revert: Bring Android.mk rules back [Nolen Johnson]
+* android_hardware_interfaces
+8d5bf37 Camera: Remap camera IDs by property if it is defined [Ivan Vecera]
+8526b69 Camera: Maintain set of non-external cameras [Ivan Vecera]
 
-* android_hardware_amlogic_kernel-modules_optee-pie
-89e9c57 Revert "optee: Remove Android makefile with old-style build rules" [Nolen Johnson]
+* android_hardware_lineage_compat
+e13c629 compat: expose android.hardware.sensors@1.0-convert as shared lib [nift4]
 
-* android_hardware_amlogic_kernel-modules_rtk_btusb
-d96ce06 rtk_btusb: Hardcode as module [Nolen Johnson]
+* android_hardware_qcom-caf_common
+c89b361 qcom: Set soong configs required by sdm845 libgrallocutils [Michael Bestas]
+dbae08f qcom: Enable gralloc4 on 4.14/4.19 families [Michael Bestas]
+4cfb859 qcom: Only set TARGET_USES_COLOR_METADATA for UM 3.18 family [Michael Bestas]
 
-* android_hardware_amlogic_kernel-modules_rtl8822bs
-51e1eba rtl8822bs: Fix compilation using kbuild [Bruno Martins]
-a7d5f6f rtl8822bs: Remove Android makefile with old-style build rules [Bruno Martins]
+* android_lineage-sdk
+5e5212c sdk: Try getting LineageHardwareService again before checking for it [Andy CrossGate Yan]
 
-* android_hardware_amlogic_kernel-modules_rtl8822cs
-95f1b71 rtl8822cs: Fix compilation using kbuild [Bruno Martins]
-4b48c88 rtl8822cs: Remove Android makefile with old-style build rules [Bruno Martins]
+* android_packages_apps_Aperture
+e34ee13 Aperture: Remove unused expression [Luca Stefani]
+2e066d2 Aperture: Switch to coil3 [Luca Stefani]
+6288db3 Automatic translation import [LineageOS Infra]
+f58b1a4 Aperture: Bump gradle-generatebp to 1.17 [Luca Stefani]
 
-* android_hardware_oplus
-8691a35 sepolicy: qti: Move some SM8150/SM8250 wakeup nodes to qcom sepolicy [patr_]
+* android_packages_apps_Backgrounds
+68f6e81 Automatic translation import [LineageOS Infra]
 
-* android_hardware_sony
-a79b6b3 sepolicy: remove duplicated wakeup node labels [dianlujitao]
+* android_packages_apps_Camelot
+5d6aff2 Automatic translation import [LineageOS Infra]
+4d3e9e0 Camelot: Bump gradle-generatebp to 1.17 [Luca Stefani]
 
-* android_hardware_xiaomi
-dc4e80c xiaomi: Run bpfix [basamaryan]
+* android_packages_apps_Catapult
+cae943b Catapult: Add CI for gradle-generatebp [LuK1337]
+f5833cb Catapult: Bump gradle-generatebp to 1.17 [Luca Stefani]
+
+* android_packages_apps_DeskClock
+a2df299 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Dialer
+36d512e Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_ElmyraService
+74b7a67 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Etar
+63f4cd6 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_FlipFlap
+7c64363 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Glimpse
-e88669a Glimpse: Sync up with Twelve [Sebastiano Barezzi]
+b487397 Glimpse: Center crop thumbnails [Luca Stefani]
+58b55cb Glimpse: Force thumbnail image size to MAX_THUMBNAIL_SIZE [Luca Stefani]
+37f3b68 Glimpse: Handle not found and empty albums again [Sebastiano Barezzi]
+4797054 Glimpse: ViewActivity: Set the adapter data and position at the same time [Sebastiano Barezzi]
+86fff52 Glimpse: Reformat code [Sebastiano Barezzi]
+85fd500 Glimpse: Coil -> Glide [Sebastiano Barezzi]
+4ce3f48 Glimpse: Bump gradle-generatebp to 1.19 [Sebastiano Barezzi]
+a316375 Glimpse: Default null bucket display name to Build.MODEL [Luca Stefani]
+7a94824 Glimpse: Allow album name to be null [Luca Stefani]
+a30b5a5 Glimpse: Allow media display name to be null [Luca Stefani]
+9b88adb Automatic translation import [LineageOS Infra]
+db811f2 Glimpse: Bump gradle-generatebp to 1.17 [Luca Stefani]
+a039693 Glimpse: Remove scope from MediaRepository [Luca Stefani]
+d4711b8 Glimpse: Use DefaultSelectionTracker's AdapterDataObserver [LuK1337]
 
 * android_packages_apps_Jelly
-7fdca2a Jelly: Resize main activity if IME is visible [SaeedDev94]
+58452d5 Jelly: Allow to disable Home Page autoload [SaeedDev94]
+fb3d412 Jelly: add hint for auto complete [SaeedDev94]
+d7d88d7 Jelly: url_bar_layout: hide LinearProgressIndicator by default [SaeedDev94]
+8cc065b Jelly: remove settings.databaseEnabled [SaeedDev94]
+7db4219 Jelly: Add history suggestion provider [SaeedDev94]
+eed0375 Jelly: Migrate suggestion provider to flow [Luca Stefani]
+a67ec9d Automatic translation import [LineageOS Infra]
+80b212e Jelly: Bump gradle-generatebp to 1.17 [Luca Stefani]
+dd1e705 Jelly: Sync history changed via History API [SaeedDev94]
+c5d1df9 Jelly: Allow to enable dynamic popups [SaeedDev94]
+68f7000 Jelly: Resolve dynamic new tab URLs semi-automatically [SaeedDev94]
+
+* android_packages_apps_LineageParts
+941f8ee Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Messaging
-6cdd458 Messaging: Tint recipient field properly [Michael W]
-8ae3809 Messaging: Style ViewPagerTabStrip's underline properly [Michael W]
-edb2686 Messaging: Get rid of storage permissions [Michael W]
-161c3e9 Messaging: Remove VisibleForTesting [Michael W]
-bbf9033 Messaging: Style the subject line properly [Michael W]
-e11745a Messaging: Style the attachment choosers properly [Michael W]
-3788b9d Messaging: Style the attachments properly [Michael W]
-6e9a803 Messaging: Handle default SMS app setting properly [Michael W]
-241b4cf Messaging: Style even more dialogs properly [Michael W]
-0aa08c0 Messaging: Finish after no more contacts are blocked [Michael W]
-e5eb059 Messaging: Rename in german [Michael W]
-68a3707 Messaging: Get rid of deprecated PhoneStateListener [Michael W]
-590243f Messaging: ContactMediaChooser: Remove permission requesting [Michael W]
-c73fdc5 Messaging: Replace permission requests with launchers [Michael W]
-7f464b4 Messaging: Replace own camera handling with pickers [Michael W]
-6cc0e38 Messaging: Get rid of onActivityResult() [Michael W]
-06bb0cc Messaging: Auto-format the manifest [Michael W]
-d940ab7 Messaging: Fix a few android related things [Michael W]
-e128bff Messaging: Language cleanup [Michael W]
-e335f6b Messaging: Use ActivityResultContracts for media and contacts [Michael W]
-7f9087a Messaging: Properly hide and show FAB [Michael W]
-d4ac014 Messaging: Use an extended FAB [Michael W]
-056cf5f Messaging: Fix navigation bar theming [Pranav Vashi]
-b12a4f8 Messaging: Fix loader not auto-restarting [Michael W]
-6d11a66 Messaging: Fix C-style array declarations [Michael W]
-5403d02 Messaging: Fix javadoc [Michael W]
-e29b158 Messaging: Remove unused code [Michael W]
-0069df8 Messaging: Replace explicit types [Michael W]
-9538179 Messaging: Use try-with-resource [Michael W]
-2a09fa3 Messaging: Fix indicated issues in layouts [Michael W]
-bd46716 Messaging: Remove unused static libs [Michael W]
-f31b198 Messaging: Remove usages of DataUsageStatUpdater [Michael W]
-5ed268c Messaging: Style the SwitchPreferences [Michael W]
-1914db5 Messaging: Convert further parts to androidx [Michael W]
-d430161 Messaging: Fix warnings about drawables and colors [Michael W]
-fd63d5f Messaging: Use StandardCharsets where possible [Michael W]
-a2f67b4 Messaging: Remove GServices [Michael W]
-7f22a3e Messaging: Remove low storage handling [Michael W]
-d43b6ff Messaging: Let there be lambdas [Michael W]
-c1b4aa4 Messaging: Nullability [Michael W]
-e35d385 Messaging: Remove unnecessary toString() and String.valueOf() calls [Michael W]
-21cb2b6 Messaging: Fix modifiers [Michael W]
-37d6d70 Messaging: Prevent broadcast spoofing [Michael W]
-101b31e Messaging: Remove unused resources [Michael W]
-3b7f05b Messaging: Replace ExifInterface with its androidx counterpart [Michael W]
-d869533 Messaging: Use xml drawables [Michael W]
-4ecf5bc Messaging: Fix wrong icons [Michael W]
-7c55a6d Messaging: Remove compatibility for old android versions [Michael W]
-9bbc7a8 Messaging: Fix file permissions [Michael W]
-a65de2a Messaging: Rename androidx.appcompat.mms [Michael W]
-009df43 Messaging: Remove cell broadcasts [Michael W]
-6a10100 Messaging: Properly style dialogs [Michael W]
-bc93ce3 Messaging: Bump sdk (>=33, <=34) [Michael W]
-f3863c9 Messaging: Remove tests [Michael W]
+7f639e3 Messaging: Use MaterialComponents everywhere instead of AppCompat [Michael W]
+
+* android_packages_apps_Recorder
+bc7d609 Recorder: Bump gradle-generatebp to 1.17 [Luca Stefani]
 
 * android_packages_apps_Settings
-dc1856d Revert "Settings: Use display version for, well, displayed version" [Michael Bestas]
+534a757 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Trebuchet
-8498dd6 Launcher3: Address taskbar crash on fold devices [Pranav Vashi]
+5138028 fixup! Cleanup widgetsModel and add tests [Ido Ben-Hur]
 
 * android_packages_apps_Twelve
-a7c8487 Twelve: Handle timeout in remote clients [Joey]
-a689363 Twelve: Add album arts to AlbumsFragment [Joey]
-ccad876 Twelve: SubsonicDataSource: Remove useless toString call for playlist ID [Sebastiano Barezzi]
-508ef8e Twelve: LocalDataSource: Implement random suggestions [Joey]
-ce99120 Twelve: Animated play / pause icon [Joey]
-06d40cd Twelve: Contextual dialog for all media items [Sebastiano Barezzi]
-fae91b2 Twelve: Hide progress bar by default in widget layout [Joey]
-fe503c7 Twelve: Persist sorting preferences [Joey]
-f63581e Twelve: Add sort by artist to albums [Joey]
+c289050 Twelve: Reduce default values for bufferForPlaybackMs and bufferForPlaybackAfterRebufferMs [Luca Stefani]
+bd9a3fe Twelve: Update media3 to 1.5.1 [Luca Stefani]
+9e77815 Twelve: Bump gradle-generatebp to 1.19 [LuK1337]
+32d8dd8 Automatic translation import [LineageOS Infra]
+641f951 Twelve: Handle more possible okhttp exceptions [Luca Stefani]
 
 * android_packages_apps_Updater
-a2e31f1 Revert "Updater: 20 and up are integers!" [Michael Bestas]
-b31dd16 Revert "Updater: Handle NumberFormatException" [Michael Bestas]
+b551ebc Updater: Migrate away from deprecated ProgressDialog [Hridaya Prajapati]
+d8e73e3 Automatic translation import [LineageOS Infra]
+
+* android_packages_providers_DownloadProvider
+8f732ed Automatic translation import [LineageOS Infra]
+
+* android_packages_services_Telephony
+4cf0ae6 Telephony: Migrate RadioInfo from ScrollView to NestedScrollView [ReallySnow]
+
+* android_tools_extract-utils
+d9318ce extract_utils: add logging for unprocessed files [Sarthak Roy]
+b3a33cf extract_utils: add type hints for BpBuilder's set() method [Cosmin Tanislav]
+84f4349 extract_utils: remove type hints for BpBuilder methods returning self [Cosmin Tanislav]
+a345b1b extract_utils: remove BpBuilder's get_partition() method [Cosmin Tanislav]
+a39a2bf extract_utils: do not store unused device / common modules [Cosmin Tanislav]
+1280d39 extract_utils: remove add_argument's store explicit default [Cosmin Tanislav]
+62fb085 extract_utils: add types for ExtractUtilsModule device and vendor [Cosmin Tanislav]
+3fbbd99 extract_utils: add types for device_with_common args [Cosmin Tanislav]
+e400cfc extract_utils: fix unslot_partition() for unslotted system_ext [LuK1337]
+
+* android_vendor_crowdin
+0f2cb1c Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
-292ca28 kernel: Block HIP detection through HIP_PATH=none [voidanix]
-33c2bee overlay: Change 5G+ -> 5G UC for T-Mobile [Alexander Koskovich]
-539b51c common: Disable continuous transaction tracing on userdebug builds [SamarV-121]
+744306f apns: Update T-Mobile U.S. (310|260) from tmobile_us-62000000022.10 [Alexander Koskovich]
+ee73731 roomservice: Exit if get_default_or_fallback_revision() fails [LuK1337]
+
+* android_vendor_qcom_opensource_fm-commonsys
+b9a26c3 Automatic translation import [LineageOS Infra]
