@@ -1,5 +1,5 @@
 ====================
-     02-01-2025    
+     06-01-2025    
 ====================
 
 * android
@@ -10,12 +10,21 @@
 3dbe719 Allow selective R8 optimization for eng test_suites [Jared Duke]
 
 * android_frameworks_base
+d180fd7 SystemUI: Update UdfpsTouchOverlay sensorRect on updating overlay params [Dhina17]
+8f2b06f fixup! SystemUI: Fix constraints for keyguard slice view [LuK1337]
 eef5777 Automatic translation import [LineageOS Infra]
+
+* android_hardware_qcom-caf_common
+c89b361 qcom: Set soong configs required by sdm845 libgrallocutils [Michael Bestas]
+dbae08f qcom: Enable gralloc4 on 4.14/4.19 families [Michael Bestas]
+4cfb859 qcom: Only set TARGET_USES_COLOR_METADATA for UM 3.18 family [Michael Bestas]
 
 * android_lineage-sdk
 5e5212c sdk: Try getting LineageHardwareService again before checking for it [Andy CrossGate Yan]
 
 * android_packages_apps_Aperture
+e34ee13 Aperture: Remove unused expression [Luca Stefani]
+2e066d2 Aperture: Switch to coil3 [Luca Stefani]
 6288db3 Automatic translation import [LineageOS Infra]
 f58b1a4 Aperture: Bump gradle-generatebp to 1.17 [Luca Stefani]
 
@@ -62,6 +71,9 @@ a039693 Glimpse: Remove scope from MediaRepository [Luca Stefani]
 d4711b8 Glimpse: Use DefaultSelectionTracker's AdapterDataObserver [LuK1337]
 
 * android_packages_apps_Jelly
+8cc065b Jelly: remove settings.databaseEnabled [SaeedDev94]
+7db4219 Jelly: Add history suggestion provider [SaeedDev94]
+eed0375 Jelly: Migrate suggestion provider to flow [Luca Stefani]
 a67ec9d Automatic translation import [LineageOS Infra]
 80b212e Jelly: Bump gradle-generatebp to 1.17 [Luca Stefani]
 dd1e705 Jelly: Sync history changed via History API [SaeedDev94]
@@ -80,15 +92,23 @@ bc7d609 Recorder: Bump gradle-generatebp to 1.17 [Luca Stefani]
 * android_packages_apps_Settings
 534a757 Automatic translation import [LineageOS Infra]
 
+* android_packages_apps_Trebuchet
+5138028 fixup! Cleanup widgetsModel and add tests [Ido Ben-Hur]
+
 * android_packages_apps_Twelve
+9e77815 Twelve: Bump gradle-generatebp to 1.19 [LuK1337]
 32d8dd8 Automatic translation import [LineageOS Infra]
 641f951 Twelve: Handle more possible okhttp exceptions [Luca Stefani]
 
 * android_packages_apps_Updater
+b551ebc Updater: Migrate away from deprecated ProgressDialog [Hridaya Prajapati]
 d8e73e3 Automatic translation import [LineageOS Infra]
 
 * android_packages_providers_DownloadProvider
 8f732ed Automatic translation import [LineageOS Infra]
+
+* android_packages_services_Telephony
+4cf0ae6 Telephony: Migrate RadioInfo from ScrollView to NestedScrollView [ReallySnow]
 
 * android_tools_extract-utils
 e400cfc extract_utils: fix unslot_partition() for unslotted system_ext [LuK1337]
@@ -97,6 +117,7 @@ e400cfc extract_utils: fix unslot_partition() for unslotted system_ext [LuK1337]
 0f2cb1c Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
+744306f apns: Update T-Mobile U.S. (310|260) from tmobile_us-62000000022.10 [Alexander Koskovich]
 ee73731 roomservice: Exit if get_default_or_fallback_revision() fails [LuK1337]
 
 * android_vendor_qcom_opensource_fm-commonsys
