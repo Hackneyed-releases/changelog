@@ -1,0 +1,65 @@
+name: Generate Changelog
+
+on:
+  workflow_dispatch:
+    inputs:
+      codename:
+        description: 'Select the text files to update'
+        required: true
+        type: choice
+        options:
+          - kiev.txt
+          - larry.txt
+          - luigi.txt
+          - oscar.txt
+          - oscaro.txt
+      commit_message:
+        description: 'Custom commit message'
+        required: true
+      fetch_date:
+        description: 'Date in DD-MM-YYYY format for commit filtering'
+        required: true
+      current_date:
+        description: 'Date in DD-MM-YYYY format for changelog output'
+        required: true  # Make this required
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r bin/requirements.txt  # Add your dependencies if necessary
+
+    - name: Run changelog generation script
+      run: |
+        source venv/bin/activate
+        python bin/gen_change.py
+      env:
+        TARGET_GITHUB_TOKEN: ${{ secrets.TARGET_GITHUB_TOKEN }}
+        FETCH_DATE: ${{ github.event.inputs.fetch_date }}  # Pass the user input date as an environment variable
+        CURRENT_DATE: ${{ github.event.inputs.current_date }}  # Used for output date in changelog header
+
+    - name: Overwrite selected text file
+      run: |
+        codename="${{ github.event.inputs.codename }}"
+        if [ -f "$codename" ]; then
+          echo "Overwriting $codename with new content"
+          cat change.txt > "$codename"  # Overwrite the file with the new content
+        else
+          echo "File $codename not found, skipping."
+        fi
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add "${{ github.event.inputs.codename }}"
+        git commit -m "${{ github.event.inputs.commit_message }}"
+        git push
