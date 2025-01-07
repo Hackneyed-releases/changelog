@@ -1,63 +1,11 @@
 ====================
-     06-01-2025    
+     07-01-2025    
 ====================
 
-* android_kernel_oneplus_sm6375
-90bcda9 power: oplus: Fix comparison of different enum types [pjgowtham]
-e668327 arm64: configs: disable CONFIG_MSM_PERFORMANCE [Rick Yiu]
-404420f drivers/input: ilitek7807s: Don't ignore first irq [Sugakesshaa]
-e2d2880 oplus_touchscreen_v2: NT36672C_noflash: Set spi cs pin to high for normal boot [Vivekachooz]
-cef5b46 techpack: camera: Introduce OPLUS_FEATURE_CAMERA_GUNNAR [Albert Tang]
-4d4943d power: oplus: Fix incorrect EN_GPIO_MAX value [Vivekachooz]
-d7058ad drivers: oplus_discrete_charger: Resolve extra tokens warning [Albert Tang]
-a5df4da drivers: tcpc: Resolve unused variable warnings [Albert Tang]
-a947745 drivers: fsa4480-i2c: Fix misleading indentation warning [Albert Tang]
-b98c08d drivers: oplus_sm5602: Fix misleading indentation warning [Albert Tang]
-a656fd2 techpack: display: oplus: Resolve return value warnings [Albert Tang]
-3b7d6de drivers: oplus_p922x: Resolve return value warnings [LuK1337]
-3f5c759 drivers: Handle -Wvoid-pointer-to-int-cast warning [Albert Tang]
-52bae1c techpack: display: Fix uninitialized variable warnings [Michael Bestas]
-e9d092b oplus_touchscreen_v2: Fix unused variable warning [Albert Tang]
-c607930 treewide: Remove oplus makefile warnings [Michael Bestas]
-2ea88d6 OplusKernelEnvConfig.mk: Disable KEVENT_UPLOAD [Albert Tang]
-40303c7 oplus_touchscreen_v2: Force import FT3681 firmware [Albert Tang]
-1190639 drivers/power: oplus_discrete_charger: Add support for battery cycle count [Sugakesshaa]
-7e509f4 discrete_charger: Report design capacity correctly [Albert Tang]
-a2e1758 power: oplus: Report discharging status on ui soc update [LuK1337]
-050520e techpack: camera: Lower OPE max limit and stripe on oplus only [Albert Tang]
-d41b5d3 treewide: Fix more compilation errors [Albert Tang]
-501070c drivers: cmdline_parser: Fix malformed Kconfig [Bruno Martins]
-952cdb1 oplus_touchpanel_v2: Fix game mode not restoring on wakeup [LibXZR]
-d287af9 oplus_touchscreen_v2: Always enable gestures and assign unique keycodes [LuK1337]
-2efe7d2 oplus_touchscreen_v2: Add software only black gesture indep support [LuK1337]
-68c6524 display: oplus: Add fp_state sysfs [LuK1337]
-6e6fae1 msm/sde: prevent double register of input handler [Prashant Singh]
-77850a4 cnss2: Propagate WLAN MAC to cnss utils [LuK1337]
-670abf2 drivers, techpack: Resolve more clang-17 errors [Albert Tang]
-3a99c8f treewide: oplus: Address clang-17 build warnings [LuK1337]
-5b52328 treewide: Fix various compilation errors [Albert Tang]
-fbf2c76 configs: Generate holi-qgki_defconfig [Albert Tang]
-ca41286 oplus_QGKI.config: Enable CONFIG_IP_NF_TARGET_TTL [Aleksey Gavrilov]
-7ac1664 oplus_QGKI.config: Enable QCACLD and CONFIG_BUILD_ARM64_DT_OVERLAY [Albert Tang]
-97bc161 scripts: gki: Add additional oplus_Q/GKI.config fragments [Alexander Koskovich]
-2436cd0 arm64: configs: vendor: Import minimal oplus_Q/GKI fragments [Alexander Koskovich]
-bef9d33 techpack: camera: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
-70d4768 techpack: display: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
-7eb028c techpack: audio: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
-eaad0ae dts: vendor: Import changes from CPH2513_14.0.0.700(EX01) [Albert Tang]
-f71fcac treewide: Import changes from CPH2513_14.0.0.700 [Albert Tang]
-
 * android
-821fba9 Fork device/generic/goldfish [Luca Stefani]
-
-* android_build_soong
-8e5eae4 Disable source map id usage in eng builds [Jared Duke]
-3dbe719 Allow selective R8 optimization for eng test_suites [Jared Duke]
-
-* android_frameworks_base
-d180fd7 SystemUI: Update UdfpsTouchOverlay sensorRect on updating overlay params [Dhina17]
-8f2b06f fixup! SystemUI: Fix constraints for keyguard slice view [LuK1337]
-eef5777 Automatic translation import [LineageOS Infra]
+ff76282 manifest: Stop tracking sm8450/sm8550 media HALs [Michael Bestas]
+e37975a manifest: Stop tracking AOSP sdm845 bluetooth [Michael Bestas]
+ebc2d5c manifest: Stop tracking AOSP sdm845/sm8150 ipacfg-mgr HALs [Michael Bestas]
 
 * android_hardware_interfaces
 8d5bf37 Camera: Remap camera IDs by property if it is defined [Ivan Vecera]
@@ -67,107 +15,59 @@ eef5777 Automatic translation import [LineageOS Infra]
 e13c629 compat: expose android.hardware.sensors@1.0-convert as shared lib [nift4]
 
 * android_hardware_qcom-caf_common
-c89b361 qcom: Set soong configs required by sdm845 libgrallocutils [Michael Bestas]
-dbae08f qcom: Enable gralloc4 on 4.14/4.19 families [Michael Bestas]
-4cfb859 qcom: Only set TARGET_USES_COLOR_METADATA for UM 3.18 family [Michael Bestas]
+5807122 common: Extend list of prebuilt interfaces [Nolen Johnson]
 
-* android_lineage-sdk
-5e5212c sdk: Try getting LineageHardwareService again before checking for it [Andy CrossGate Yan]
+* android_hardware_qcom_sdm845_display
+ec1f12c display: Remove libmemtrack library [Zube Molokwu]
+
+* android_hardware_qcom_sdm845_gps
+84f4869 Include Android.mk when building B4S4 [Roger Liao]
+645c2f2 Add os_pickup.bp to create namespace [ChengYou Ho]
+9e6a59f Add os_pickup.mk to control access to all sdm845 projects [Alexey Polyudov]
+4f3246a gps: Convert remaining Android.mk to bp [Michael Bestas]
+
+* android_hardware_qcom_sm7250_display
+5eb7ffa display: Remove libmemtrack library [Zube Molokwu]
+
+* android_hardware_qcom_sm8150_display
+c989343 display: Remove libmemtrack library [Zube Molokwu]
+
+* android_hardware_qcom_sm8150_gps
+035adb9 Include Android.mk when building S5 [Cyan_Hsieh]
+3bbbaa5 skip building when BUILD_WITHOUT_VENDOR = true [Alex Hong]
+1fa7d97 Use PRODUCT_PLATFORM as filter variable [ChengYou Ho]
+6551c67 switch sm8150 to msmnile [Cyan_Hsieh]
+24e8813 More googleplex integration - namespaces [Andrew Chant]
+8281dfe gps: Convert remaining Android.mk to bp [Michael Bestas]
 
 * android_packages_apps_Aperture
-e34ee13 Aperture: Remove unused expression [Luca Stefani]
-2e066d2 Aperture: Switch to coil3 [Luca Stefani]
-6288db3 Automatic translation import [LineageOS Infra]
-f58b1a4 Aperture: Bump gradle-generatebp to 1.17 [Luca Stefani]
-
-* android_packages_apps_Backgrounds
-68f6e81 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Camelot
-5d6aff2 Automatic translation import [LineageOS Infra]
-4d3e9e0 Camelot: Bump gradle-generatebp to 1.17 [Luca Stefani]
-
-* android_packages_apps_Catapult
-cae943b Catapult: Add CI for gradle-generatebp [LuK1337]
-f5833cb Catapult: Bump gradle-generatebp to 1.17 [Luca Stefani]
-
-* android_packages_apps_DeskClock
-a2df299 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Dialer
-36d512e Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_ElmyraService
-74b7a67 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Etar
-63f4cd6 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FlipFlap
-7c64363 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Glimpse
-b487397 Glimpse: Center crop thumbnails [Luca Stefani]
-58b55cb Glimpse: Force thumbnail image size to MAX_THUMBNAIL_SIZE [Luca Stefani]
-37f3b68 Glimpse: Handle not found and empty albums again [Sebastiano Barezzi]
-4797054 Glimpse: ViewActivity: Set the adapter data and position at the same time [Sebastiano Barezzi]
-86fff52 Glimpse: Reformat code [Sebastiano Barezzi]
-85fd500 Glimpse: Coil -> Glide [Sebastiano Barezzi]
-4ce3f48 Glimpse: Bump gradle-generatebp to 1.19 [Sebastiano Barezzi]
-a316375 Glimpse: Default null bucket display name to Build.MODEL [Luca Stefani]
-7a94824 Glimpse: Allow album name to be null [Luca Stefani]
-a30b5a5 Glimpse: Allow media display name to be null [Luca Stefani]
-9b88adb Automatic translation import [LineageOS Infra]
-db811f2 Glimpse: Bump gradle-generatebp to 1.17 [Luca Stefani]
-a039693 Glimpse: Remove scope from MediaRepository [Luca Stefani]
-d4711b8 Glimpse: Use DefaultSelectionTracker's AdapterDataObserver [LuK1337]
+5b5de03 lens_launcher: Don't optimize [Luca Stefani]
 
 * android_packages_apps_Jelly
+01168fd Jelly: Properly name onCreate argument [Luca Stefani]
+017b0b5 Jelly: s/DEPRECATION/Deprecation [Luca Stefani]
+d65a76e Jelly: MainActivity: add Suppress DEPRECATION for TaskDescription [SaeedDev94]
+c829ddd Jelly: WebClient: remove Suppress DEPRECATION [SaeedDev94]
+4cc1225 Jelly: WebViewExt: remove shouldAllowDownload [SaeedDev94]
+985cc20 Jelly: remove unused parts [SaeedDev94]
 58452d5 Jelly: Allow to disable Home Page autoload [SaeedDev94]
 fb3d412 Jelly: add hint for auto complete [SaeedDev94]
 d7d88d7 Jelly: url_bar_layout: hide LinearProgressIndicator by default [SaeedDev94]
-8cc065b Jelly: remove settings.databaseEnabled [SaeedDev94]
-7db4219 Jelly: Add history suggestion provider [SaeedDev94]
-eed0375 Jelly: Migrate suggestion provider to flow [Luca Stefani]
-a67ec9d Automatic translation import [LineageOS Infra]
-80b212e Jelly: Bump gradle-generatebp to 1.17 [Luca Stefani]
-dd1e705 Jelly: Sync history changed via History API [SaeedDev94]
-c5d1df9 Jelly: Allow to enable dynamic popups [SaeedDev94]
-68f7000 Jelly: Resolve dynamic new tab URLs semi-automatically [SaeedDev94]
-
-* android_packages_apps_LineageParts
-941f8ee Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Messaging
-7f639e3 Messaging: Use MaterialComponents everywhere instead of AppCompat [Michael W]
-
-* android_packages_apps_Recorder
-bc7d609 Recorder: Bump gradle-generatebp to 1.17 [Luca Stefani]
-
-* android_packages_apps_Settings
-534a757 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Trebuchet
-5138028 fixup! Cleanup widgetsModel and add tests [Ido Ben-Hur]
 
 * android_packages_apps_Twelve
+c3782fb Twelve: PlaybackService: Refactor custom command handler [Sebastiano Barezzi]
+759e375 Twelve: Get audio session via custom commands [Luca Stefani]
+1af5665 Twelve: Add simple audioSessionId getter [Luca Stefani]
+b827ab2 Twelve: Add "play" to MediaItemBottomSheetDialog [Joey]
+1a1ae6c Twelve: Play audio in activity fragment [Luca Stefani]
+98f8935 Twelve: Handle null genre/album name in activity [Luca Stefani]
+6e62525 Twelve: Add last played and most played albums activity tabs [Joey]
+a8f8510 Twelve: Track audio stats and last played information [Joey]
 c289050 Twelve: Reduce default values for bufferForPlaybackMs and bufferForPlaybackAfterRebufferMs [Luca Stefani]
 bd9a3fe Twelve: Update media3 to 1.5.1 [Luca Stefani]
-9e77815 Twelve: Bump gradle-generatebp to 1.19 [LuK1337]
-32d8dd8 Automatic translation import [LineageOS Infra]
-641f951 Twelve: Handle more possible okhttp exceptions [Luca Stefani]
-
-* android_packages_apps_Updater
-b551ebc Updater: Migrate away from deprecated ProgressDialog [Hridaya Prajapati]
-d8e73e3 Automatic translation import [LineageOS Infra]
-
-* android_packages_providers_DownloadProvider
-8f732ed Automatic translation import [LineageOS Infra]
-
-* android_packages_services_Telephony
-4cf0ae6 Telephony: Migrate RadioInfo from ScrollView to NestedScrollView [ReallySnow]
 
 * android_tools_extract-utils
+6314ccf extract_utils: add support for generating dummy shared lib packages [Cosmin Tanislav]
 d9318ce extract_utils: add logging for unprocessed files [Sarthak Roy]
 b3a33cf extract_utils: add type hints for BpBuilder's set() method [Cosmin Tanislav]
 84f4349 extract_utils: remove type hints for BpBuilder methods returning self [Cosmin Tanislav]
@@ -176,14 +76,7 @@ a39a2bf extract_utils: do not store unused device / common modules [Cosmin Tanis
 1280d39 extract_utils: remove add_argument's store explicit default [Cosmin Tanislav]
 62fb085 extract_utils: add types for ExtractUtilsModule device and vendor [Cosmin Tanislav]
 3fbbd99 extract_utils: add types for device_with_common args [Cosmin Tanislav]
-e400cfc extract_utils: fix unslot_partition() for unslotted system_ext [LuK1337]
-
-* android_vendor_crowdin
-0f2cb1c Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
-744306f apns: Update T-Mobile U.S. (310|260) from tmobile_us-62000000022.10 [Alexander Koskovich]
-ee73731 roomservice: Exit if get_default_or_fallback_revision() fails [LuK1337]
-
-* android_vendor_qcom_opensource_fm-commonsys
-b9a26c3 Automatic translation import [LineageOS Infra]
+991fd49 fixup! fixup! roomservice: Migrate from GitHub API to git ls-remote [LuK1337]
+d5aa270 fixup! roomservice: Migrate from GitHub API to git ls-remote [LuK1337]
