@@ -1,5 +1,5 @@
 ====================
-     07-01-2025    
+     08-01-2025    
 ====================
 
 * android
@@ -15,6 +15,7 @@ ebc2d5c manifest: Stop tracking AOSP sdm845/sm8150 ipacfg-mgr HALs [Michael Best
 e13c629 compat: expose android.hardware.sensors@1.0-convert as shared lib [nift4]
 
 * android_hardware_qcom-caf_common
+1b1901b common: Introduce QtiTelephonyCompat [danielml]
 5807122 common: Extend list of prebuilt interfaces [Nolen Johnson]
 
 * android_hardware_qcom_sdm845_display
@@ -55,6 +56,14 @@ fb3d412 Jelly: add hint for auto complete [SaeedDev94]
 d7d88d7 Jelly: url_bar_layout: hide LinearProgressIndicator by default [SaeedDev94]
 
 * android_packages_apps_Twelve
+aa56dde Twelve: Migrate generatebp to plugin declaration [Luca Stefani]
+cdb8339 Twelve: Use lifecycleScope in PlaybackService [Luca Stefani]
+972f961 Twelve: MediaRepositoryTree: Rework [Sebastiano Barezzi]
+5801f89 Twelve: MediaRepositoryTree: Remove useless `filterNotNull()` [Sebastiano Barezzi]
+cf89907 Twelve: Support splitting MediaStore volumes [Sebastiano Barezzi]
+5a21d97 Twelve: Rework visualizer [Sebastiano Barezzi]
+eff41e5 Twelve: PermissionsChecker: Add optional flag and custom denied message [Sebastiano Barezzi]
+431befb Twelve: Remove unused import [Sebastiano Barezzi]
 c3782fb Twelve: PlaybackService: Refactor custom command handler [Sebastiano Barezzi]
 759e375 Twelve: Get audio session via custom commands [Luca Stefani]
 1af5665 Twelve: Add simple audioSessionId getter [Luca Stefani]
