@@ -1,122 +1,68 @@
 ====================
-     12-01-2025    
+     16-01-2025    
 ====================
 
-* android
-d2e99c4 manifest: January 2025 Security update [Chirayu Desai]
-4629f4e manifest: Sync Catapult [Luca Stefani]
+* android_device_realme_luigi
+f34ea9d luigi: Disable OMX service [Michael Bestas]
 
-* android_build
-f71ff99 Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
+* android_device_oneplus_sm6375-common
+965a43a sm6375-common: Build init.qti.display_boot scripts [Rohit R Sekhar]
+82c3fb8 sm6375-common: remove OMX [dianlujitao]
+e31b01a fixup! sm6375-common: Remove software omx codec references [Michael Bestas]
+b543654 sm6375-common: Copy media_codecs_vendor to media_codecs [Michael Bestas]
+697e69e sm6375-common: Import media_codecs*.xml from vendor [Michael Bestas]
+
+* android_device_oneplus_larry
+fa948cf larry: Disable OMX service [Michael Bestas]
+
+* android
+e65b2f3 manifest: Switch to our fork of hardware/qcom/bt [Michael Bestas]
+ecd8a40 manifest: Stop tracking sm8350 media HAL [Michael Bestas]
 
 * android_external_mesa
-b72612d Merge tag 'mesa-24.3.3' of https://gitlab.freedesktop.org/mesa/mesa into lineage-22.1 [Yumi Yukimura]
-
-* android_frameworks_av
-e8bbb3a Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
+a5a7bc7 LINEAGE: android: Add prebuilts/intel-clc to $PATH in build recipe [Yumi Yukimura]
+0bcfdf2 LINEAGE: android: Include libdrm_intel for i915 too [Yumi Yukimura]
 
 * android_frameworks_base
-1e9e157 Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
-c116193 Revert "Remove Live Captions button from the Volume Dialog when the new Volmue Panel is enabled" [Dhina17]
+0737ddf SystemUI: Allow disabling QS tiles long click effect for specific tiles [Ido Ben-Hur]
+dbdbd81 QSLongPressEffect: Provide a fallback for devices with no primitives [Ido Ben-Hur]
+f418f61 SystemUI: screenrecord: Remove blinking stop dot [Ido Ben-Hur]
 
-* android_frameworks_libs_systemui
-03cb15b Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
+* android_hardware_lineage_interfaces
+ccb1a7a health: Move dumping function call into macro guards [Luofan Chen]
+85d6113 health: Combine ChargingControl constructor [Luofan Chen]
+70fab33 health: Don't use other nodes when a custom node is set [Luofan Chen]
+0d92a9d health: Force a default capability for the default nodes [Luofan Chen]
 
-* android_frameworks_native
-7578bd5 Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
+* android_hardware_motorola
+3c7aad4 motorola: Abuse symlinks to generate fsg mount point [Michael Bestas]
 
 * android_hardware_qcom-caf_common
-1b1901b common: Introduce QtiTelephonyCompat [danielml]
-
-* android_hardware_qcom_audio
-e5ddeb9 audio: Remove unsupported platforms [Michael Bestas]
-
-* android_hardware_qcom_display
-967638b display: Remove unsupported platforms [Michael Bestas]
-
-* android_hardware_qcom_gps
-d5ff4d8 gps: Remove unsupported platforms [Michael Bestas]
-
-* android_hardware_qcom_media
-c2ce39b media: Remove unsupported platforms [Michael Bestas]
+e2f45c7 Add conditional RFS install_symlink targets support [chaptsand]
+890ac8b common: Abuse symlinks to generate mount points [Michael Bestas]
+bc8b4e1 common: Sort prebuilt interfaces [Michael Bestas]
 
 * android_hardware_realtek
-82a80c1 rtk: Include wpa_supplicant_8 mk [Nolen Johnson]
+2f58daa rtkbt: convert to bp [Stricted]
 
-* android_packages_apps_Aperture
-c58ec83 Aperture: Migrate generatebp to plugin declaration [Luca Stefani]
-f1b269e Aperture: Bump gradle-generatebp to 1.21 [Luca Stefani]
-
-* android_packages_apps_Camelot
-714eaed Camelot: Handle rotation [Luca Stefani]
-e6a4300 Camelot: Update androidx.pdf to 1.0.0-alpha05 [Luca Stefani]
-0e4f30c Camelot: Migrate generatebp to plugin declaration [Luca Stefani]
-c103f81 Camelot: Bump gradle-generatebp to 1.21 [Luca Stefani]
-
-* android_packages_apps_Catapult
-ff6c084 Catapult: Migrate generatebp to plugin declaration [Luca Stefani]
-52647cf Catapult: Update assistant button visual [Timi]
-1488134 Catapult: Rename favorite related classes [Timi]
-616abfe Catapult: Create TwoLineButton class [Timi]
-0f32bbd Catapult: Visualize long press selection [Timi]
-49be4d7 Catapult: Update layout to spec [Timi]
-
-* android_packages_apps_ExactCalculator
-1a8f18b ExactCalculator: Migrate generatebp to plugin declaration [Luca Stefani]
-
-* android_packages_apps_Glimpse
-24ea58d Glimpse: Migrate generatebp to plugin declaration [Luca Stefani]
-b9001bd Glimpse: Bump gradle-generatebp to 1.21 [Luca Stefani]
+* android_lineage-sdk
+8a7af5a ChargingControl: Decouple charging control and main logic [Luofan Chen]
 
 * android_packages_apps_Jelly
-e12cd59 Jelly: Remove stale com.android.library plugin [Luca Stefani]
-5e3a594 Jelly: Migrate generatebp to plugin declaration [Luca Stefani]
+edd9612 Jelly: Wrap homepage EditText in TextInputLayout [SaeedDev94]
 
-* android_packages_apps_Recorder
-0d41c48 Recorder: Remove unused check [Luca Stefani]
-0ab4aa9 Recorder: Use correct arg names in overrides [Luca Stefani]
-bf5103e Recorder: Migrate generatebp to plugin declaration [Luca Stefani]
-
-* android_packages_apps_Settings
-fa7e6f0 BatteryTip: Hide Learn more button if URL is empty [Michael Bestas]
-6c6a2b1 Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
+* android_packages_apps_TvSettings
+ec0d8c3 TvSettings: Update banner [Asher Simonds]
 
 * android_packages_apps_Twelve
-033a0e5 Twelve: Quick reformat [Luca Stefani]
-b60de79 Twelve: Don't typealias with {Int,Float}Range [Luca Stefani]
-a28dc05 Twelve: Lint fixes [Sebastiano Barezzi]
-259d507 Twelve: Remove unused resources [Sebastiano Barezzi]
-a8f1387 Twelve: Use localized output mode name strings [Sebastiano Barezzi]
-10f2021 Twelve: Remove margin between provider and settings [Sebastiano Barezzi]
-a225edd Twelve: PlaybackControlBottomSheetDialogFragment: Fix switch listener [Sebastiano Barezzi]
-1101ae0 Twelve: Propagate more errors in Api.kt [Luca Stefani]
-f0130e3 Twelve: Add 32-bit floating output toggle [Sebastiano Barezzi]
-972784c Twelve: Listen to exoplayer updates using coroutines [Luca Stefani]
-fbf04e9 Twelve: Save last media item when task is removed [Luca Stefani]
-6608834 Twelve: Introduce speed/pitch playback control [Luca Stefani]
-5d06247 Twelve: Update AGP to 8.8.0 [Luca Stefani]
-44bd4b7 Twelve: Bump gradle-generatebp to 1.21 [Luca Stefani]
-954cc5b Twelve: Log request errors throwable [Luca Stefani]
-aa56dde Twelve: Migrate generatebp to plugin declaration [Luca Stefani]
-cdb8339 Twelve: Use lifecycleScope in PlaybackService [Luca Stefani]
-972f961 Twelve: MediaRepositoryTree: Rework [Sebastiano Barezzi]
-5801f89 Twelve: MediaRepositoryTree: Remove useless `filterNotNull()` [Sebastiano Barezzi]
-cf89907 Twelve: Support splitting MediaStore volumes [Sebastiano Barezzi]
-
-* android_packages_modules_Bluetooth
-7af6aaf Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
-
-* android_system_sepolicy
-e567bea Merge tag 'android-15.0.0_r10' into staging/lineage-22.1_merge-android-15.0.0_r10 [Michael Bestas]
-
-* android_tools_extract-utils
-bd5c3ad extract_utils: move ADB connection initialization to AdbSource.__init__() [Cosmin Tanislav]
-f4d3536 extract_utils: remove bad ADB default of extract script [Cosmin Tanislav]
-8f333e9 fixup! extract_utils: move extract partitions filtering to extract_image() [Cosmin Tanislav]
-3e25146 extract_utils: allow reading tar in any format [Cosmin Tanislav]
-fee2974 extract_utils: import contextmanager from contextlib [Cosmin Tanislav]
+5933211 Twelve: Slim down the RenderersFactory [Luca Stefani]
+a83f8ac Twelve: Migrate Subsonic to Api.kt [Luca Stefani]
+3b8ccf9 Twelve: Allow query parameters to be null [Luca Stefani]
+90c68c4 Twelve: Introduce MediaError.INVALID_RESPONSE [Luca Stefani]
+8346a97 Twelve: Migrate Subsonic auth to an interceptor [Luca Stefani]
+6cf4bcf Twelve: Handle weird playback speed values [Sebastiano Barezzi]
+b69b60d Twelve: Ensure pitch unlock state matches pitch parameter [Luca Stefani]
+206770c Twelve: Change playback speed stepping [Luca Stefani]
 
 * android_vendor_lineage
-142b5f9 Pixel 6-9: Sync SVN manually for Jan ASB [Chirayu Desai]
-85f5bd8 vars: January 2025 Security update [Chirayu Desai]
-81b54f9 Enable Catapult as config_defaultListenerAccessPackages [Timi]
+3b646b3 soong: Unset custom charging path var if it is not defined [Luofan Chen]
