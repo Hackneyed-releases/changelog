@@ -1,68 +1,122 @@
 ====================
-     16-01-2025    
+     21-01-2025    
 ====================
 
+* android_device_lineage_sepolicy
+d3389f9 sepolicy: Allow recovery (minadbd) to use TCP and VSOCK socket [Yumi Yukimura]
+6f210ac common: Unlabel aw2013 lights HAL [LuK1337]
+69dde9f common: Label lineage light-service [LuK1337]
+
+* android_device_realme_oscar
+c474a25 oscar: Declare adsp_avs_config.acdb symlink during extraction [LuK1337]
+
+* android_device_realme_sm6375-common
+a6a9831 sm6375-common: Move input surface to CCodec [Pawin Vongmasa]
+105ace6 sm6375-common: Migrate mount point creation out of Android.mk [Michael Bestas]
+
+* android_kernel_realme_sm6375
+9721090 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
+
 * android_device_realme_luigi
-f34ea9d luigi: Disable OMX service [Michael Bestas]
+f809603 luigi: Declare adsp_avs_config.acdb symlink during extraction [LuK1337]
 
 * android_device_oneplus_sm6375-common
-965a43a sm6375-common: Build init.qti.display_boot scripts [Rohit R Sekhar]
-82c3fb8 sm6375-common: remove OMX [dianlujitao]
-e31b01a fixup! sm6375-common: Remove software omx codec references [Michael Bestas]
-b543654 sm6375-common: Copy media_codecs_vendor to media_codecs [Michael Bestas]
-697e69e sm6375-common: Import media_codecs*.xml from vendor [Michael Bestas]
+8e3eed9 sm6375-common: Move input surface to CCodec [Pawin Vongmasa]
+13366dc sm6375-common: Migrate mount point creation out of Android.mk [Michael Bestas]
 
 * android_device_oneplus_larry
-fa948cf larry: Disable OMX service [Michael Bestas]
+a1dedaf larry: Declare adsp_avs_config.acdb symlink during extraction [LuK1337]
 
-* android
-e65b2f3 manifest: Switch to our fork of hardware/qcom/bt [Michael Bestas]
-ecd8a40 manifest: Stop tracking sm8350 media HAL [Michael Bestas]
+* android_kernel_oneplus_sm6375
+5ef56eb Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
 
-* android_external_mesa
-a5a7bc7 LINEAGE: android: Add prebuilts/intel-clc to $PATH in build recipe [Yumi Yukimura]
-0bcfdf2 LINEAGE: android: Include libdrm_intel for i915 too [Yumi Yukimura]
-
-* android_frameworks_base
-0737ddf SystemUI: Allow disabling QS tiles long click effect for specific tiles [Ido Ben-Hur]
-dbdbd81 QSLongPressEffect: Provide a fallback for devices with no primitives [Ido Ben-Hur]
-f418f61 SystemUI: screenrecord: Remove blinking stop dot [Ido Ben-Hur]
+* android_build
+062dc37 Install adb_keys into recovery [LuK1337]
 
 * android_hardware_lineage_interfaces
-ccb1a7a health: Move dumping function call into macro guards [Luofan Chen]
-85d6113 health: Combine ChargingControl constructor [Luofan Chen]
-70fab33 health: Don't use other nodes when a custom node is set [Luofan Chen]
-0d92a9d health: Force a default capability for the default nodes [Luofan Chen]
-
-* android_hardware_motorola
-3c7aad4 motorola: Abuse symlinks to generate fsg mount point [Michael Bestas]
+252de88 aidl: light: Add support for keyboard-backlight* devices [Giovanni Ricca]
+1922439 aidl: light: Add support for lcd_backlight0 device [Giovanni Ricca]
+e990e8d aidl: light: Add RGB sync support [LuK1337]
+f2c1b4a aidl: light: Lower battery light priority [LuK1337]
+6b69552 aidl: light: Support the `left` LED [danielml]
+b012b37 aidl: light: Add support for button-backlight2 device [LuK1337]
+dd452ec aidl: light: Add support for timed mode [Bruno Martins]
+f3108da aidl: light: Refactor [Sebastiano Barezzi]
+3f67d2c aidl: light: Implement attention light type [Sebastiano Barezzi]
+6c128d3 aidl: light: Make rgb a normal struct [Luca Stefani]
+4606a8f aidl: light: Reformat with clang-format [Sebastiano Barezzi]
+78af27c aidl: light: Construct HwLight in place [Luca Stefani]
+c3ca87e aidl: light: Use const on getLights' foreach loop [Sebastiano Barezzi]
+5b2088d aidl: light: Fix a bug where breath wouldn't be disabled when not needed [Sebastiano Barezzi]
+65c9f00 aidl: light: Uprev to V2 [Sebastiano Barezzi]
+0689f70 aidl: light: Add "backlight" to the list of backlight devices [Sebastiano Barezzi]
+88336c0 aidl: light: Rewrite backlight support [Sebastiano Barezzi]
+404de9a aidl: light: Make RGB utils rgb_t methods [Sebastiano Barezzi]
+e7e3b0e aidl: light: Don't store alpha value [Sebastiano Barezzi]
+57d5d33 aidl: light: Set color and brightness data size to 8bit [Sebastiano Barezzi]
+7b9814b aidl: light: Don't scale RGB brightness if alpha is 0 [BeYkeRYkt]
+e4d9183 aidl: light: Wire up [Sebastiano Barezzi]
+e8551f3 aidl: light: Rebrand to Lineage [Sebastiano Barezzi]
+c812b94 aidl: light: Initial stub service [Sebastiano Barezzi]
+7c5cffd RIP android.hardware.light@2.0-service.aw2013 [LuK1337]
 
 * android_hardware_qcom-caf_common
-e2f45c7 Add conditional RFS install_symlink targets support [chaptsand]
-890ac8b common: Abuse symlinks to generate mount points [Michael Bestas]
-bc8b4e1 common: Sort prebuilt interfaces [Michael Bestas]
+424c71f common: Add firmware-modem mount point [Bruno Martins]
+446c2a8 common: Make use of newly added mkdir{} [LuK1337]
 
-* android_hardware_realtek
-2f58daa rtkbt: convert to bp [Stricted]
+* android_packages_apps_Aperture
+fc36f30 Aperture: Fix kotlin 2 build [Luca Stefani]
 
-* android_lineage-sdk
-8a7af5a ChargingControl: Decouple charging control and main logic [Luofan Chen]
+* android_packages_apps_Dialer
+622d6b7 Dialer: Fix blinking hint text [Michael W]
 
 * android_packages_apps_Jelly
-edd9612 Jelly: Wrap homepage EditText in TextInputLayout [SaeedDev94]
+f144ca5 Jelly: Use ColorUtils#calculateLuminance() to detect light color [SaeedDev94]
+b3c55e3 Jelly: handle PermissionRequest (RESOURCE_PROTECTED_MEDIA_ID) [SaeedDev94]
+2ca24f8 Jelly: handle PermissionRequest (RESOURCE_VIDEO_CAPTURE and RESOURCE_AUDIO_CAPTURE) [SaeedDev94]
+9b94843 Jelly: PWA basic support [SaeedDev94]
+
+* android_packages_apps_Messaging
+28b9c1d Messaging: Make SMS delivered and MMS sent intents mutable [LuK1337]
 
 * android_packages_apps_TvSettings
-ec0d8c3 TvSettings: Update banner [Asher Simonds]
+f1e1498 TvSettings: Move About to top of Device page [Timi]
 
 * android_packages_apps_Twelve
-5933211 Twelve: Slim down the RenderersFactory [Luca Stefani]
-a83f8ac Twelve: Migrate Subsonic to Api.kt [Luca Stefani]
-3b8ccf9 Twelve: Allow query parameters to be null [Luca Stefani]
-90c68c4 Twelve: Introduce MediaError.INVALID_RESPONSE [Luca Stefani]
-8346a97 Twelve: Migrate Subsonic auth to an interceptor [Luca Stefani]
-6cf4bcf Twelve: Handle weird playback speed values [Sebastiano Barezzi]
-b69b60d Twelve: Ensure pitch unlock state matches pitch parameter [Luca Stefani]
-206770c Twelve: Change playback speed stepping [Luca Stefani]
+cac10ea Twelve: NowPlayingFragment: Use the correct URI for audio actions [Sebastiano Barezzi]
+8385ea7 Twelve: Add retries to Api.kt [Luca Stefani]
+f2d0e8b Twelve: Refactor Api.kt [Luca Stefani]
+af13d66 Twelve: Provider information UI [Sebastiano Barezzi]
+d203766 Twelve: MediaDataSource: Add status method [Sebastiano Barezzi]
+42cc47a Twelve: Rework LocalizedString [Sebastiano Barezzi]
+008b5fe Twelve: JellyfinClient: Implement getSystemInfo [Luca Stefani]
+7f563b1 Twelve: SubsonicResponse: Let `ping()` return the whole response [Sebastiano Barezzi]
+bc17bca Twelve: SubsonicClient: Implement getLicense [Sebastiano Barezzi]
+
+* android_packages_inputmethods_LatinIME
+a6bea29 LatinIME: Fix emoji delete key changing color when swiping [Michael W]
+e6e1366 LatinIME: Implement delete key repetition on emoji keyboard [Michael W]
+
+* android_packages_overlays_Lineage
+1d6bbeb overlays: IconPack: Apply default corner radius [ant]
+
+* android_tools_extract-utils
+96275fa extract_utils: add support for generating boot jars list [LuK1337]
+e2c291b extract_utils: implement extract fn for super volume name renaming [Cosmin Tanislav]
+c64e728 extract_utils: move ext4 details to separate file [Cosmin Tanislav]
+bad1cea extract_utils: implement extract fn for super retrofits [Cosmin Tanislav]
+2b57f84 extract_utils: add support for multiple extent sources [Cosmin Tanislav]
+88c5831 extract_utils: use number of processors for parallel [Cosmin Tanislav]
+4e259ab extract_utils: implement lpunpack in python [Cosmin Tanislav]
+e14f32b extract_utils: implement simg2img in python [Cosmin Tanislav]
+ab4a385 extract_utils: add support for list of extract fns [Cosmin Tanislav]
+a90ae2c extract_utils: implement URL source [Cosmin Tanislav]
+d1cc9ef extract_utils: refactor source and extraction [Cosmin Tanislav]
+c6f0ed4 extract_utils: remove support for extract_fns tuple key [Cosmin Tanislav]
+08f86e9 extract_utils: make hashing chunked [Cosmin Tanislav]
+f9088e2 extract_utils: do not redefine path name [Cosmin Tanislav]
+a919768 extract_utils: create vendor path in run() [LuK1337]
 
 * android_vendor_lineage
-3b646b3 soong: Unset custom charging path var if it is not defined [Luofan Chen]
+ff19773 soong: Make mkdir install dir optional [LuK1337]
+e0ff29e soong: Add mkdir module [Luca Stefani]
