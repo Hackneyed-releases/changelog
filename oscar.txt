@@ -1,122 +1,124 @@
 ====================
-     21-01-2025    
+     31-01-2025    
 ====================
 
-* android_device_lineage_sepolicy
-d3389f9 sepolicy: Allow recovery (minadbd) to use TCP and VSOCK socket [Yumi Yukimura]
-6f210ac common: Unlabel aw2013 lights HAL [LuK1337]
-69dde9f common: Label lineage light-service [LuK1337]
-
-* android_device_realme_oscar
-c474a25 oscar: Declare adsp_avs_config.acdb symlink during extraction [LuK1337]
-
 * android_device_realme_sm6375-common
-a6a9831 sm6375-common: Move input surface to CCodec [Pawin Vongmasa]
-105ace6 sm6375-common: Migrate mount point creation out of Android.mk [Michael Bestas]
-
-* android_kernel_realme_sm6375
-9721090 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
-
-* android_device_realme_luigi
-f809603 luigi: Declare adsp_avs_config.acdb symlink during extraction [LuK1337]
+972181a sm6375-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
 
 * android_device_oneplus_sm6375-common
-8e3eed9 sm6375-common: Move input surface to CCodec [Pawin Vongmasa]
-13366dc sm6375-common: Migrate mount point creation out of Android.mk [Michael Bestas]
+6890777 sm6375-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
 
-* android_device_oneplus_larry
-a1dedaf larry: Declare adsp_avs_config.acdb symlink during extraction [LuK1337]
-
-* android_kernel_oneplus_sm6375
-5ef56eb Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
+* android
+83c2066 manifest: Track sm8450 audioreach-graphservices [Michael Bestas]
 
 * android_build
-062dc37 Install adb_keys into recovery [LuK1337]
+92b516e fixup! Install adb_keys into recovery [LuK1337]
+
+* android_frameworks_base
+4a4a4eb Biometrics: Allow disabling of fingerprint cleanups [Quallenauge]
+
+* android_hardware_lineage_compat
+85d5c13 Introduce libnativehelper shim [Stricted]
 
 * android_hardware_lineage_interfaces
-252de88 aidl: light: Add support for keyboard-backlight* devices [Giovanni Ricca]
-1922439 aidl: light: Add support for lcd_backlight0 device [Giovanni Ricca]
-e990e8d aidl: light: Add RGB sync support [LuK1337]
-f2c1b4a aidl: light: Lower battery light priority [LuK1337]
-6b69552 aidl: light: Support the `left` LED [danielml]
-b012b37 aidl: light: Add support for button-backlight2 device [LuK1337]
-dd452ec aidl: light: Add support for timed mode [Bruno Martins]
-f3108da aidl: light: Refactor [Sebastiano Barezzi]
-3f67d2c aidl: light: Implement attention light type [Sebastiano Barezzi]
-6c128d3 aidl: light: Make rgb a normal struct [Luca Stefani]
-4606a8f aidl: light: Reformat with clang-format [Sebastiano Barezzi]
-78af27c aidl: light: Construct HwLight in place [Luca Stefani]
-c3ca87e aidl: light: Use const on getLights' foreach loop [Sebastiano Barezzi]
-5b2088d aidl: light: Fix a bug where breath wouldn't be disabled when not needed [Sebastiano Barezzi]
-65c9f00 aidl: light: Uprev to V2 [Sebastiano Barezzi]
-0689f70 aidl: light: Add "backlight" to the list of backlight devices [Sebastiano Barezzi]
-88336c0 aidl: light: Rewrite backlight support [Sebastiano Barezzi]
-404de9a aidl: light: Make RGB utils rgb_t methods [Sebastiano Barezzi]
-e7e3b0e aidl: light: Don't store alpha value [Sebastiano Barezzi]
-57d5d33 aidl: light: Set color and brightness data size to 8bit [Sebastiano Barezzi]
-7b9814b aidl: light: Don't scale RGB brightness if alpha is 0 [BeYkeRYkt]
-e4d9183 aidl: light: Wire up [Sebastiano Barezzi]
-e8551f3 aidl: light: Rebrand to Lineage [Sebastiano Barezzi]
-c812b94 aidl: light: Initial stub service [Sebastiano Barezzi]
-7c5cffd RIP android.hardware.light@2.0-service.aw2013 [LuK1337]
+96271f0 health: Change return type when we fail the sysfs read/write [Michael Bestas]
+6656659 health: Don't loop through charging nodes if a custom one is set [Michael Bestas]
+
+* android_hardware_oplus
+2194d3f gpt-utils: Add OTA support for pdp partition [dianlujitao]
+5d9c06b gpt-utils: Adding partitions in PTN_SWAP_LIST [LAVEENA FULWANI]
+cf82d4e gpt-utils: Add OTA support for spuservice partition [Roopesh Nataraja]
+ca7d3a1 gpt-utils: Fixes in oem-recovery in gpt_boot_chain_swap [Anubhav]
+e773c45 Revert "gpt-utils: Check ufs device first before checking partition names" [dianlujitao]
+4d04a8c gpt-utils: Add OTA support for pvmfw partition [Karra Harshitha]
+1da51d9 gpt-utils: Add OTA support for cpucp_dtb partition [Anthony Adamo]
 
 * android_hardware_qcom-caf_common
-424c71f common: Add firmware-modem mount point [Bruno Martins]
-446c2a8 common: Make use of newly added mkdir{} [LuK1337]
+f7e3ba2 common: Enable master side content protection with soong [Giovanni Ricca]
 
-* android_packages_apps_Aperture
-fc36f30 Aperture: Fix kotlin 2 build [Luca Stefani]
+* android_packages_apps_Car_Settings
+a486d48 fixup! Hardcode default pattern size [Cosmin Tanislav]
 
-* android_packages_apps_Dialer
-622d6b7 Dialer: Fix blinking hint text [Michael W]
+* android_packages_apps_Catapult
+93037f8 Catapult: Update notification layout [Timi]
+9c39db2 Catapult: Fix dismissing some notifications [Timi]
+c3ac79f Catapult: Skip home app dialog if system app [Timi]
 
-* android_packages_apps_Jelly
-f144ca5 Jelly: Use ColorUtils#calculateLuminance() to detect light color [SaeedDev94]
-b3c55e3 Jelly: handle PermissionRequest (RESOURCE_PROTECTED_MEDIA_ID) [SaeedDev94]
-2ca24f8 Jelly: handle PermissionRequest (RESOURCE_VIDEO_CAPTURE and RESOURCE_AUDIO_CAPTURE) [SaeedDev94]
-9b94843 Jelly: PWA basic support [SaeedDev94]
+* android_packages_apps_Etar
+6fa7ca7 Update dependencies [Gitsaibot]
+46616b7 New version 1.0.48 [Gitsaibot]
+1d2063f Go back to default view instead of quitting [Gitsaibot]
+cca1fb3 Update README.md [Gitsaibot]
+d2402fe 6430-t-Clear_notification_after_event_ends [Fahim Salam Chowdhury]
+c509b54 fixup! Etar: Add workaround for Notification trampoline [Gitsaibot]
+beb8dbb Etar: Add workaround for Notification trampoline [althafvly]
+95c4aef Remove obsolete sdk version checks [Gitsaibot]
+0718a92 Remove FOREGROUND_SERVICE_DATA_SYNC permission [Gitsaibot]
+77e51bc remove unnecessary sdk version checks [Jonas Häusler]
+c0a947e dismiss alarm when event is opened via notification [Jonas Häusler]
+b77574b remove global dismiss manager [Jonas Häusler]
+886c3fc start event activity from notification instead trampolining via service [Jonas Häusler]
 
-* android_packages_apps_Messaging
-28b9c1d Messaging: Make SMS delivered and MMS sent intents mutable [LuK1337]
+* android_packages_apps_Glimpse
+7a8535c Glimpse: Lowercase cursor column names [Luca Stefani]
+2fca29d Glimpse: Fix-up albums query [Luca Stefani]
+945ac7e Glimpse: Use SharingStarted.Eagerly for ParsedIntent dependent flows [LuK1337]
+5f912f2 Glimpse: Fix media loading for wildcard mime type in PickerActivity [LuK1337]
 
-* android_packages_apps_TvSettings
-f1e1498 TvSettings: Move About to top of Device page [Timi]
+* android_packages_apps_LineageParts
+e4e6a9d LineageParts: Support breath LED mode [LuK1337]
+b524188 LineageParts: Fix overlapping interval seekbar texts in RTL [Dhina17]
+
+* android_packages_apps_Settings
+8dbb64d fixup! Fix background data clobbering other policies [Tommy Webb]
+
+* android_packages_apps_Trebuchet
+86db034 Trebuchet: Implement auto open keyboard in drawer setting [Frederico Silva]
 
 * android_packages_apps_Twelve
-cac10ea Twelve: NowPlayingFragment: Use the correct URI for audio actions [Sebastiano Barezzi]
-8385ea7 Twelve: Add retries to Api.kt [Luca Stefani]
-f2d0e8b Twelve: Refactor Api.kt [Luca Stefani]
-af13d66 Twelve: Provider information UI [Sebastiano Barezzi]
-d203766 Twelve: MediaDataSource: Add status method [Sebastiano Barezzi]
-42cc47a Twelve: Rework LocalizedString [Sebastiano Barezzi]
-008b5fe Twelve: JellyfinClient: Implement getSystemInfo [Luca Stefani]
-7f563b1 Twelve: SubsonicResponse: Let `ping()` return the whole response [Sebastiano Barezzi]
-bc17bca Twelve: SubsonicClient: Implement getLicense [Sebastiano Barezzi]
-
-* android_packages_inputmethods_LatinIME
-a6bea29 LatinIME: Fix emoji delete key changing color when swiping [Michael W]
-e6e1366 LatinIME: Implement delete key repetition on emoji keyboard [Michael W]
+1d86b88 Twelve: Use library icon from design specifications [Joey]
+96ce1b5 Twelve: Add play next and add to queue in AlbumFragment [Joey]
+03e781f Twelve: AlbumViewModel: Cleanup code [Sebastiano Barezzi]
+e3f69e7 Twelve: Fix playlist toolbar menu XML file name [Sebastiano Barezzi]
+2d5f3a7 Twelve: Allow to reset local media playback stats from Settings [Joey]
+ef70df1 Twelve: SubsonicDataSource: Suppress unchecked cast lint [Luca Stefani]
+3a2be98 Twelve: Unify suppress lint labels [Luca Stefani]
+6b31559 Twelve: Nicer media item bottom sheet dialog padding values [Sebastiano Barezzi]
+3289cf3 Twelve: Get rid of media type prefix for media items [Sebastiano Barezzi]
+06d6573 Twelve: Add `http://ip` example to malformed provider uri msg [LuK1337]
+6442d14 Twelve: Fixup custom command calls [Sebastiano Barezzi]
+cd4dd1b Twelve: Freeze some state flows [Luca Stefani]
+c19abb1 Twelve: Don't state mediaStoreProviders [Luca Stefani]
+1a20f00 Twelve: Don't stop visualizer if it never started [Luca Stefani]
+976d08f Twelve: Fix unlucky progress slider out-of-range values [Sebastiano Barezzi]
+6407263 Twelve: Remove some useless overloads and better providers manager code [Sebastiano Barezzi]
+123b719 Twelve: Reformat code [Sebastiano Barezzi]
+2966626 Twelve: Remember chosen provider [Timi]
+93c79c0 Twelve: Add media item dialog shortcut in now playing fragment [Sebastiano Barezzi]
+db8f797 Twelve: Smarter thumbnail management [Sebastiano Barezzi]
+0b2f5f8 Twelve: Add shuffle play [Timi]
+fa70c24 Twelve: Redo progress slider animators [Sebastiano Barezzi]
+2611970 Twelve: Stop using BitmapFactory [Sebastiano Barezzi]
+74c9f14 Twelve: NowPlayingViewModel: Fix audio initial value [Sebastiano Barezzi]
 
 * android_packages_overlays_Lineage
-1d6bbeb overlays: IconPack: Apply default corner radius [ant]
+d723f75 overlays: IconPack: Set config_bottomDialogCornerRadius to 16dp [LuK1337]
+7ae0e26 overlays: IconPack: Restore config_dialogCornerRadius [LuK1337]
 
 * android_tools_extract-utils
-96275fa extract_utils: add support for generating boot jars list [LuK1337]
-e2c291b extract_utils: implement extract fn for super volume name renaming [Cosmin Tanislav]
-c64e728 extract_utils: move ext4 details to separate file [Cosmin Tanislav]
-bad1cea extract_utils: implement extract fn for super retrofits [Cosmin Tanislav]
-2b57f84 extract_utils: add support for multiple extent sources [Cosmin Tanislav]
-88c5831 extract_utils: use number of processors for parallel [Cosmin Tanislav]
-4e259ab extract_utils: implement lpunpack in python [Cosmin Tanislav]
-e14f32b extract_utils: implement simg2img in python [Cosmin Tanislav]
-ab4a385 extract_utils: add support for list of extract fns [Cosmin Tanislav]
-a90ae2c extract_utils: implement URL source [Cosmin Tanislav]
-d1cc9ef extract_utils: refactor source and extraction [Cosmin Tanislav]
-c6f0ed4 extract_utils: remove support for extract_fns tuple key [Cosmin Tanislav]
-08f86e9 extract_utils: make hashing chunked [Cosmin Tanislav]
-f9088e2 extract_utils: do not redefine path name [Cosmin Tanislav]
-a919768 extract_utils: create vendor path in run() [LuK1337]
+70997b4 extract_utils: fix rules for QDSP6 blobs [dianlujitao]
+a5549b0 extract_utils: fix printing of single path as multiple [Nolen Johnson]
 
 * android_vendor_lineage
-ff19773 soong: Make mkdir install dir optional [LuK1337]
-e0ff29e soong: Add mkdir module [Luca Stefani]
+1c00116 fixup! roomservice: Skip setting revision if it's the same as default [Patrick Gaskin]
+caae070 roomservice: Skip setting revision if it's the same as default [LuK1337]
+
+* android_vendor_qcom_opensource_core-utils-vendor
+115dcd7 qspaframework: Convert to blueprint [Michael Bestas]
+
+* android_vendor_qcom_opensource_dataservices
+b141057 datatop: Fix -Wstrict-prototypes errors [Michael Bestas]
+53082e4 datatop: Convert to blueprint [Michael Bestas]
+
+* android_vendor_qcom_opensource_fm-commonsys
+249783d FM: Add qcom.fmradio to required[] [LuK1337]
