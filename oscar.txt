@@ -1,6 +1,18 @@
 ====================
-     09-02-2025    
+     11-02-2025    
 ====================
+
+* android_device_realme_sm6375-common
+d649eb6 sm6375-common: Use aidl sensors multihal [Bruno Martins]
+6f1717d sm6375-common: move to aidl bootctrl hal [dianlujitao]
+7863901 sm6375-common: Move network scan overlay to OPlusSettingsResCommon [LuK1337]
+
+* android_device_oneplus_sm6375-common
+def0ec9 sm6375-common: Use aidl sensors multihal [Bruno Martins]
+1269506 sm6375-common: move to aidl bootctrl hal [dianlujitao]
+4ea2ca2 sm6375-common: Move network scan overlay to OPlusSettingsResCommon [LuK1337]
+5c94674 sm6375-common: props: Set call_vol_steps to 7 [Vivekachooz]
+6af5290 sm6375-common: Update from CPH2467_14.0.0.1330(EX01) [Vivekachooz]
 
 * android
 538c253 manifest: February 2025 Security Update [Michael Bestas]
@@ -8,6 +20,9 @@
 
 * android_build
 36c1905 Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
+
+* android_external_gptfdisk
+b605061 gptfdisk: Make libgptf available to product/vendor [Aaron Kling]
 
 * android_frameworks_av
 c2d9d7b Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
@@ -32,6 +47,8 @@ b49cd73 media_sync: Address unresolved symbol `demux_get_pcr` [Nolen Johnson]
 14b0b54 compat: add libaudioclient shim [nift4]
 
 * android_hardware_lineage_interfaces
+a90b7f9 light: Add `lcd-backlight-ex` to the list of backlight devices [Han Sol Jin]
+232ba05 light: Add `panel0-backlight-ex` to the list of backlight devices [Han Sol Jin]
 6063eaf light: Add "sprd_backlight" to the list of backlight devices [Giovanni Ricca]
 
 * android_hardware_nothing
@@ -44,6 +61,12 @@ f4b425d Automatic translation import [LineageOS Infra]
 8473f4a Automatic translation import [LineageOS Infra]
 
 * android_hardware_oplus
+95e9749 interfaces: Update OplusTouch to V2 [Bruno Martins]
+37688c9 sepolicy: qti: add rules for URCC [John Galt]
+e3197d4 interfaces: unfreeze touch aidl [John Galt]
+07bc326 sepolicy: qti: Add touch aidl service as a client of power hal [Dr-chen99]
+31ea1b8 vintf: add oplus touch and urcc [John Galt]
+2ef6bca interfaces: import touch aidl [Dr-chen99]
 331acdb sepolicy: qti: Label and write rules for oplus_consumer_ir device [pjgowtham]
 c342915 Introduce android.hardware.ir-service.oplus [pjgowtham]
 465fa45 sepolicy: qti: Partially hide labels of services relocated by Oneplus [Bruno Martins]
@@ -136,6 +159,7 @@ ee1c105 Automatic translation import [LineageOS Infra]
 2b4e22a Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Settings
+0eb034c Settings: Make SIM toggle unchangable when not supported [LuK1337]
 a0338d6 Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
 31ad24c Automatic translation import [LineageOS Infra]
 12ac629 Settings: Set key order on addition [AnierinB]
@@ -147,6 +171,13 @@ a0338d6 Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-1
 5579749 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Twelve
+dec2d10 Twelve: Make togglePlayPause() rewind if playback has ended [LuK1337]
+2c66e7b Twelve: Add some margin to create playlist button [Luca Stefani]
+11e6ecb Twelve: Don't open bottom sheet for "create playlist" item [Luca Stefani]
+8a0e7de Twelve: Move onPrepareView callbacks using item to onBindView [Luca Stefani]
+799a828 Twelve: Merge all media item views [Sebastiano Barezzi]
+c95473a Twelve: Reformat code [Sebastiano Barezzi]
+0836d86 Twelve: Fix/improve intent handling navigation [Sebastiano Barezzi]
 2a492f1 Twelve: Fix-up provider preference store [Luca Stefani]
 967f2ab Twelve: New create playlist fragment [Sebastiano Barezzi]
 23e5e41 Twelve: Convert Serializable users to Parcel [Luca Stefani]
@@ -183,6 +214,7 @@ ec91385 Automatic translation import [LineageOS Infra]
 9768bfb Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
+2053e60 TV: Ship Catapult [Timi]
 8cafe31 vars: February 2025 Security update [Chirayu Desai]
 81d6c3c Revert "config: Changes for libfmjni bp conversion" [borbelyvince]
 03f912f apns: Update Lebara UK [razorloves]
