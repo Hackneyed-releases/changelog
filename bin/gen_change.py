@@ -45,7 +45,7 @@ def convert_to_iso8601(date_str):
 DATE_FILTER = convert_to_iso8601(FETCH_DATE)
 HEADERS = {"Authorization": f"token {TARGET_GITHUB_TOKEN}"}
 
-EXCLUDED_KEYWORDS = ("samsung", "nvidia", "mediatek", "exynos", "nintendo", "sony", "lge")  # Add more if needed
+EXCLUDED_KEYWORDS = ("samsung", "nvidia", "mediatek", "exynos", "nintendo", "sony", "lge", "nothing", "google_pixel", "amlogic", "xiaomi")  # Add more if needed
 
 def fetch_repositories(org_name):
     """Fetch all active repositories for an organization, filtered by rules."""
