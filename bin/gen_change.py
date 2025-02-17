@@ -31,6 +31,9 @@ ALLOWED_REPOS = {
     "android_device_oneplus_sm6375-common",
     "android_device_oneplus_oscao",
     "android_device_oneplus_larry",
+    "android_device_motorola_sm7250-common",
+    "android_device_motorola_kiev",
+    "android_kernel_motorola_sm7250",
 }
 ALLOWED_PREFIXES = ("android_device_lineage_",)
 
