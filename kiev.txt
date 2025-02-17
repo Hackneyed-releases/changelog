@@ -1,58 +1,399 @@
 ====================
-     26-01-2025    
+     17-02-2025    
 ====================
 
+* android_device_lineage_sepolicy
+6585eff common: private: Don't audit mediahshell_app get wifi_config_prop [Nolen Johnson]
+a592049 common: private: Update ATV rules [Nolen Johnson]
+14fdb86 Restrict access to custom properties [Michael Bestas]
+7ce36a3 common: label Lineage fingerprint AIDL [Han Sol Jin]
+
+* android_device_motorola_sm7250-common
+523c3e1 sm7250-common: Move input surface to CCodec [Pawin Vongmasa]
+5b97cd8 sm7250-common: remove OMX [dianlujitao]
+2f9ab1f sm7250-common: Allow radio service to get moto_boot_prop [Vivekachooz]
+88bd095 sm7250-common: Drop unnecessary perf blobs [Vivekachooz]
+5229c14 sm7250-common: Nuke update-sha1sums.py [Nolen Johnson]
+b77ad62 sm7250-common: gps: Resolve unused parameter warnings [Michael Bestas]
+4f17b76 sm7250-common: gps/location: Convert remaining Android.mk to bp [Michael Bestas]
+a53e958 sm7250-common: gps: Remove unused implementations [Michael Bestas]
+2843ff8 sm7250-common: Drop debug.sf.enable_transaction_tracing [Vivekachooz]
+
+* android_device_motorola_kiev
+2c729dd kiev: add "can-swap-width-height" for video codecs [wenchangliu]
+5f12d98 kiev: configs: Update media c2 configs from FP4 [Hridaya Prajapati]
+db0dbbb kiev: remove OMX [dianlujitao]
+9704845 kiev: configs: media_profiles: Edit profiles xml in accordance with schema [Malathi Gottam]
+da9b184 kiev: configs: media: performance: remove non-existant codecs [Alexander Martinz]
+fc6e936 kiev: configs: media: drop OMX heic encoder [Alexander Martinz]
+7165818 kiev: configs: media: drop OMX sw video codecs [Alexander Martinz]
+1772a6a kiev: Import c2 configs and blobs from stock [Vivekachooz]
+cdc3e42 kiev: Copy media_codecs_vendor to media_codecs [Michael Bestas]
+65237c0 kiev: Drop unused media_profiles [Michael Bestas]
+612d27a kiev: Remove unused media_codecs [Michael Bestas]
+
 * android_device_realme_sm6375-common
-972181a sm6375-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
+d649eb6 sm6375-common: Use aidl sensors multihal [Bruno Martins]
+6f1717d sm6375-common: move to aidl bootctrl hal [dianlujitao]
+7863901 sm6375-common: Move network scan overlay to OPlusSettingsResCommon [LuK1337]
 
 * android_device_oneplus_sm6375-common
-6890777 sm6375-common: Move WfdCommon boot jar declaration to vendor [LuK1337]
+def0ec9 sm6375-common: Use aidl sensors multihal [Bruno Martins]
+1269506 sm6375-common: move to aidl bootctrl hal [dianlujitao]
+4ea2ca2 sm6375-common: Move network scan overlay to OPlusSettingsResCommon [LuK1337]
+5c94674 sm6375-common: props: Set call_vol_steps to 7 [Vivekachooz]
+6af5290 sm6375-common: Update from CPH2467_14.0.0.1330(EX01) [Vivekachooz]
+
+* android_device_oneplus_larry
+c061e86 larry: Update from CPH2467_14.0.0.1330(EX01) [Vivekachooz]
+
+* android
+538c253 manifest: February 2025 Security Update [Michael Bestas]
+43cb1e2 manifest: Drop legacy QCOM VR HAL [Michael Bestas]
 
 * android_build
-92b516e fixup! Install adb_keys into recovery [LuK1337]
+36c1905 Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
+0ed9194 Fix false positive when checking ELF prebuilts in PRODUCT_COPY_FILES [dianlujitao]
+
+* android_build_blueprint
+e29c960 Use pool for mutatorContext and transition contexts [Colin Cross]
+633ab9e Optimize proptools.CalculateHash allocations [Colin Cross]
+
+* android_build_soong
+219a62d Use blueprint/pool [Colin Cross]
+0cec59e Optimize getJarJarRuleText [Colin Cross]
+
+* android_external_gptfdisk
+b605061 gptfdisk: Make libgptf available to product/vendor [Aaron Kling]
+
+* android_frameworks_av
+c2d9d7b Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
 
 * android_frameworks_base
-4a4a4eb Biometrics: Allow disabling of fingerprint cleanups [Quallenauge]
+d6cbccb SystemUI: VpnTile: Don't ask for user/pw on IKEv2/IPSec PSK and RSA [Trogel]
+fcf50b7 Automatic translation import [LineageOS Infra]
+0451f44 Handle all exceptions when loading artwork bitmap [Luca Stefani]
+ee9b736 PhoneWindowManager: Support volume up/down to mute [Aaron Kling]
+c47ad6a FingerprintUtils: Migrate old fp config xml to new one on HIDL/AIDL switch [Luofan Chen]
+8f2748b Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
+9595096 SystemUI: Add DOUBLE_TAP_TO_WAKE to tuner service reset exceptions [LuK1337]
+472a487 SystemUI: Fix burn-in translations not applying to keyguard slices [Andy CrossGate Yan]
+de6640e Automatic translation import [LineageOS Infra]
+
+* android_hardware_interfaces
+6d4d419 cec: Don't spam "Machine is not on the network" [Nolen Johnson]
 
 * android_hardware_lineage_compat
-85d5c13 Introduce libnativehelper shim [Stricted]
+7697651 compat: libaudioclient: Shim MTK constructor as well [bengris32]
+14b0b54 compat: add libaudioclient shim [nift4]
 
 * android_hardware_lineage_interfaces
-96271f0 health: Change return type when we fail the sysfs read/write [Michael Bestas]
-6656659 health: Don't loop through charging nodes if a custom one is set [Michael Bestas]
+ed17ff3 libperfmgr: Only throw DisplayIdle errors if we support it [Nolen Johnson]
+8f445d1 fingerprint: aidl: Improve documentation on sensor_location [Luofan Chen]
+3824e1a fingerprint: aidl: Use soong to decide which arch to build [Giovanni Ricca]
+9d7e862 fingerprint: aidl: Allow setting more than one sensor location [Jens Reidel]
+87c6ff2 fingerprint: aidl: Initial legacy libhardware implementation [Fabian Leutenegger]
+15024d6 fingerprint: aidl: Initial stub service [Tim Zimmermann]
+a90b7f9 light: Add `lcd-backlight-ex` to the list of backlight devices [Han Sol Jin]
+232ba05 light: Add `panel0-backlight-ex` to the list of backlight devices [Han Sol Jin]
+6063eaf light: Add "sprd_backlight" to the list of backlight devices [Giovanni Ricca]
+
+* android_hardware_oneplus
+970dbcd Automatic translation import [LineageOS Infra]
+8473f4a Automatic translation import [LineageOS Infra]
+
+* android_hardware_oplus
+1177faa sepolicy: qti: Allow audio HAL to read debug audio props [Bruno Martins]
+d656351 sepolicy: qti: Label ro.sys.engineering.pre prop [Bruno Martins]
+81d0ee9 Automatic translation import [LineageOS Infra]
+a4ba264 sepolicy: qti: Remove duplicate snxxx AIDL rules [Bruno Martins]
+8d237bf bootctrl: Remove HIDL variants [LuK1337]
+8aa74e5 gpt-utils: Make BSG/SG configurable [Michael Bestas]
+95e9749 interfaces: Update OplusTouch to V2 [Bruno Martins]
+37688c9 sepolicy: qti: add rules for URCC [John Galt]
+e3197d4 interfaces: unfreeze touch aidl [John Galt]
+07bc326 sepolicy: qti: Add touch aidl service as a client of power hal [Dr-chen99]
+31ea1b8 vintf: add oplus touch and urcc [John Galt]
+2ef6bca interfaces: import touch aidl [Dr-chen99]
+331acdb sepolicy: qti: Label and write rules for oplus_consumer_ir device [pjgowtham]
+c342915 Introduce android.hardware.ir-service.oplus [pjgowtham]
+465fa45 sepolicy: qti: Partially hide labels of services relocated by Oneplus [Bruno Martins]
+71f8171 oplus: Deprecate NXP NFC and old HALs for good [Bruno Martins]
+ad80010 oplus: Keep a single clang-format in rootdir [Sebastiano Barezzi]
+b2c137f aidl: vibrator: Clean up aac_vibra_function.h [LuK1337]
+d2bc42d aidl: vibrator: Add dummy libaacvibrator shared_lib [Bruno Martins]
+fe3c661 sepolicy: qti: let vibrator service access richtap dev [Cosmin Tanislav]
+2823ba9 sepolicy: qti: label richtap vibrator service [Cosmin Tanislav]
+538d679 aidl: vibrator: implement richtap vibrator service [Cosmin Tanislav]
+32be43f aidl: vibrator: Place modded QTI impl into its own dir [Bruno Martins]
+2ac71df aidl: Add missing vintf version entries [Tim Zimmermann]
+309c373 bootctrl: add AIDL variants [dianlujitao]
+566dd12 Automatic translation import [LineageOS Infra]
+2194d3f gpt-utils: Add OTA support for pdp partition [dianlujitao]
+5d9c06b gpt-utils: Adding partitions in PTN_SWAP_LIST [LAVEENA FULWANI]
+cf82d4e gpt-utils: Add OTA support for spuservice partition [Roopesh Nataraja]
+ca7d3a1 gpt-utils: Fixes in oem-recovery in gpt_boot_chain_swap [Anubhav]
+e773c45 Revert "gpt-utils: Check ufs device first before checking partition names" [dianlujitao]
+4d04a8c gpt-utils: Add OTA support for pvmfw partition [Karra Harshitha]
+1da51d9 gpt-utils: Add OTA support for cpucp_dtb partition [Anthony Adamo]
 
 * android_hardware_qcom-caf_common
-f7e3ba2 common: Enable master side content protection with soong [Giovanni Ricca]
+645e8b6 qcom: Initial audio feature soong flags [Michael Bestas]
 
-* android_packages_apps_Car_Settings
-a486d48 fixup! Hardcode default pattern size [Cosmin Tanislav]
+* android_hardware_qcom_data_ipacfg-mgr
+816edd3 Remove no longer used Android.mk guard [Michael Bestas]
+ef8e1ce data-ipa-cfg-mgr: Disable NAT_DUMP on non-debug builds [Michael Bestas]
+ddc7901 data-ipa-cfg-mgr: Disable all the debugging [Bruno Martins]
+1921b32 ipanat: Remove test/Android.mk [Michael Bestas]
+e753ce9 ipacm: convert Android.mk files to Android.bp [Chaitanya Pratapa]
+63a4592 ipacm: Fix compilation error for switch case [mjavid]
+e821842 google: Add repo license information. [Andrew Chant]
+e12c3ac Add hardware/qcom/data/ipacfg-mgr/msm8998 soong namespace [ChengYou Ho]
+
+* android_lineage-sdk
+436d750 health: Format notification's target time according to locale [наб]
+2772796 Automatic translation import [LineageOS Infra]
+ce38f73 lineage-sdk: Add setting for atv two button mute [Aaron Kling]
+b9be94a sdk: Get rid of lineageos.os.{Build,Concierge} [Michael Bestas]
+cc0d50a Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Aperture
+59013c8 Aperture: Update kotlin to 1.9.23 [LuK1337]
+759f8d0 Aperture: Update gradle{,w} to 8.12 [LuK1337]
+0e49f58 Aperture: Update ZXing-C++ to 2.3.0 [LuK1337]
+62bc27b Aperture: Update CameraX to 1.5.0-alpha05 [LuK1337]
+39a00a1 Aperture: Ensure secure URIs are inserted in order [Luca Stefani]
+4fc2193 Aperture: Update kotlin to 1.9.10 [LuK1337]
+066ea34 Automatic translation import [LineageOS Infra]
+97a58dd Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_AudioFX
+02916e7 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Backgrounds
+4ab11f9 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Camelot
+23242a1 Automatic translation import [LineageOS Infra]
+8318cbd Camelot: Update androidx.pdf to 1.0.0-alpha06 [Luca Stefani]
+6f113dd Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Catapult
+c114091 Automatic translation import [LineageOS Infra]
+b24f455 Automatic translation import [LineageOS Infra]
+93037f8 Catapult: Update notification layout [Timi]
+9c39db2 Catapult: Fix dismissing some notifications [Timi]
+c3ac79f Catapult: Skip home app dialog if system app [Timi]
+
+* android_packages_apps_Contacts
+77afb19 Automatic translation import [LineageOS Infra]
+cb43fab Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_DeskClock
+296e428 DeskClock: Convert ListPreferences to SimpleMenuPreferences [Michael W]
+5ddac95 DeskClock: Remove the summaries for AM/PM and bold text [Michael W]
+f0f776a DeskClock: Hide or disable some screensaver settings [Michael W]
+713a916 DeskClock: Fix formatting in ScreensaverSettingsActivity [Michael W]
+3db9ea7 Automatic translation import [LineageOS Infra]
+852c5e9 Automatic translation import [LineageOS Infra]
+01228be DeskClock: Fix angles in dynamic icon [Daniel H]
+
+* android_packages_apps_Dialer
+5bf5719 Automatic translation import [LineageOS Infra]
+3e15353 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_DocumentsUI
+2b77689 Automatic translation import [LineageOS Infra]
+a6001ed Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_ElmyraService
+5e13492 Automatic translation import [LineageOS Infra]
+a0a9197 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Etar
+578b82a Automatic translation import [LineageOS Infra]
+03d7b5a Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_FMRadio
+7f5188d Automatic translation import [LineageOS Infra]
+f3eb07a FMRadio: Rework custom jni support [Michael Bestas]
+9249322 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_FlipFlap
+fe2abce Automatic translation import [LineageOS Infra]
+5816ba1 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Glimpse
+a0ad138 Glimpse: Split ACTION_REVIEW from ACTION_REVIEW_SECURE [Sebastiano Barezzi]
+d47de86 Automatic translation import [LineageOS Infra]
+c57bcd7 Glimpse: Create a Media out of thin air if not in media provider [Luca Stefani]
+c9a90aa Glimpse: Allow multiple selection for non-pick intents [LuK1337]
+be8eec5 Automatic translation import [LineageOS Infra]
+7a8535c Glimpse: Lowercase cursor column names [Luca Stefani]
+2fca29d Glimpse: Fix-up albums query [Luca Stefani]
+945ac7e Glimpse: Use SharingStarted.Eagerly for ParsedIntent dependent flows [LuK1337]
+5f912f2 Glimpse: Fix media loading for wildcard mime type in PickerActivity [LuK1337]
+
+* android_packages_apps_Jelly
+1f5f1bc Jelly: Save user agreement about protected media [SaeedDev94]
+3f4c549 Jelly: Include assets [Luca Stefani]
+525b66c Automatic translation import [LineageOS Infra]
+68e9e9f Jelly: Handle MediaSession For BackgroundShortcut [SaeedDev94]
+0d0d674 Jelly: Background Shortcuts [SaeedDev94]
+649eef6 Jelly: set MainActivity launchMode to singleTask [SaeedDev94]
+3796d36 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_LineageParts
+ce30ee7 Automatic translation import [LineageOS Infra]
+e37c42c Automatic translation import [LineageOS Infra]
+e4e6a9d LineageParts: Support breath LED mode [LuK1337]
+b524188 LineageParts: Fix overlapping interval seekbar texts in RTL [Dhina17]
+
+* android_packages_apps_Messaging
+ff479f4 Automatic translation import [LineageOS Infra]
+ee1c105 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Profiles
+7455e65 Automatic translation import [LineageOS Infra]
+8439675 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Recorder
+8f65896 Automatic translation import [LineageOS Infra]
+2b4e22a Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Settings
-8dbb64d fixup! Fix background data clobbering other policies [Tommy Webb]
+b722610 Automatic translation import [LineageOS Infra]
+0eb034c Settings: Make SIM toggle unchangable when not supported [LuK1337]
+a0338d6 Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
+31ad24c Automatic translation import [LineageOS Infra]
+12ac629 Settings: Set key order on addition [AnierinB]
+
+* android_packages_apps_SetupWizard
+eeb98ba Automatic translation import [LineageOS Infra]
+760cfc5 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_ThemePicker
+1c8d1e0 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Trebuchet
+ad70f3e Automatic translation import [LineageOS Infra]
+5579749 Automatic translation import [LineageOS Infra]
+86db034 Trebuchet: Implement auto open keyboard in drawer setting [Frederico Silva]
+
+* android_packages_apps_TvSettings
+d6b23f1 TvSettings: Support two button mute [Aaron Kling]
 
 * android_packages_apps_Twelve
-6442d14 Twelve: Fixup custom command calls [Sebastiano Barezzi]
-cd4dd1b Twelve: Freeze some state flows [Luca Stefani]
-c19abb1 Twelve: Don't state mediaStoreProviders [Luca Stefani]
-1a20f00 Twelve: Don't stop visualizer if it never started [Luca Stefani]
-976d08f Twelve: Fix unlucky progress slider out-of-range values [Sebastiano Barezzi]
-6407263 Twelve: Remove some useless overloads and better providers manager code [Sebastiano Barezzi]
-123b719 Twelve: Reformat code [Sebastiano Barezzi]
-2966626 Twelve: Remember chosen provider [Timi]
-93c79c0 Twelve: Add media item dialog shortcut in now playing fragment [Sebastiano Barezzi]
-db8f797 Twelve: Smarter thumbnail management [Sebastiano Barezzi]
-0b2f5f8 Twelve: Add shuffle play [Timi]
-fa70c24 Twelve: Redo progress slider animators [Sebastiano Barezzi]
-2611970 Twelve: Stop using BitmapFactory [Sebastiano Barezzi]
-74c9f14 Twelve: NowPlayingViewModel: Fix audio initial value [Sebastiano Barezzi]
+b503c04 Twelve: Make player/mediaLibrarySession lateinit [Luca Stefani]
+5d265a0 Twelve: Reformat code [Luca Stefani]
+1120101 Twelve: Handle empty resumption playlist [Luca Stefani]
+2a9b749 Twelve: Readd round icon attribute [Sebastiano Barezzi]
+1e4626b Twelve: Set wake mode to network [Luca Stefani]
+7c4ac24 Twelve: Tie CoilBitmapLoader to service scope [Luca Stefani]
+38aff6a Automatic translation import [LineageOS Infra]
+4edf7e3 Twelve: LocalDataSource: Stop pretending we can have artist thumbnails [Sebastiano Barezzi]
+69f3c76 Twelve: BaseMediaItemView: Simplify thumbnail handling [Sebastiano Barezzi]
+53ccfe0 Twelve: Navigate safely! [Luca Stefani]
+254cec7 Twelve: Ensure all media items have fallback titles [Luca Stefani]
+8e70bf3 Twelve: LocalDataSource: `/audio/albumart/<album_id>` exists too [Sebastiano Barezzi]
+1cd5d90 Twelve: LocalDataSource: Use hidden album art database [nift4]
+62db55b Twelve: Switch back to vendored material [Luca Stefani]
+33444d7 Twelve: Use a custom BitmapLoader for our service [Sebastiano Barezzi]
+472b00e Twelve: SubsonicDataSource: Use media item builders [Sebastiano Barezzi]
+8690156 Twelve: Simplify media item to data source and media type querying [Sebastiano Barezzi]
+f010219 Twelve: Use `ProviderIdentifier` for all fragment arguments [Sebastiano Barezzi]
+59cea6d Twelve: Hide trailing view for local provider [Luca Stefani]
+a7af174 Twelve: Media item builders! [Sebastiano Barezzi]
+32ff491 Twelve: Use Album thumbnail as Audio thumbnail [Joey]
+b5597d7 Twelve: Lowercase cursor column names [Luca Stefani]
+1a2d65a Twelve: Fix double .px in MAX_THUMBNAIL_SIZE [Luca Stefani]
+dec2d10 Twelve: Make togglePlayPause() rewind if playback has ended [LuK1337]
+2c66e7b Twelve: Add some margin to create playlist button [Luca Stefani]
+11e6ecb Twelve: Don't open bottom sheet for "create playlist" item [Luca Stefani]
+8a0e7de Twelve: Move onPrepareView callbacks using item to onBindView [Luca Stefani]
+799a828 Twelve: Merge all media item views [Sebastiano Barezzi]
+c95473a Twelve: Reformat code [Sebastiano Barezzi]
+0836d86 Twelve: Fix/improve intent handling navigation [Sebastiano Barezzi]
+2a492f1 Twelve: Fix-up provider preference store [Luca Stefani]
+967f2ab Twelve: New create playlist fragment [Sebastiano Barezzi]
+23e5e41 Twelve: Convert Serializable users to Parcel [Luca Stefani]
+ed57e27 Twelve: Better provider selector dialog [Sebastiano Barezzi]
+b06afb1 Twelve: Commonize Material 3 dialog fragments [Sebastiano Barezzi]
+e47e3be Automatic translation import [LineageOS Infra]
+1d86b88 Twelve: Use library icon from design specifications [Joey]
+96ce1b5 Twelve: Add play next and add to queue in AlbumFragment [Joey]
+03e781f Twelve: AlbumViewModel: Cleanup code [Sebastiano Barezzi]
+e3f69e7 Twelve: Fix playlist toolbar menu XML file name [Sebastiano Barezzi]
+2d5f3a7 Twelve: Allow to reset local media playback stats from Settings [Joey]
+ef70df1 Twelve: SubsonicDataSource: Suppress unchecked cast lint [Luca Stefani]
+3a2be98 Twelve: Unify suppress lint labels [Luca Stefani]
+6b31559 Twelve: Nicer media item bottom sheet dialog padding values [Sebastiano Barezzi]
+3289cf3 Twelve: Get rid of media type prefix for media items [Sebastiano Barezzi]
+06d6573 Twelve: Add `http://ip` example to malformed provider uri msg [LuK1337]
 
-* android_packages_overlays_Lineage
-d723f75 overlays: IconPack: Set config_bottomDialogCornerRadius to 16dp [LuK1337]
-7ae0e26 overlays: IconPack: Restore config_dialogCornerRadius [LuK1337]
+* android_packages_apps_Updater
+5ab3076 Updater: Show "no items" view after deleting last update [Michael W]
+6fafcc4 Automatic translation import [LineageOS Infra]
+e670f6e Automatic translation import [LineageOS Infra]
+
+* android_packages_inputmethods_LatinIME
+79f3aff Automatic translation import [LineageOS Infra]
+5170335 Automatic translation import [LineageOS Infra]
+de716ec LatinIME: Update actions/* [LuK1337]
+
+* android_packages_modules_Bluetooth
+c2414be Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
+
+* android_packages_providers_DownloadProvider
+be8b0fb Automatic translation import [LineageOS Infra]
+9b7f7a4 Automatic translation import [LineageOS Infra]
+
+* android_packages_resources_devicesettings
+8624d14 Automatic translation import [LineageOS Infra]
+ec91385 Automatic translation import [LineageOS Infra]
+
+* android_packages_services_Telecomm
+9eea11e Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
+
+* android_system_core
+5860c0f Merge tag 'android-15.0.0_r14' into staging/lineage-22.1_merge-android-15.0.0_r14 [Michael Bestas]
 
 * android_tools_extract-utils
-a5549b0 extract_utils: fix printing of single path as multiple [Nolen Johnson]
+9d8fe9b extract-utils: Don't make extract-factory mutually exclusive [Michael Bestas]
+70997b4 extract_utils: fix rules for QDSP6 blobs [dianlujitao]
+
+* android_vendor_crowdin
+fef707d Automatic translation import [LineageOS Infra]
+9768bfb Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
-1c00116 fixup! roomservice: Skip setting revision if it's the same as default [Patrick Gaskin]
-caae070 roomservice: Skip setting revision if it's the same as default [LuK1337]
+4ae5dc8 overlay: Set PermissionController help URLs [LuK1337]
+4119bc6 config: Long live ro.modversion [Michael Bestas]
+2053e60 TV: Ship Catapult [Timi]
+8cafe31 vars: February 2025 Security update [Chirayu Desai]
+81d6c3c Revert "config: Changes for libfmjni bp conversion" [borbelyvince]
+03f912f apns: Update Lebara UK [razorloves]
+728e6e0 vars: Update qcom tags [Michael Bestas]
+f5b67a8 kernel: sign GKI modules [dianlujitao]
+0c5ab30 kernel: preserve GKI modules in vendor modules.dep [dianlujitao]
+2f05d48 kernel: break the build when depmod finds missing symbols [dianlujitao]
+259906d kernel: consider gki modules when running depmod for vendor modules [dianlujitao]
+382aba2 kernel: reduce the use of find when copying modules [dianlujitao]
+8e2709c merge_dtbs: Craft unique name for final saved merged trees [Guru Das Srinagesh]
+81c8cad merge_dtbs: Use logging and argparse [Guru Das Srinagesh]
+bd92c42 merge_dtbs.py: Print only basenames of dtb* files [Guru Das Srinagesh]
+
+* android_vendor_qcom_opensource_core-utils-vendor
+115dcd7 qspaframework: Convert to blueprint [Michael Bestas]
+
+* android_vendor_qcom_opensource_dataservices
+b141057 datatop: Fix -Wstrict-prototypes errors [Michael Bestas]
+53082e4 datatop: Convert to blueprint [Michael Bestas]
+
+* android_vendor_qcom_opensource_fm-commonsys
+b38a391 Automatic translation import [LineageOS Infra]
+152dff0 Automatic translation import [LineageOS Infra]
+249783d FM: Add qcom.fmradio to required[] [LuK1337]
+
+* android_vendor_qcom_opensource_libfmjni
+c5ace14 libfmjni: Convert it to filegroup and header lib [Michael Bestas]
