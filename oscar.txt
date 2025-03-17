@@ -1,312 +1,156 @@
 ====================
-     03-03-2025    
+     17-03-2025    
 ====================
 
-* android_device_lineage_sepolicy
-6585eff common: private: Don't audit mediahshell_app get wifi_config_prop [Nolen Johnson]
-a592049 common: private: Update ATV rules [Nolen Johnson]
-14fdb86 Restrict access to custom properties [Michael Bestas]
-7ce36a3 common: label Lineage fingerprint AIDL [Han Sol Jin]
+* android_device_motorola_sm7250-common
+46ecc22 sm7250-common: sepolicy: Label missing wakeup nodes [basamaryan]
+35469b4 sm7250-common: Remove duplicate sysfs_wakeup labels [Hridaya Prajapati]
+64a5628 sm7250-common: tetheroffload: Version 1.1 [Tyler Wear]
+
+* android_device_realme_sm6375-common
+877ecc4 sm6375-common: Enable UFFD GC [Michael Bestas]
+de974b1 sm6375-common: Declare WiFi Aware support to WiFi HAL [Etan Cohen]
+81eba23 sm6375-common: Add feature flag for IPSEC_TUNNEL_MIGRATION [Yan Yan]
+06e5916 sm6375-common: manifest: Bump target-level to 6 [Yumi Yukimura]
+4befe82 sm6375-common: tetheroffload: Version 1.1 [Tyler Wear]
+9002c13 sm6375-common: audio: Remove direct flag for VOIP RX [Kumar Anurag Singh]
+241a4bd sm6375-common: Migrate to avbtool --set_verification_disabled_flag [LuK1337]
+bb024fa sm6375-common: Remove unused media_codecs [Michael Bestas]
+30e3e72 sm6375-common: Drop unused media_profiles [Michael Bestas]
+d6cd546 sm6375-common: Import media_profiles*.xml from vendor [Vivekachooz]
 
 * android_kernel_realme_sm6375
-0648c48 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
+cf29059 arm64: configs: Regenerate Q/GKI holi defconfigs [Vivekachooz]
+9d61cbd Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
+
+* android_device_oneplus_sm6375-common
+ee85486 Revert "sm6375-common: Drop debugfs.config" [Vivekachooz]
+b1a875f sm6375-common: Enable UFFD GC [Michael Bestas]
+05c122d sm6375-common: Declare WiFi Aware support to WiFi HAL [Etan Cohen]
+9659bf3 sm6375-common: Add feature flag for IPSEC_TUNNEL_MIGRATION [Yan Yan]
+49afd39 sm6375-common: manifest: Bump target-level to 6 [Yumi Yukimura]
+316fec5 sm6375-common: tetheroffload: Version 1.1 [Tyler Wear]
+302be63 sm6375-common: Migrate to avbtool --set_verification_disabled_flag [LuK1337]
+8c61917 sm6375-common: Remove unused media_codecs [Michael Bestas]
+8dd8326 sm6375-common: Drop unused media_profiles [Michael Bestas]
+f25d571 sm6375-common: Import media_profiles*.xml from vendor [Vivekachooz]
 
 * android_kernel_oneplus_sm6375
-cb0d5de Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
+1982b62 arm64: configs: Regenerate Q/GKI holi defconfigs [Vivekachooz]
+63381db Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.1 [Vivekachooz]
 
-* android_build
-e12f013 core: Treat vendor/lineage-priv/* as release-keys [LuK1337]
-22bcc40 build: Move inclusion of BoardConfigExtra.mk to board_config.mk [Yumi Yukimura]
+* android
+daf2f75 Track our own forks for 2025-03 ASB patching [Kevin F. Haggerty]
 
-* android_build_blueprint
-e29c960 Use pool for mutatorContext and transition contexts [Colin Cross]
-633ab9e Optimize proptools.CalculateHash allocations [Colin Cross]
-
-* android_build_soong
-8b8cdfe soong: Treat vendor/lineage-priv/* as release-keys [LuK1337]
-219a62d Use blueprint/pool [Colin Cross]
-0cec59e Optimize getJarJarRuleText [Colin Cross]
-
-* android_external_avb
-5986166 avbtool: Add --set_verification_disabled_flag arg [LuK1337]
+* android_build_release
+2e2d61b Bump Security String to 2025-03-01 [Kevin F. Haggerty]
 
 * android_external_grub
-903db50 LINEAGE: util/grub-mkrescue: Use `i386-pc` source dir in prebuilts/bootmgr if present [Yumi Yukimura]
-885862c LINEAGE: loadstring: Fix compilation [Yumi Yukimura]
-20ac500 Merge remote-tracking branch 'origin/master' into lineage-21.0 [Yumi Yukimura]
-56ccc5e util/grub.d/30_os-prober.in: Fix GRUB_OS_PROBER_SKIP_LIST for non-EFI [Pascal Hambourg]
-01f0640 docs: Do not reference non-existent --dumb option [Glenn Washburn]
-3f440b5 docs: Replace @lbracechar{} and @rbracechar{} with @{ and @} [Glenn Washburn]
-f209887 fs/xfs: Fix grub_xfs_iterate_dir() return value in case of failure [Egor Ignatov]
-1ed2628 fs/xfs: Add new superblock features added in Linux 6.12/6.13 [Darrick J. Wong]
-348cd41 fs/ext2: Rework out-of-bounds read for inline and external extents [Michael Chang]
-c730edd disk/ahci: Remove conditional operator for endtime [Leo Sandoval]
-f0a0832 term/ns8250-spcr: Return if redirection is disabled [Benjamin Herrenschmidt]
-7161e24 commands/file: Fix NULL dereference in the knetbsd tests [Lukas Fink]
-11b9c2d gdb_helper: Typo hueristic [Heinrich Schuchardt]
-224aefd kern/efi/mm: Reset grub_mm_add_region_fn after ExitBootServices() call [Ruihan Li]
-531750f i386/tsc: The GRUB menu gets stuck due to unserialized rdtsc [Duan Yayong]
-f2a1f66 kern/i386/tsc_pmtimer: The GRUB menu gets stuck due to failed calibration [Duan Yayong]
-13f005e loader/i386/linux: Fix cleanup if kernel doesn't support 64-bit addressing [Sergii Dmytruk]
-4dc6166 loader/i386/bsd: Use safe math to avoid underflow [Alec Brown]
-490a6ab loader/i386/linux: Cast left shift to grub_uint32_t [Alec Brown]
-a8d6b06 kern/misc: Add sanity check after grub_strtoul() call [Lidong Chen]
-8e6e87e kern/partition: Add sanity check after grub_strtoul() call [Lidong Chen]
-5b36a52 normal/menu: Use safe math to avoid an integer overflow [Alec Brown]
-9907d9c bus/usb/ehci: Define GRUB_EHCI_TOGGLE as grub_uint32_t [Alec Brown]
-f8795cd misc: Ensure consistent overflow error messages [Lidong Chen]
-66733f7 osdep/unix/getroot: Fix potential underflow [Lidong Chen]
-d13b6e8 script/execute: Fix potential underflow and NULL dereference [Lidong Chen]
-e3c578a fs/sfs: Check if allocated memory is NULL [Alec Brown]
-1c06ec9 net: Check if returned pointer for allocated memory is NULL [Alec Brown]
-dee2c14 net: Prevent overflows when allocating memory for arrays [Lidong Chen]
-4beeff8 net: Use safe math macros to prevent overflows [Lidong Chen]
-dd6a4c8 fs/zfs: Add missing NULL check after grub_strdup() call [Lidong Chen]
-13065f6 fs/zfs: Check if returned pointer for allocated memory is NULL [Lidong Chen]
-7f38e32 fs/zfs: Prevent overflows when allocating memory for arrays [Lidong Chen]
-88e491a fs/zfs: Use safe math macros to prevent overflows [Lidong Chen]
-cde9f7f fs: Prevent overflows when assigning returned values from read_number() [Lidong Chen]
-84bc0a9 fs: Prevent overflows when allocating memory for arrays [Lidong Chen]
-6608163 fs: Use safe math macros to prevent overflows [Lidong Chen]
-fbaddcc disk/ieee1275/ofdisk: Call grub_ieee1275_close() when grub_malloc() fails [Alec Brown]
-33bd6b5 disk: Check if returned pointer for allocated memory is NULL [Alec Brown]
-d8151f9 disk: Prevent overflows when allocating memory for arrays [Alec Brown]
-c407724 disk: Use safe math macros to prevent overflows [Alec Brown]
-c4bc55d fs: Disable many filesystems under lockdown [Daniel Axtens]
-26db660 fs/bfs: Disable under lockdown [Daniel Axtens]
-5f31164 commands/hexdump: Disable memory reading in lockdown mode [B Horn]
-340e4d0 commands/memrw: Disable memory reading in lockdown mode [B Horn]
-3482480 commands/minicmd: Block the dump command in lockdown mode [B Horn]
-c68b7d2 commands/test: Stack overflow due to unlimited recursion depth [Lidong Chen]
-dad8f50 commands/read: Fix an integer overflow when supplying more than 2^31 characters [Jonathan Bar Or]
-b970a5e gettext: Integer overflow leads to heap OOB write [Lidong Chen]
-09bd6eb gettext: Integer overflow leads to heap OOB write or read [Lidong Chen]
-7580add gettext: Remove variables hooks on module unload [B Horn]
-9c16197 normal: Remove variables hooks on module unload [B Horn]
-2123c5b commands/pgp: Unregister the "check_signatures" hooks on module unload [B Horn]
-0bf56bc commands/ls: Fix NULL dereference [B Horn]
-05be856 commands/extcmd: Missing check for failed allocation [Lidong Chen]
-98ad843 kern/dl: Check for the SHF_INFO_LINK flag in grub_dl_relocate_symbols() [B Horn]
-d722084 kern/dl: Use correct segment in grub_dl_set_mem_attrs() [B Horn]
-500e5fd kern/dl: Fix for an integer overflow in grub_dl_ref() [B Horn]
-2c34af9 video/readers/jpeg: Do not permit duplicate SOF0 markers in JPEG [Daniel Axtens]
-0707acc net/tftp: Fix stack buffer overflow in tftp_open() [B Horn]
-5eef881 net: Fix OOB write in grub_net_search_config_file() [B Horn]
-
-* android_external_mesa
-9db8639 Merge tag 'mesa-24.3.4' of https://gitlab.freedesktop.org/mesa/mesa into lineage-22.1 [Yumi Yukimura]
+e0c5c71 Merge remote-tracking branch 'origin/master' into lineage-22.1 [Yumi Yukimura]
+d123190 fixup! LINEAGE: loadstring: Fix compilation [Yumi Yukimura]
+ff7f553 disk/lvm: Add informational messages in error cases of ignored features [Patrick Plenefisch]
+a16b430 disk/lvm: Add support for cachevol LV [Patrick Plenefisch]
+9a37d61 disk/lvm: Add support for integrity LV [Patrick Plenefisch]
+6c14b87 lvm: Match all LVM segments before validation [Patrick Plenefisch]
+d34b912 disk/lvm: Remove unused cache_pool [Patrick Plenefisch]
+90848a1 disk/lvm: Make cache_lv more generic as ignored_feature_lv [Patrick Plenefisch]
+488ac8b commands/ls: Add directory header for dir args [Glenn Washburn]
+096bf59 commands/ls: Print full paths for file args [Glenn Washburn]
+90288fc commands/ls: Output path for single file arguments given with path [Glenn Washburn]
+6337d84 commands/ls: Show modification time for file paths [Glenn Washburn]
+cbfb031 commands/ls: Merge print_files_long() and print_files() into print_file() [Glenn Washburn]
+112d206 commands/ls: Return proper GRUB_ERR_* for functions returning type grub_err_t [Glenn Washburn]
+da9740c commands/acpi: Use options enum to index command options [Glenn Washburn]
+1acf11f docs: Capture additional commands restricted by lockdown [Andrew Hamilton]
+6a168af docs: Document restricted filesystems in lockdown [Andrew Hamilton]
+be0ae95 loader/i386/bsd: Fix type passed for the kernel [Vladimir Serbinenko]
+ee27f07 kern/partition: Unbreak support for nested partitions [Vladimir Serbinenko]
+cb639ac lib/tss2/tss2_structs.h: Fix clang build - remove duplicate typedef [Andrew Hamilton]
+696e35b include/grub/mm.h: Remove duplicate inclusion of grub/err.h [Yuri Zaporozhets]
+187338f script/execute: Don't let trailing blank lines determine the return code [James Le Cuirot]
+ff173a1 gitignore: Ignore generated files from libtasn [Glenn Washburn]
+fbcc388 util/grub.d/30_os-prober.in: Conditionally show or hide chain and efi menu entries [Pascal Hambourg]
 
 * android_frameworks_base
-ae211e0 SystemUI: Fixup center clock position [Aditya Eka Pranata]
-6e956d6 Automatic translation import [LineageOS Infra]
-9af2ac7 pm: aconfig: do not error on missing flag files [Thomas Makin]
-0f0a69e SettingsProvider: aconfig: do not error on missing flag files [Aaron Kling]
-9aa511c Catch BadParcelableException when checking extras [Luca Stefani]
-772ada4 Catch all exceptions when loading images [Jernej Virag]
-0368bb1 Revert "Handle all exceptions when loading artwork bitmap" [Luca Stefani]
-4709909 ExifInterface: do not spam stacktrace on invalid format [Thomas Makin]
-d6cbccb SystemUI: VpnTile: Don't ask for user/pw on IKEv2/IPSec PSK and RSA [Trogel]
-fcf50b7 Automatic translation import [LineageOS Infra]
-0451f44 Handle all exceptions when loading artwork bitmap [Luca Stefani]
-ee9b736 PhoneWindowManager: Support volume up/down to mute [Aaron Kling]
-c47ad6a FingerprintUtils: Migrate old fp config xml to new one on HIDL/AIDL switch [Luofan Chen]
+f42ac3a Merge tag 'android-security-15.0.0_r6' into staging/lineage-22.1_android-security-15.0.0_r6 [Kevin F. Haggerty]
+a9664e0 BrightnessUtils: Conditionally disable gamma conversion for brightness slider [SagarMakhar]
+
+* android_frameworks_native
+2ad86cb Merge tag 'android-security-15.0.0_r6' into staging/lineage-22.1_android-security-15.0.0_r6 [Kevin F. Haggerty]
 
 * android_hardware_interfaces
 55e7ea4 compatibility_matrices: Allow IOffloadControl 1.1 on target-level 5 [LuK1337]
-7381227 compatibility_matrices: Allow radio 1.5 on target-level 6 [Yumi Yukimura]
-6d4d419 cec: Don't spam "Machine is not on the network" [Nolen Johnson]
-
-* android_hardware_lineage_compat
-ee08dfa compat: libnativehelper: clang-format [LuK1337]
-dfdc32e compat: libaudioproxy: clang-format [LuK1337]
 
 * android_hardware_lineage_interfaces
-19de245 aidl: light: Treat keyboard devices as keyboards [Sebastiano Barezzi]
-a163b58 aidl: light: Support `charging` LED [Nolen Johnson]
-ed17ff3 libperfmgr: Only throw DisplayIdle errors if we support it [Nolen Johnson]
-8f445d1 fingerprint: aidl: Improve documentation on sensor_location [Luofan Chen]
-3824e1a fingerprint: aidl: Use soong to decide which arch to build [Giovanni Ricca]
-9d7e862 fingerprint: aidl: Allow setting more than one sensor location [Jens Reidel]
-87c6ff2 fingerprint: aidl: Initial legacy libhardware implementation [Fabian Leutenegger]
-15024d6 fingerprint: aidl: Initial stub service [Tim Zimmermann]
+cc1cb0f health: Delete .clang-format [Bruno Martins]
+
+* android_hardware_motorola
+ec1f4b1 fixup! motorola: Make use of newly added mkdir{} [Michael Bestas]
+d77bf8c motorola: Make use of newly added mkdir{} [LuK1337]
 
 * android_hardware_oneplus
-c42bcc2 doze: Move to PreferenceFragmentCompat [AnierinB]
-5949dc9 touch: Migrate to select() [LuK1337]
-2d5fbdc Remove hidl/powershare [LuK1337]
-1439d14 Remove no longer used Android.mk guard [Michael Bestas]
-425a1c0 audio_amplifier: Convert to blueprint [Michael Bestas]
-0c0aab8 audio_amplifier: Make all the functions static [Alexander Winkowski]
-9606042 audio_amplifier: Fix PCM device check [Alexander Winkowski]
-970dbcd Automatic translation import [LineageOS Infra]
+4e8c988 audio_amplifier: Use hw_module_t->dso instead of RTLD_NEXT [LuK1337]
 
 * android_hardware_oplus
-e50dfe2 doze: Move to PreferenceFragmentCompat [AnierinB]
-aaf9005 sepolicy: qti: Address new denials with fingerprint AIDL HAL [Bruno Martins]
-7591d33 fingerprint: Add a shim to manipulate fingerprint SensorProps [LuK1337]
-63127da fingerprint: Move shims and UDFPS extension out of HIDL [Bruno Martins]
-48f3da9 sepolicy: Label commondcs service and adjust rules [Bruno Martins]
-5134fa4 Introduce vendor.oplus.hardware.commondcs-service [Bruno Martins]
-9f1f2c1 interfaces: Add vendor.oplus.hardware.commondcs V1 [Bruno Martins]
-2f24de9 audio_amplifier: Add holi SoC [Albert Tang]
-c0e82d6 audio_amplifier: Use hw_module_t->dso instead of RTLD_NEXT [LuK1337]
-ee64733 Remove no longer used Android.mk guard [Michael Bestas]
-fff84ef audio_amplifier: Convert to blueprint [Michael Bestas]
-5a4c2cf audio_amplifier: Make all the functions static [Alexander Winkowski]
-1166219 audio_amplifier: Fix PCM device check [Alexander Winkowski]
-1177faa sepolicy: qti: Allow audio HAL to read debug audio props [Bruno Martins]
-d656351 sepolicy: qti: Label ro.sys.engineering.pre prop [Bruno Martins]
-81d0ee9 Automatic translation import [LineageOS Infra]
-a4ba264 sepolicy: qti: Remove duplicate snxxx AIDL rules [Bruno Martins]
-8d237bf bootctrl: Remove HIDL variants [LuK1337]
-8aa74e5 gpt-utils: Make BSG/SG configurable [Michael Bestas]
-95e9749 interfaces: Update OplusTouch to V2 [Bruno Martins]
-37688c9 sepolicy: qti: add rules for URCC [John Galt]
-e3197d4 interfaces: unfreeze touch aidl [John Galt]
-07bc326 sepolicy: qti: Add touch aidl service as a client of power hal [Dr-chen99]
-31ea1b8 vintf: add oplus touch and urcc [John Galt]
-2ef6bca interfaces: import touch aidl [Dr-chen99]
-
-* android_lineage-sdk
-e395199 health: Catch all setCharging*() exceptions [LuK1337]
-a5c37ac health: Rename msToUTCString to msToHMSString [Luofan Chen]
-436d750 health: Format notification's target time according to locale [наб]
-2772796 Automatic translation import [LineageOS Infra]
-ce38f73 lineage-sdk: Add setting for atv two button mute [Aaron Kling]
-
-* android_packages_apps_Aperture
-3b31359 Automatic translation import [LineageOS Infra]
-a1618e8 Aperture: Use ViewModel's `onCleared()` [Sebastiano Barezzi]
-12c932c Aperture: CameraActivity: Rename `model` to `viewModel` [Sebastiano Barezzi]
-3532c3b Aperture: Clarify what's the actual context for `AndroidViewModel`s [Sebastiano Barezzi]
-cca046f Aperture: Update edge-to-edge setup [Sebastiano Barezzi]
-6b6cddb Aperture: Rework Camera2 CaptureRequest application [Sebastiano Barezzi]
-82e69ef Aperture: Address getTapToFocusState() deprecation [LuK1337]
-b8c65f3 Aperture: Update CameraX to 1.5.0-alpha06 [LuK1337]
-b0eea75 Aperture: More lint fixes [Sebastiano Barezzi]
-fa6f4d0 Aperture: `values()` -> `entries` [Sebastiano Barezzi]
-a1514f1 Aperture: Cleanup experimental CameraX annotations [Sebastiano Barezzi]
-50805c4 Aperture: Remove not needed deprecation suppress [Sebastiano Barezzi]
-f0a16c0 Aperture: Bump JVM version to 17 [Sebastiano Barezzi]
-b384c7f Aperture: lens_launcher: Bump SDK to 35 [Sebastiano Barezzi]
-4c2c873 Aperture: Update AGP to 8.8.1 [Sebastiano Barezzi]
-cfe5d27 Aperture: Update Gradle wrapper to 8.13 [Sebastiano Barezzi]
-0d1066c Aperture: Move to Gradle catalog and update Gradle templates from Twelve [Sebastiano Barezzi]
-e4afda2 Aperture: Reformat code [Sebastiano Barezzi]
-0fd3ae9 Aperture: Switch to upstream zxing-cpp [Luca Stefani]
-59013c8 Aperture: Update kotlin to 1.9.23 [LuK1337]
-759f8d0 Aperture: Update gradle{,w} to 8.12 [LuK1337]
-0e49f58 Aperture: Update ZXing-C++ to 2.3.0 [LuK1337]
-62bc27b Aperture: Update CameraX to 1.5.0-alpha05 [LuK1337]
-39a00a1 Aperture: Ensure secure URIs are inserted in order [Luca Stefani]
-4fc2193 Aperture: Update kotlin to 1.9.10 [LuK1337]
-066ea34 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_AudioFX
-02916e7 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Camelot
-587b087 Automatic translation import [LineageOS Infra]
-23242a1 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Catapult
-08ac373 Automatic translation import [LineageOS Infra]
-ad6520a Catapult: Fix row icons issue [Timi]
-fb83201 Catapult: String improvements & fixes [Michael Bestas]
-c114091 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Contacts
-77afb19 Automatic translation import [LineageOS Infra]
+41fb946 audio_amplifier: Add lahaina SoC [LuK1337]
 
 * android_packages_apps_DeskClock
-6ef8dca Automatic translation import [LineageOS Infra]
-296e428 DeskClock: Convert ListPreferences to SimpleMenuPreferences [Michael W]
-5ddac95 DeskClock: Remove the summaries for AM/PM and bold text [Michael W]
-f0f776a DeskClock: Hide or disable some screensaver settings [Michael W]
-713a916 DeskClock: Fix formatting in ScreensaverSettingsActivity [Michael W]
-3db9ea7 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Dialer
-6427016 Automatic translation import [LineageOS Infra]
-5bf5719 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_DocumentsUI
-2b77689 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_ElmyraService
-006102e Automatic translation import [LineageOS Infra]
-5e13492 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Etar
-578b82a Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FMRadio
-3c79d0b Automatic translation import [LineageOS Infra]
-168f373 jni: Move customisation to properties [bengris32]
-e603ac7 jni: Always build noise floor detect code and make it conditional [bengris32]
-7f5188d Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FlipFlap
-fe2abce Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Glimpse
-c72ee26 Automatic translation import [LineageOS Infra]
-d66d116 Glimpse: Reformat code [Sebastiano Barezzi]
-fb5adcd Glimpse: Make K NonNull in SelectionTracker<K>.kill(...) [Luca Stefani]
-8b37257 Glimpse: MediaRepository: Introduce medias(List<Uri>) [Luca Stefani]
-7e7ea6d Glimpse: Fix trashed SECURE_REVIEW items not getting removed from screen [Torsten Grote]
-dde8aa8 Glimpse: buildList for the win [Luca Stefani]
-a05d2fa Glimpse: Show warning regarding trash's auto-empty behavior [Aayush Gupta]
-2162911 Glimpse: Break as soon a valid media type is found [Luca Stefani]
-a0ad138 Glimpse: Split ACTION_REVIEW from ACTION_REVIEW_SECURE [Sebastiano Barezzi]
-d47de86 Automatic translation import [LineageOS Infra]
+666f26d DeskClock: Fix NPE when removing a timer [Trogel]
+21ed120 DeskClock: Fix updating remaining time in timer [Trogel]
 
 * android_packages_apps_Jelly
-09df967 Automatic translation import [LineageOS Infra]
-925c0a9 Jelly: Introduce HttpUtils#bitmap() [SaeedDev94]
-994dbb9 Jelly: Improve strings [SaeedDev94]
-1f5f1bc Jelly: Save user agreement about protected media [SaeedDev94]
-3f4c549 Jelly: Include assets [Luca Stefani]
-525b66c Automatic translation import [LineageOS Infra]
-68e9e9f Jelly: Handle MediaSession For BackgroundShortcut [SaeedDev94]
-0d0d674 Jelly: Background Shortcuts [SaeedDev94]
-
-* android_packages_apps_LineageParts
-a5fd5ed Automatic translation import [LineageOS Infra]
-ce30ee7 Automatic translation import [LineageOS Infra]
+a621293 Jelly: Update Yahoo search engine url [Bjørn Wiegell]
+2dbb5f0 Jelly: Add Ecosia, GOOD, Startpage, and Qwant search engines [Bjørn Wiegell]
 
 * android_packages_apps_Messaging
-94c0b87 Automatic translation import [LineageOS Infra]
-ff479f4 Automatic translation import [LineageOS Infra]
+a39f270 Messaging: Fix wrong thumb tint [Michael W]
+a8f89a1 Messaging: Resolve missing symbol [Thomas Turner]
+37f7aae Messaging: Fix wrong enum value [Michael W]
+53eb598 Messaging: Good news: we can tint the status bar properly! [Michael W]
+b0f59f9 Messaging: Round AddContactsConfirmationDialog [Michael W]
+162c78f Messaging: Replace fragment with FragmentContainerView [Michael W]
+4009b68 Messaging: Heavily reduce the exif interface [Michael W]
+b2f5e31 Messaging: Further code improvements [Michael W]
+47f5533 Messaging: Remove duplicate code [Michael W]
+f83b05e Messages: Replace (Safe)AsyncTask [Michael W]
 
-* android_packages_apps_Profiles
-7455e65 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Recorder
-66d85eb Automatic translation import [LineageOS Infra]
-8f65896 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Settings
-6015d30 Automatic translation import [LineageOS Infra]
-b722610 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_SetupWizard
-eeb98ba Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_SimpleSettingsConfig
-e539270 Add support for "first boot" configs [LuK1337]
-
-* android_packages_apps_ThemePicker
-1c8d1e0 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Trebuchet
-dcb17f1 Automatic translation import [LineageOS Infra]
-ad70f3e Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_TvSettings
-d6b23f1 TvSettings: Support two button mute [Aaron Kling]
+* android_packages_apps_Seedvault
+fe27fa2 Merge tag '15-5.3' of https://github.com/seedvault-app/seedvault into HEAD [Chirayu Desai]
 
 * android_packages_apps_Twelve
+cf15b21 Twelve: Result: `Error.throwable` exists too [Sebastiano Barezzi]
+17292e6 Twelve: Result: Add `flatMap` [Sebastiano Barezzi]
+26a5410 Twelve: Result: Make it an interface [Sebastiano Barezzi]
+4ddb2ee Twelve: Result: Move `getOrNull` to extension [Sebastiano Barezzi]
+c55b069 Twelve: Result: Remove Any constaint from getOrNull extension [Sebastiano Barezzi]
+dd57af2 Twelve: Result: Remove `fold` and nullable `map` extensions [Sebastiano Barezzi]
+8c2a95f Twelve: Api: Get rid of `toResult` [Sebastiano Barezzi]
+1926373 Twelve: Api: Clarify generics purpose [Sebastiano Barezzi]
+b56402e Twelve: Log all result errors' throwables in fragments [Sebastiano Barezzi]
+e51f0b7 Twelve: Parcelize Provider [Luca Stefani]
+1d3e312 Twelve: Api: Fix leakage [Sebastiano Barezzi]
+c5f20ec Twelve: ResumptionPlaylist: Don't die on no items [Sebastiano Barezzi]
+f879466 Twelve: PlaybackService: Optimize resumption item mapping to media item [Sebastiano Barezzi]
+3082635 Twelve: Start using resumption playlist with the widget [Sebastiano Barezzi]
+e08088f Twelve: Audio: Allow null playback URI [Sebastiano Barezzi]
+2544d77 Twelve: TwelveDatabase: Get rid of Item [Sebastiano Barezzi]
+3c0433b Twelve: TwelveDatabase: Remove unused stuff and rename some columns [Sebastiano Barezzi]
+8da81cb Twelve: Drop per-provider last played feature [Sebastiano Barezzi]
+7d4b668 Twelve: TwelveDatabase: Add some javadoc [Sebastiano Barezzi]
+437fced Twelve: NowPlayingViewModel: Don't poll current position w/o lyrics [Sebastiano Barezzi]
+b669300 Twelve: MediaItemBottomSheetDialog: Handle favorites [Sebastiano Barezzi]
+c282206 Twelve: NowPlayingFragment: Add favorite button [Luca Stefani]
+5c88661 Twelve: Add playlist type handling [Luca Stefani]
+890d8b9 Twelve: LocalDataSource: Implement favorites [Sebastiano Barezzi]
+498c06c Twelve: LocalDataSource: Move media item mappers to method [Sebastiano Barezzi]
+2ce5a23 Twelve: TwelveDatabase: Add favorites table [Sebastiano Barezzi]
+435d5e3 Twelve: JellyfinDataSource: Implement favorites [Sebastiano Barezzi]
+5fa1fb1 Twelve: SubsonicDataSource: Implement favorites [Sebastiano Barezzi]
+cade559 Twelve: Add `setFavorite` method [Sebastiano Barezzi]
+7b09541 Twelve: Add playlist type and audio isFavorite attributes [Luca Stefani]
+a81cbc8 Twelve: MediaItemBottomSheetDialog: Refactor [Sebastiano Barezzi]
+c931c8a Twelve: SubsonicDataSource: Fix a missed playlist ID cast to int [Sebastiano Barezzi]
+33b49f7 Twelve: NowPlayingViewModel: Missed a nullable state flow [Sebastiano Barezzi]
 951e350 Twelve: Bring back loading state for flows [Sebastiano Barezzi]
 fe2ac4a Twelve: Api: Migrate MethodResult to Result [Sebastiano Barezzi]
 00bdb89 Twelve: Result: Mark mapping methods as inline [Sebastiano Barezzi]
@@ -317,92 +161,27 @@ ad282d0 Twelve: Commonize Error [Sebastiano Barezzi]
 cc2faac Twelve: Readd TextRenderer [Sebastiano Barezzi]
 7f16232 Twelve: Lyrics: Let the builder methods return the builder itself [Sebastiano Barezzi]
 a8b4b5c Twelve: Don't save an instance of TwelveDatabase [Luca Stefani]
-007116c Automatic translation import [LineageOS Infra]
-d62490f Twelve: Reduce number of player callbacks [Luca Stefani]
-5dea906 Twelve: Reformat code [Luca Stefani]
-ae0a3ea Twelve: NowPlayingFragment: Fix shuffle and repeat marker being cut in half [Sebastiano Barezzi]
-af4cd4e Twelve: MediaRepositoryTree: Don't crash in case of error [Luca Stefani]
-8710915 Twelve: buildList for the win [Luca Stefani]
-6f40e59 Twelve: Add support for search queries [Luca Stefani]
-0713aed Twelve: Apply player setup after .build() [Luca Stefani]
-5e5d43a Twelve: Lyrics fragment [Sebastiano Barezzi]
-e822e83 Twelve: Add lyrics view [Timi]
-fc7c6c5 Twelve: SubsonicDataSource: Implement lyrics fetching [Sebastiano Barezzi]
-85bd87e Twelve: JellyfinDataSource: Implement lyrics fetching [Timi]
-27e846a Twelve: Add lyrics method [Sebastiano Barezzi]
-65c5974 Twelve: MainActivity: Move intent flow handing to the usual `loadData()` [Sebastiano Barezzi]
-f9fd41c Twelve: Stop using fitsSystemView=true on CoordinatorLayout [Sebastiano Barezzi]
-1d1424a Twelve: Set edge to edge and transparent navigation bar color attributes [Sebastiano Barezzi]
-22e2370 Twelve: Remove useless orientation attribute on CoordinatorLayout [Sebastiano Barezzi]
-3dcf24e Twelve: Fix visualizer, hopefully for the last time [Luca Stefani]
-5053246 Twelve: Take into account the timeline for the queue [Luca Stefani]
-ccdd16b Twelve: Add notification shuffle/repeat [Luca Stefani]
-eb13860 Twelve: Use Resources when possible to fetch resources [Luca Stefani]
-7b7be5f Twelve: Fix some format strings [Luca Stefani]
-b503c04 Twelve: Make player/mediaLibrarySession lateinit [Luca Stefani]
-5d265a0 Twelve: Reformat code [Luca Stefani]
-1120101 Twelve: Handle empty resumption playlist [Luca Stefani]
-2a9b749 Twelve: Readd round icon attribute [Sebastiano Barezzi]
-1e4626b Twelve: Set wake mode to network [Luca Stefani]
-7c4ac24 Twelve: Tie CoilBitmapLoader to service scope [Luca Stefani]
-38aff6a Automatic translation import [LineageOS Infra]
-4edf7e3 Twelve: LocalDataSource: Stop pretending we can have artist thumbnails [Sebastiano Barezzi]
-69f3c76 Twelve: BaseMediaItemView: Simplify thumbnail handling [Sebastiano Barezzi]
-53ccfe0 Twelve: Navigate safely! [Luca Stefani]
-254cec7 Twelve: Ensure all media items have fallback titles [Luca Stefani]
-8e70bf3 Twelve: LocalDataSource: `/audio/albumart/<album_id>` exists too [Sebastiano Barezzi]
-1cd5d90 Twelve: LocalDataSource: Use hidden album art database [nift4]
-62db55b Twelve: Switch back to vendored material [Luca Stefani]
-33444d7 Twelve: Use a custom BitmapLoader for our service [Sebastiano Barezzi]
-472b00e Twelve: SubsonicDataSource: Use media item builders [Sebastiano Barezzi]
-8690156 Twelve: Simplify media item to data source and media type querying [Sebastiano Barezzi]
-f010219 Twelve: Use `ProviderIdentifier` for all fragment arguments [Sebastiano Barezzi]
-59cea6d Twelve: Hide trailing view for local provider [Luca Stefani]
-a7af174 Twelve: Media item builders! [Sebastiano Barezzi]
-32ff491 Twelve: Use Album thumbnail as Audio thumbnail [Joey]
-b5597d7 Twelve: Lowercase cursor column names [Luca Stefani]
-1a2d65a Twelve: Fix double .px in MAX_THUMBNAIL_SIZE [Luca Stefani]
 
 * android_packages_apps_Updater
-ec85854 Automatic translation import [LineageOS Infra]
-e92031f !fixup Updater: Allow Updater to handle major upgrades via property [Nolen Johnson]
-c9159bf Updater: Allow Updater to handle major upgrades via property [Nolen Johnson]
-5ab3076 Updater: Show "no items" view after deleting last update [Michael W]
-6fafcc4 Automatic translation import [LineageOS Infra]
+0342bb3 Updater: Fix warnings [Michael W]
+33d63d6 Updater: Use Java 11 [Michael W]
+9918f7e Updater: Bump minSdk to 32 [Michael W]
+fbdb557 Updater: Update gradle plugin to 8.7.3 [Michael W]
+e28d157 Updater: Update gradle wrapper to 8.9 [Michael W]
+a9d7673 Updater: Add welcome message with instructions [Michael W]
 
-* android_packages_inputmethods_LatinIME
-a27d7ed Automatic translation import [LineageOS Infra]
-79f3aff Automatic translation import [LineageOS Infra]
+* android_packages_modules_Bluetooth
+9bddf25 BondStateMachine: Check name for validity before access [electimon]
+a8601d1 Merge tag 'android-security-15.0.0_r6' into staging/lineage-22.1_android-security-15.0.0_r6 [Kevin F. Haggerty]
 
 * android_packages_providers_DownloadProvider
-be8b0fb Automatic translation import [LineageOS Infra]
+3044e11 Merge tag 'android-security-15.0.0_r6' into staging/lineage-22.1_android-security-15.0.0_r6 [Kevin F. Haggerty]
 
-* android_packages_resources_devicesettings
-2a12ea4 Automatic translation import [LineageOS Infra]
-8624d14 Automatic translation import [LineageOS Infra]
+* android_packages_services_Telecomm
+8441990 Merge tag 'android-security-15.0.0_r6' into staging/lineage-22.1_android-security-15.0.0_r6 [Kevin F. Haggerty]
 
 * android_prebuilts_bootmgr
-926cc1a bootmgr: grub: linux-arm64: arm64-efi: Update [Yumi Yukimura]
-03c3fe1 bootmgr: grub: linux-x86: Add i386 prebuilts [Yumi Yukimura]
-0509bb9 bootmgr: grub: linux-x86: x86_64-efi: Update [Yumi Yukimura]
-
-* android_system_security
-b4c4416 Await boot_completed before allowing GC [David Drysdale]
-
-* android_tools_extract-utils
-0239fa3 extract_utils: try to move SaR even if all partitions are there [Cosmin Tanislav]
-c069833 extract_utils: add support extracting Moto PIV images [Cosmin Tanislav]
-
-* android_vendor_crowdin
-c9b1d00 Automatic translation import [LineageOS Infra]
-fef707d Automatic translation import [LineageOS Infra]
-
-* android_vendor_lineage
-4d616dc config: Install FRP wipe script into recovery /system/bin [LuK1337]
-3d683b1 apns: Update for ChinaTelecom Macau (CTMO) [Flicker372]
-4ae5dc8 overlay: Set PermissionController help URLs [LuK1337]
-4119bc6 config: Long live ro.modversion [Michael Bestas]
-
-* android_vendor_qcom_opensource_fm-commonsys
-0b5e2e3 Automatic translation import [LineageOS Infra]
-b38a391 Automatic translation import [LineageOS Infra]
+c1d6921 bootmgr: grub: linux-x86: HACK: Symlink unicode.pf2 from linux-arm64 build [Yumi Yukimura]
+ce0b365 bootmgr: grub: linux-x86: Update [Yumi Yukimura]
+c6873bb bootmgr: grub: linux-arm64: arm64-efi: Update [Yumi Yukimura]
+615b619 bootmgr: grub: linux-x86: Update [Yumi Yukimura]
