@@ -27,6 +27,8 @@ ALLOWED_REPOS = {
     "android_kernel_realme_sm6375",
     "android_device_realme_sm6375-common",
     "android_device_realme_oscar",
+    "android_device_realme_oscarc",
+    "android_device_realme_oscarru",
     "android_device_realme_luigi",
     "android_kernel_oneplus_sm6375",
     "android_device_oneplus_sm6375-common",

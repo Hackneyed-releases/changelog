@@ -12,6 +12,8 @@ on:
           - larry.txt
           - luigi.txt
           - oscar.txt
+          - oscarc.txt
+          - oscarru.txt
           - oscaro.txt
       commit_message:
         description: 'Custom commit message'
