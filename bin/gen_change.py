@@ -104,7 +104,7 @@ def fetch_commits(args):
     """Fetch all commits from a repo (with org) after a given date."""
     repo_name, org_name = args
     try:
-        branch = "lineage-22.1"
+        branch = "lineage-22.2"
         url = f"{GITHUB_API_URL}/repos/{org_name}/{repo_name}/commits"
         params = {"since": DATE_FILTER, "sha": branch, "per_page": 100, "page": 1}
         all_commits = []
