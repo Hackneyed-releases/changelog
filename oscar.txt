@@ -1,315 +1,284 @@
 ====================
-     04-05-2025    
+     21-05-2025    
 ====================
 
 * android_device_lineage_sepolicy
-0d3f593 common: Add video encode flag opt-out for DeviceAsWebcam [Alexander Koskovich]
-3a6e321 atv: Shut MediaShell up [Nolen Johnson]
+085b6d6 sepolicy: Allow crash_dump to read ro.lineage.version [LuK1337]
+2ed0e51 sepolicy: Migrate to PowerShare AIDL [sidharthify]
+0cebada common: Label property `vendor.usb.uvc.payload_transfer_size` [Yumi Yukimura]
+
+* android_device_motorola_sm7250-common
+70113cf sm7250-common: Update product partition reserved space [Pranav Vashi]
+ee923ef sm7250-common: Use SPDX copyright & licence headers [Giovanni Ricca]
+6fc69a9 sm7250-common: Run clang-format [basamaryan]
+db3a712 sm7250-common: Add clang-format configuration [Arian]
+20ae4f7 sm7250-common: Cleanup proprietary files [Giovanni Ricca]
+ccdedec sm7250-common: init: Drop unused init scripts [Giovanni Ricca]
+8f0d548 sm7250-common: Migrate Lineage Health to soong_config_set [Bruno Martins]
+da59e8d sm7250-common: Set vendor init lib via soong config [Bruno Martins]
+f48457d sm7250-common: Drop reboot=panic_warm [basamaryan]
+9acfea8 sm7250-common: Clean-up makefiles [basamaryan]
+7335d8b sm7250-common: Don't inherit legacy QTI FCM [basamaryan]
+030ee7b sm7250-common: init.mmi.rc: Drop force_max_chrg_temp [basamaryan]
+4c256b8 sm7250-common: init.oem.hw: Drop set_ro_vendor_incremental [Michael Bestas]
+ae5d346 sm7250-common: Drop `TARGET_RECOVERY_DEVICE_MODULES` [Yumi Yukimura]
+11c6ef5 sm7250-common: Drop persist.vendor.delta_time.enable [basamaryan]
+bec522a sm7250-common: Setup checkpoint_gc for /vendor [Daniel Rosenberg]
+211b748 sm7250-common: Enable and use QTI poweroff alarm service [dianlujitao]
+685ccd9 sm7250-common: Switch from time_daemon to TimeKeep [Roberto Sartori]
+fbc10e1 sm7250-common: Don't explicity build `(e2fsck|resize2fs|tune2fs)_ramdisk` [Giovanni Ricca]
+5fa1f4a sm7250-common: Nuke irsc_util [dianlujitao]
+f0765a6 sm7250-common: Move public.libraries.txt on vendor [Giovanni Ricca]
+9f0c833 sm7250-common: Move QTI permissions on vendor [Giovanni Ricca]
+3b50a1d sm7250-common: Remove A2DP input module in audio policy configuration [llololo]
+01f5de4 sm7250-common: init: Increase Swappiness to 100 [Kishore Srivenkata Ganesh Bolisetty]
+2ee215d sm7250-common: init: Properly enable ZRAM [sb6596]
+34da591 sm7250-common: Use hardware/motorola/sepolicy [basamaryan]
+b14afb3 sm7250-common: Temporarily downgrade kernel clang version [Giovanni Ricca]
+387f8bb fixup! sm7250-common: Remove wigig components [basamaryan]
+f3b41b6 sm7250-common: remove wifilearner [Han Sol Jin]
+b70291a sm7250-common: gps: Remove CleanSpec.mk [Michael Bestas]
+2d6ac87 sm7250-common: use common RFS FSG symlink [Cosmin Tanislav]
+635d915 sm7250-common: use common super_fsg/super_modem mountpoints [Cosmin Tanislav]
+ff6bfdb sm7250-common: Add hardware/motorola to soong namespaces [Michael Bestas]
+e9ad329 sm7250-common: Enable ELF checks for libmdmcutback [Michael Bestas]
+ee6a8bd sm7250-common: Enable ELF checks for libwpa_client dependent libs [Michael Bestas]
+53088dc sm7250-common: Enable ELF checks for libril dependent libs [Edwin Moquete]
+db522f6 sm7250-common: Inherit common motorola FCM [Michael Bestas]
+910fe58 sm7250-common: switch to common QCOM AIDL bootctrl HAL [Cosmin Tanislav]
+020d880 sm7250-common: Don't use BSG framework for gpt-utils [Michael Bestas]
+9e6363f sm7250-common: manifest: Freeze kernel-level to 5 [Michael Bestas]
+9a8ca3a sm7250-common: manifest: Bump target-level to 6 [Yumi Yukimura]
+95c6596 sm7250-common: Correct BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE [Deivid21]
+8b1caa3 sm7250-common: Remove moto charger [dianlujitao]
+2e29717 sm7250-common: Import init.mmi.charge_only.rc [basamaryan]
+2c61a17 sm7250-common: Populate vendor.boot_completed [dianlujitao]
+05d144b sm7250-common: Remove unused oem services [dianlujitao]
+08f0440 sm7250-common: Remove invalid property triggers [dianlujitao]
+b256221 sm7250-common: Match moto GIDs with stock [dianlujitao]
+7a2df98 sm7250-common: Update init scripts [basamaryan]
+662d503 sm7250-common: init: common: Move testscripts file from main rc to test rc [Abhiprayah Tiwari]
+18d1254 sm7250-common: init: Revert "init.qcom.rc: Bring WPSS out-of-reset on init" [Naman Padhiar]
+465bb66 sm7250-common: init: ueventd: set permissions to rawdump node [Nagireddy Annem]
+bf84437 sm7250-common: init: Add permissions for btfmslim node [Satish Kumar Kodishala]
+b6d28b9 sm7250-common: init: Fix "Invalid section keyword found" on ueventd [Alexander Koskovich]
+b571fc3 sm7250-common: ueventd: Set permissions for KGSL sysfs node [Mohammed Mirza Mandayappurath Manzoor]
+9e4d2bf sm7250-common: Don't mess up pstore permission [dianlujitao]
+86312fa sm7250-common: Remove runtime ro.carrier setting [dianlujitao]
+7e97c05 sm7250-common: Drop factory mode detection [dianlujitao]
+ae573fa sm7250-common: Remove duplicated time_daemon definition [dianlujitao]
+0a2fd8b sm7250-common: Remove init.mmi.chipset.rc that doesn't seem to be useful [dianlujitao]
+e3f85eb sm7250-common: Use common bugreport service definition [dianlujitao]
+6956650 sm7250-common: Drop libmm-color-convertor [Nolen Johnson]
+eecb3a2 sm7250-common: Remove libI420colorconvert [Michael Bestas]
+aeffc32 sm7250-common: Remove aptX encoder shared libs [Georg Veichtlbauer]
+e7800c7 sm7250-common: Import full CACert stack [me-cafebabe]
+232b0d7 sm7250-common: Use aidl sensors multihal [Bruno Martins]
+614cc03 sm7250-common: Move to QTI health AIDL service [Bruno Martins]
+15ae644 sm7250-common: Sort proprietary-files.txt [Wiktor Rudzki]
+37e9c66 sm7250-common: Use the common device compatibility matrix from QCOM [Bruno Martins]
+c616ca3 sm7250-common: Move libinit out of init [basamaryan]
+afadb82 sm7250-common: Setup 6GB Dalvik heap configuration [Lokesh Gidra]
+f34e04e sm7250-common: Drop dalvik.vm.* properties [Giovanni Ricca]
+
+* android_device_motorola_kiev
+d930975 Revert "kiev: Disable alpha compositing in WM" [Giovanni Ricca]
+91e5c5d kiev: Remove A2DP input module in audio policy configuration [llololo]
+e5ba492 kiev: Use hardware/motorola/sepolicy [basamaryan]
+0103369 kiev: powerhint: Fix QoS CPU DMA latency value [Artem Labazov]
+
+* android_kernel_realme_sm6375
+ef7dbd8 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.2 [Vivekachooz]
+
+* android_kernel_oneplus_sm6375
+fb449ef Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.2 [Vivekachooz]
 
 * android_device_realme_sm6375-common
-af41e22 sm6375-common: Drop inclusion of init.oscar.overlay.rc [Vivekachooz]
-28872d8 sm6375-common: Enable ELF checks for libwpa_client dependent libs [Michael Bestas]
-
-* android_device_realme_luigi
-97bca81 luigi: Bump libAlgoProcess android.hardware.graphics.common dep [Michael Bestas]
-
-* android_device_oneplus_larry
-eb40464 larry: Bump libAlgoProcess android.hardware.graphics.common dep [Michael Bestas]
-
-* android_device_realme_sm6375-common
+db0927c sm6375-common: Migrate Lineage Health to soong_config_set [Bruno Martins]
+1390d89 Revert "sm6375-common: Add AOSP RCS packages" [Vivekachooz]
+6b2c6e6 sm6375-common: Update from RMX3660_15.0.0.830(EX01) [Vivekachooz]
+3c7b23b Revert "sm6375-common: Drop inclusion of init.oscar.overlay.rc" [Vivekachooz]
 d8fa64b sm6375-common: overlay: Disable world_mode_enabled_bool [Alexander Koskovich]
 d1c1f46 sm6375-common: Delete dhcpcd init entries, since dhcpcd is no more. [Lorenzo Colitti]
 fc73afe sm6375-common: Remove wigig components [Ethan Chen]
 
 * android_kernel_realme_sm6375
 8c5f53f Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.2 [Vivekachooz]
-0db4cc4 usb: gadget: f_ncm: Always set current gadget in ncm_bind() [Hardik Gajjar]
-305e9e4 FROMGIT: usb: gadget: u_ether: support configuring interface names. [Lorenzo Colitti]
-3e79ef2 usb: gadget: f_ncm: Revert to upstream [Jack Pham]
-365ffb9 mm: page_owner: Fix -Wstrlcpy-strlcat-size [Sevenrock]
-20d7404 Revert "hrtimers: Handle CPU state correctly on hotplug" [LuK1337]
-ef174b9 Merge tag 'ASB-2025-04-05_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
+
+* android_device_realme_luigi
+3b99054 luigi: Set global device name as Realme 10 Pro 5G [Vivekachooz]
+390ebef luigi: Replace BTM_DEF_LOCAL_NAME with a sysprop [Sal Savage]
+c409217 luigi: Set USB product string to 'Realme 10 Pro 5G' [Alexander Koskovich]
+756b8fa luigi: Set vendor init lib via soong config [Bruno Martins]
 
 * android_device_realme_oscar
-a37a21d oscar: Correct pcm id for vi feedback [Albert Tang]
-a957f62 oscar: Set global device name as Realme 9 Pro 5G [Vivekachooz]
-2ffec43 oscar: Replace BTM_DEF_LOCAL_NAME with a sysprop [Sal Savage]
-9c7e542 oscar: Set USB product string to 'Realme 9 Pro 5G' [Alexander Koskovich]
-4d08bfd oscar: Decommonize oscar variants [Vivekachooz]
-
-* android_device_realme_oscarc
-e1070d0 oscarc: Initial rebrand to Realme Q5 [Vivekachooz]
-a37a21d oscar: Correct pcm id for vi feedback [Albert Tang]
-a957f62 oscar: Set global device name as Realme 9 Pro 5G [Vivekachooz]
-2ffec43 oscar: Replace BTM_DEF_LOCAL_NAME with a sysprop [Sal Savage]
-9c7e542 oscar: Set USB product string to 'Realme 9 Pro 5G' [Alexander Koskovich]
-4d08bfd oscar: Decommonize oscar variants [Vivekachooz]
-
-* android_device_realme_oscarru
-b3316c5 oscarru: Initial rebrand to Realme 9 5G [Vivekachooz]
-a37a21d oscar: Correct pcm id for vi feedback [Albert Tang]
-a957f62 oscar: Set global device name as Realme 9 Pro 5G [Vivekachooz]
-2ffec43 oscar: Replace BTM_DEF_LOCAL_NAME with a sysprop [Sal Savage]
-9c7e542 oscar: Set USB product string to 'Realme 9 Pro 5G' [Alexander Koskovich]
-4d08bfd oscar: Decommonize oscar variants [Vivekachooz]
+c274f14 oscar: Set vendor init lib via soong config [Bruno Martins]
+d518ded oscar: Setup device name and wifi ssid based on prjname [Vivekachooz]
+5ac6e1a oscar: Move /odm/overlayfs/${DEVICE}/${x}/${y} to /vendor/${x}/overlayfs/${DEVICE}/${y} [Yumi Yukimura]
+a54aeb0 oscar: Correct pcm id for vi feedback [Albert Tang]
 
 * android
-88f7665 manifest: Switch to our fork of packages/services/DeviceAsWebcam [Michael Bestas]
-b966b7f Track our own Car SystemUI [Nolen Johnson]
+8ccdcc1 Track our own Iwlan [LuK1337]
+6352ddb manifest: May 2025 Security Update [Michael Bestas]
+
+* android_build
+cbb0769 releasetools: Handle build description not ending in -keys [Michael Bestas]
+933b1c5 Filter out framework and ext in uses library tag propagation in make [Jihoon Kang]
+34bf89a Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
 
 * android_build_soong
-8ccaa9c soong: Make export_cflags configurable [Michael Bestas]
+f744257 Do not propagate boot jars in CLC construction [Jihoon Kang]
+09f6732 Do not propagate uses lib tags of framework [Jihoon Kang]
 
 * android_external_grub
-3a61cdc Merge remote-tracking branch 'origin/master' into HEAD [Yumi Yukimura]
-4abac0a fs/xfs: Fix large extent counters incompat feature support [Eric Sandeen]
+c062266 LINEAGE: fs: Add fs that exposes Android boot image components as files [Yumi Yukimura]
 
 * android_external_linux-firmware-mainline
-fec2519 linux-firmware-mainline: qcom: Import firmwares for Adreno 306/505/506/618 [Yumi Yukimura]
-804ee12 linux-firmware-mainline: Import qcom licenses [Yumi Yukimura]
-1fcaa39 linux-firmware-mainline: Initial makefile [Yumi Yukimura]
-5e1c43a Initial empty commit [Yumi Yukimura]
+d36ba54 linux-firmware-mainline: Use Soong [Sebastiano Barezzi]
 
 * android_external_lk2nd
-f4dd008 dts: msm8916-samsung: rename to j5xnltelgt for SM-J510L [Raymond Hackley]
-f118bcc doc: add Samsung SM-J510L [Raymond Hackley]
-72e2958 dts: msm8996: Add missing msm-ids for Xiaomi Mi 5 [LuK1337]
-b7ec7e0 dts: msm8996: Add support for Xiaomi Mi 5s Plus [LuK1337]
-1e4432f dts: msm8996: Add support for Xiaomi Mi 5s [LuK1337]
-c811f35 doc: Mi5 -> Mi 5, Gemini -> gemini [LuK1337]
-d5cb4e3 dts: msm8909: add Lenovo yoga tablet 10 WIFI [ΞЖKƆ/QVH]
+0d06eff FROMLIST: aboot: Fix booting boot image header v2 via `fastboot boot` [Yumi Yukimura]
+4fac0d7 FROMLIST: dev_tree: Do not update Android fstab by default [Yumi Yukimura]
+9386f48 FROMLIST: lk2nd: Enable `DYNAMIC_PARTITION_SUPPORT` [Yumi Yukimura]
+afaa26f FROMLIST: aboot: Enable recovery features if the OS is Android [Yumi Yukimura]
+8ab46d4 FROMLIST: aboot: Try booting from `real_{boot,recovery}` partition as fallback [Yumi Yukimura]
+b990e75 FROMLIST: lk2nd: device: 2nd: Split recovery partition too [Yumi Yukimura]
+a984213 FROMLIST: lk2nd: device: 2nd: Backup the partition entry before split [Yumi Yukimura]
+17f98ae NOUPSTREAM: dts: msm8952: msm89*-xiaomi-*: Keep only one component on `qcom,board-id` [Yumi Yukimura]
+5c914f9 LINEAGE: aboot: Prevent booting into lk2nd from mmc repeatly [Yumi Yukimura]
+efe6158 LINEAGE: lk2nd: device: menu: Print the LK2ND_VERSION message using lineage teal color [Yumi Yukimura]
+c3780f1 gcdb: display: Print framebuffer address on panel initialization [Giovanni Ricca]
+
+* android_frameworks_av
+a055fce Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
 
 * android_frameworks_base
-9dbc9ff Grant CAPTURE_AUDIO_OUTPUT permission for media uid [LuK1337]
-308a13f Automatic translation import [LineageOS Infra]
-9b20a23 UsbTetherTile: Check for UsbManager.USB_FUNCTION_NCM as well [ShevT]
-fa59c21 fixup! fw/b: Implement hardware keys custom rebinding [LuK1337]
-e1335ef SystemUI: injectDoublePress() -> injectPress() [LuK1337]
-142099c fixup! SystemUIProxy: Add injectLongPress() [LuK1337]
-b898dd0 Fix ever-growing AppOpItem string representation [Tommy Webb]
-4ce81b7 Stop domain verification delegated from UIDs blocked by network policy [Oliver Scott]
-7d58262 Automatic translation import [LineageOS Infra]
-ed3e555 Revert "fw/b: Add NotificationGroup class for use by lineage sdk system profiles" [Luca Stefani]
-
-* android_frameworks_native
-f1cb794 surfaceflinger: Move surfaceflinger_udfps_lib_defaults to select() [Michael Bestas]
+a8f436b Automatic translation import [LineageOS Infra]
+39ece15 Revert "SystemUI: Dismiss keyguard on boot if disabled by current profile" [LuK1337]
+d24629b PowerShareTile: Migrate to AIDL PowerShare HAL [sidharthify]
+f02cc43 Add the VDM permissions to shell [Vladimir Komsiyski]
+b35222c Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
+f19ae33 DisplayCutout: fully animate camera protection [Cosmin Tanislav]
 
 * android_frameworks_opt_telephony
-0fafa28 telephony: Make "Do not ask again" functional [Michael W]
+065fa91 Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
 
 * android_hardware_interfaces
-396db2d radiocompat: Implement iccCloseLogicalChannelWithSessionInfo() [LuK1337]
+177a5b8 camera: Migrate camera_override_format_from_reserved_defaults to select() [Michael Bestas]
 
 * android_hardware_lineage_interfaces
-e54f695 health: Fix custom limit start/stop nodes build [Michael Bestas]
-38dda78 power-libperfmgr: Migrate power_libperfmgr_defaults to select() [Michael Bestas]
-d7b6281 powershare: Migrate powershare_defaults to select() [Michael Bestas]
-161d3e0 health: Make limit start/stop nodes configurable [Michael Bestas]
-ddc729e health: Don't use other deadline nodes when a custom node is set [Michael Bestas]
-6c833c6 health: Migrate health_charging_control_defaults to select() [Michael Bestas]
-a9e2baf powershare: Fix PowerShare QS tile state toggle [Bruno Martins]
+12709a5 powershare: Convert to AIDL [sidharthify]
+f957e97 usb: 1.3-basic: Migrate trust_usb_control_defaults to select() [Michael Bestas]
 
-* android_hardware_mainline
-b4dd599 mainline: interfaces/usb/gadget/mainline: Start gadget HAL when sys.usb.configfs=2 [bengris32]
-4c78283 mainline: interfaces/usb/gadget/mainline: Specify soong namespace for `libpixelusb-aidl` dep [Yumi Yukimura]
-ae70d23 mainline: interfaces/usb/gadget: Introduce common mainline USB Gadget HAL [bengris32]
-6685321 mainline: README: Add upstreams section [Yumi Yukimura]
-d73aef3 mainline: Add soong namespace [Yumi Yukimura]
-a80d488 gbm_gralloc: Fix `-Wreorder-init-list` warning [Yumi Yukimura]
-32117a5 gbm_gralloc: Move property to vendor namespace [Yumi Yukimura]
-5a6cacf gbm_gralloc: Android.mk: Guard with BOARD_MESA3D_BUILD_LIBGBM [Yumi Yukimura]
-59dec59 Add 'gralloc/gbm/' from commit 'a8874a18ad7884ea713f45047efad080fe973712' [Yumi Yukimura]
-5e1c43a Initial empty commit [Yumi Yukimura]
-
-* android_hardware_oneplus
-c935d35 Automatic translation import [LineageOS Infra]
+* android_hardware_motorola
+76bff20 sepolicy: Resolve vendor_init_fingerprint denial on fogo [Michael Bestas]
+578107d sepolicy: Label another fogo wakeup node [Michael Bestas]
+2309d17 sepolicy: Resolve hal_fingerprint_default denial on bangkk [Michael Bestas]
+7cb24f9 sepolicy: Label additional touchscreen node for bangkk [Michael Bestas]
+e8ef6db MotoActions: Clean up the sensor maxrange to ensure proper float [William Bellavance Jr]
+f75b5fc motorola: Initial sepolicy [basamaryan]
 
 * android_hardware_oplus
-c085cde sepolicy: qti: Label missing wakeup node on OP9 [Alexander Koskovich]
-ec00c65 powershare: Fix PowerShare QS tile state toggle [Bruno Martins]
-9ca0fca vintf: Mark all HALs as optional [Bruno Martins]
-df48e72 Automatic translation import [LineageOS Infra]
-406d2da vibrator: richtap: Fixup service declaration for loading AAC effects [Mashopy]
-4cdcb94 oplus: Run bpfix [Mashopy]
+7f61212 powershare: Migrate to AIDL [Bruno Martins]
 
 * android_hardware_qcom-caf_common
-65ccad2 common: Remove no longer used TARGET_USES_YCRCB_CAMERA_ENCODE [Michael Bestas]
-d2c250c common: move QTI gralloc configs to select [Michael Bestas]
-bb9c984 qcom: Move rmnetctl old_rmnet_data to soong_config_set [Michael Bestas]
-744b9d8 qcom: declare hidl_vendor_qti_hardware_iop_interface [Simon1511]
-119eacf qcom: Allow legacy devices to use /firmware for symlinks [Nolen Johnson]
-f578914 qcom: Allow persist symlinks to be configured [Nolen Johnson]
-f70f7b7 qcom: Migrate mpss_firmware_symlink_target to select() [Michael Bestas]
+fe3b092 qcom: Pass TARGET_KERNEL_VERSION to qtidisplay [Michael Bestas]
 
-* android_hardware_realtek
-8401108 rtk: Don't log when debug responses fail [Nolen Johnson]
-40778d2 rtk: wlan: Match old Android.mk & BCM HAL [Nolen Johnson]
-187949b rtk: Match prior Android.mk setup and enable P2P [Nolen Johnson]
+* android_hardware_qcom_sdm845_gps
+e2b4788 gps: Avoid access of deprecated LocUnorderedSetMap entry [yingjiew]
 
-* android_lineage-sdk
-515b58b Automatic translation import [LineageOS Infra]
-e0d5a13 health: Allow Limit/Toggle providers for MODE_AUTO/MODE_MANUAL [LuK1337]
-1847da1 Automatic translation import [LineageOS Infra]
-a9f9b20 Move NotificationGroup to lineage-sdk [Luca Stefani]
+* android_hardware_qcom_sm7250_gps
+17b95f9 gps: Avoid access of deprecated LocUnorderedSetMap entry [yingjiew]
+
+* android_hardware_qcom_sm8150_gps
+537a8b1 gps: Avoid access of deprecated LocUnorderedSetMap entry [yingjiew]
 
 * android_packages_apps_Aperture
-0667de7 Automatic translation import [LineageOS Infra]
-72cc51b Revert "Aperture: Update gradle-generatebp to 1.23" [Luca Stefani]
-4f8bf3e Aperture: Update gradle-generatebp to 1.23 [Luca Stefani]
-63c7fdd Aperture: Apply CameraX Pixel bugfix from androidx-main [LuK1337]
-8d0a313 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_AudioFX
-9eb8650 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Camelot
-dbcca6d Automatic translation import [LineageOS Infra]
-5355197 Camelot: Update androidx.pdf to 1.0.0-alpha08 [Luca Stefani]
-153ddf1 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Car_SystemUI
-a8a3f8e CarSystemUI: Fixes after QPR2 [Michael W]
-
-* android_packages_apps_Catapult
-ecd7ae3 Automatic translation import [LineageOS Infra]
-744ef9a Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Contacts
-7ff70b4 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_DeskClock
-b49f8c1 Automatic translation import [LineageOS Infra]
-03def55 Automatic translation import [LineageOS Infra]
-b0e8c13 DeskClock: Fix select all text in label dialog [Trogel]
+6db9e94 Aperture: Update CameraX to 1.5.0-beta01 [LuK1337]
 
 * android_packages_apps_Dialer
-853783d Automatic translation import [LineageOS Infra]
-420a923 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_DocumentsUI
-5e28ce7 Automatic translation import [LineageOS Infra]
-a982322 Automatic translation import [LineageOS Infra]
+0796632 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_ElmyraService
-063f37a Automatic translation import [LineageOS Infra]
-8f030f5 Automatic translation import [LineageOS Infra]
+27287e3 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Etar
-e45e881 Automatic translation import [LineageOS Infra]
-3af4f61 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FMRadio
-40f1f11 Automatic translation import [LineageOS Infra]
-02785e5 FmService: Fix possible memory leak [AlexandrKozlovskiy]
-00763e0 FmService: Fix loss of audio if we exit from main activity [AlexandrKozlovskiy]
-8bf069b FmService: Fix a crash when the record permission is requested [AlexandrKozlovskiy]
-e1affed Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FlipFlap
-d094bb7 Automatic translation import [LineageOS Infra]
+e423395 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Glimpse
-c0e0c5f Automatic translation import [LineageOS Infra]
-ce77e3d Automatic translation import [LineageOS Infra]
+7842530 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Jelly
-78a54e4 Automatic translation import [LineageOS Infra]
-9b9605d Automatic translation import [LineageOS Infra]
+6fb5afe Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_LineageParts
-f160ef4 Automatic translation import [LineageOS Infra]
-d8edd86 LineageParts: Navbar invert only inverts back/home/recents now [LuK1337]
-c20b80a Automatic translation import [LineageOS Infra]
-92b85fb LineageParts: Show option to turn off colored LEDs when fully charged [Trogel]
-772a64c LineageParts: Hard-code and adjust boolean light defaults [Trogel]
+8716498 Automatic translation import [LineageOS Infra]
+42796d4 LineageParts: two_finger -> two_fingers [LuK1337]
 
 * android_packages_apps_Messaging
-7120148 Automatic translation import [LineageOS Infra]
-b3f84ba Automatic translation import [LineageOS Infra]
+8af1282 Messaging: Remove setHost() logic [Michael W]
+6161d0f Messaging: Get rid of everything around the local apn database [Michael W]
+aad904a Messaging: Use Start and End instead of Left and Right [Michael W]
+2f9b138 Messaging: Remove unused or not required classes and methods [Michael W]
+f0b25f0 Messaging: Remove unused resources [Michael W]
+c4bbba9 Messaging: We don't need to check for verbose logging everywhere [Michael W]
+8613b6b Messaging: Fix wrong super() call [Michael W]
+9fd4fa6 Messaging: Explicitly specify Locale where needed [Michael W]
+37e5757 Messaging: Extend AppCompatImageView instead of ImageView [Michael W]
+7acbc6a Messaging: No need to access private color members [Michael W]
+37ac798 Messaging: Remove VisibleForAnimation [Michael W]
+8d8c367 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Recorder
-cbc9299 Automatic translation import [LineageOS Infra]
-a6b4a84 Automatic translation import [LineageOS Infra]
+6f640ec Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Settings
-eace8b3 Automatic translation import [LineageOS Infra]
-71fcf6b Fix development color mode preference [Alexander Martinz]
-e773ebb Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_SetupWizard
-ffa77d8 Automatic translation import [LineageOS Infra]
-d278186 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_ThemePicker
-42f7e4c Automatic translation import [LineageOS Infra]
-b8ac0e0 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Trebuchet
-9926435 Automatic translation import [LineageOS Infra]
-a8eddb0 Trebuchet: Rework home button double tap handling [LuK1337]
-c0c3868 Trebuchet: Use match_parent for navigation button dimensions [LuK1337]
-8fe17ee fixup! Trebuchet: allow disabling workspace edit [LuK1337]
-3f17c3b Automatic translation import [LineageOS Infra]
+1a5766e Automatic translation import [LineageOS Infra]
+7dbe506 Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
 
 * android_packages_apps_Twelve
-96ee0d7 Automatic translation import [LineageOS Infra]
-4296316 Twelve: Display device name when available [LuK1337]
-474bfca Twelve: Update gradle-generatebp to 1.23 [Luca Stefani]
-21c51c4 Twelve: No empty strings please. [Luca Stefani]
-c3e522c Twelve: Update to media3 1.6.1 [Luca Stefani]
-5a2135c Automatic translation import [LineageOS Infra]
+4dbdf30 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Updater
-04ec480 Automatic translation import [LineageOS Infra]
-061bee8 Automatic translation import [LineageOS Infra]
+587cf0b Automatic translation import [LineageOS Infra]
 
-* android_packages_inputmethods_LatinIME
-c898d71 Automatic translation import [LineageOS Infra]
-8e89262 Automatic translation import [LineageOS Infra]
+* android_packages_modules_Bluetooth
+493b351 Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
 
-* android_packages_providers_DownloadProvider
-7815981 Automatic translation import [LineageOS Infra]
-10e50a1 Automatic translation import [LineageOS Infra]
+* android_packages_modules_Permission
+ed11e0d Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
+
+* android_packages_modules_Wifi
+cc1fd5e Merge tag 'android-15.0.0_r32' into staging/lineage-22.2_merge-android-15.0.0_r32 [Michael Bestas]
 
 * android_packages_resources_devicesettings
-a5351bd Automatic translation import [LineageOS Infra]
-676986c Automatic translation import [LineageOS Infra]
+144785e Automatic translation import [LineageOS Infra]
 
 * android_packages_services_DeviceAsWebcam
-7c37388 DeviceAsWebcam: Don't set VIDEO_ENCODE flag if device opts out [Alexander Koskovich]
+277855b DeviceAsWebcam: jni: Make dwMaxPayloadTransferSize adjustable via property [Yumi Yukimura]
 
-* android_system_core
-ee0570f init: Migrate vendor_init_defaults to select() [Michael Bestas]
+* android_packages_services_Iwlan
+83bd433 Remove android.net.ipsec.ike uses-library tag [Jihoon Kang]
+
+* android_prebuilts_bootmgr
+e4c3e8c bootmgr: grub: Update [Yumi Yukimura]
+
+* android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-9.3
+67a3f5c update to r35.6.1 [Thomas Makin]
 
 * android_vendor_crowdin
-cc26faa Automatic translation import [LineageOS Infra]
-5ec80da Automatic translation import [LineageOS Infra]
+e800380 Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
-712c755 config: Move vendor_init lib to select() [Michael Bestas]
-f12b535 config: Move libperfmgr mode extension lib to select() [Michael Bestas]
-4fcadea Add software credentials permission support [Bharath]
-12a6639 overlay: Create NCM USB tethering overlay package [LuK1337]
-92164a2 config: Move Lineage PowerShare HAL to select() [Michael Bestas]
-1c15518 config: Move Lineage Health HAL to select() [Michael Bestas]
-20a2227 config: Move surfaceflinger UDFPS lib to select() [Michael Bestas]
-695e44e soong: Move QTI gralloc configs to select() [Michael Bestas]
-d690c9e build: Remove reference to deprecated VR HAL [Michael Bestas]
-2130319 Revert "kernel: Add support for external kernel configs" [Nolen Johnson]
-eef4080 android: merge_dtbs: Respect oem specific extra ids [Arian]
-1b1687b kernel: Add support for external kernel configs [Yumi Yukimura]
-f171568 kernel: Add support to append DTBs to kernel image [Yumi Yukimura]
-
-* android_vendor_qcom_opensource_dataservices
-31fecfa rmnetctl: Migrate old_rmnet_data to select() [Michael Bestas]
-
-* android_vendor_qcom_opensource_display-commonsys-intf
-88cf651 display: move QTI gralloc configs to select [Michael Bestas]
+8251181 config: Mark remaining BoardConfig flags as deprecated [Michael Bestas]
+03a7096 config: Deprecate BOOTLOADER_MESSAGE_OFFSET [Michael Bestas]
+c2dd68f config: Use add_soong_config_namespace/add_soong_config_var macros [LuK1337]
+df60b80 config: Deprecate TARGET_POWERSHARE_* flags [Bruno Martins]
+5b64390 config: Migrate PowerShare to AIDL [sidharthify]
+fc8519e release: Sync flag_values with BP1A.250505.005 [Michael Bestas]
+9e87c4d vars: May 2025 Security update [Chirayu Desai]
+1133440 config: Deprecate TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB [Bruno Martins]
+e722226 config: Deprecate TARGET_TRUST_USB_CONTROL_* flags [Michael Bestas]
 
 * android_vendor_qcom_opensource_fm-commonsys
-ad4949e Automatic translation import [LineageOS Infra]
-0d16da0 Automatic translation import [LineageOS Infra]
-
-* android_vendor_qcom_opensource_usb
-9f5243e init.qcom.usb.rc: Set NCM interface name [Yumi Yukimura]
-194f6a4 usb: Add interface specifiers to USB/USB gadget services [Luca Stefani]
+64f0476 Automatic translation import [LineageOS Infra]
