@@ -1,3 +1,21 @@
 ====================
-     13-04-2025    
+     07-06-2025    
 ====================
+
+* android_art
+026b9bd Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+
+* android_build
+7c71ac4 envsetup: Set INLINE_KERNEL_BUILDING based on TARGET_PREBUILT_KERNEL [Aaron Kling]
+
+* android_frameworks_av
+4d36097 Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+
+* android_packages_apps_Gallery2
+c17bdc2 Gallery2: Change harcoded toast string to a resource [Inhishonor]
+
+* android_packages_apps_ManagedProvisioning
+8082671 Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+
+* android_packages_inputmethods_LatinIME
+ee57620 LatinIME: Update emojis [George Zacharia]
