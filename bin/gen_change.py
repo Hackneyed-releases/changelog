@@ -16,6 +16,7 @@ logging.basicConfig(
 GITHUB_API_URL = "https://api.github.com"
 ORG_NAME = "LineageOS"
 ALT_ORG_NAME = "Realme-SM6375-devs"
+AOSP_EXTRA_ORG = "aosp-extra"
 TARGET_GITHUB_TOKEN = os.getenv("TARGET_GITHUB_TOKEN")
 
 # Specify the date to filter commits (user-friendly format)
@@ -45,6 +46,16 @@ EXCLUDED_KEYWORDS = (
     "lge", "nothing", "google_pixel", "amlogic", "xiaomi"
 )
 
+# These repos should be tracked from aosp-extra, not LineageOS
+AOSP_EXTRA_REPOS = {
+    "android_packages_apps_Settings",
+    "android_frameworks_base",
+    "android_system_core",
+    "android_bionic",
+    "android_packages_services_Telecomm",
+    "android_hardware_oplus"
+}
+
 def convert_to_iso8601(date_str):
     """Convert a date in DD-MM-YYYY format to ISO 8601 format."""
     return datetime.strptime(date_str, "%d-%m-%Y").isoformat() + "Z"
@@ -54,7 +65,8 @@ DATE_FILTER = convert_to_iso8601(FETCH_DATE)
 HEADERS = {"Authorization": f"token {TARGET_GITHUB_TOKEN}"}
 
 def fetch_repositories():
-    """Fetch all active repositories from both organizations, filtered by rules."""
+    """Fetch all active repositories from all organizations, filtered by rules."""
+
     def get_repos(org_name):
         url = f"{GITHUB_API_URL}/orgs/{org_name}/repos"
         repos = []
@@ -73,15 +85,18 @@ def fetch_repositories():
             page += 1
         return repos
 
-    # Fetch from both orgs
+    # Fetch repos
     lineage_repos = get_repos(ORG_NAME)
     realme_repos = get_repos(ALT_ORG_NAME)
+    aosp_extra_repos = get_repos(AOSP_EXTRA_ORG)
 
     filtered = []
 
-    # Process LineageOS repos
+    # Repos from LineageOS
     for repo in lineage_repos:
         name = repo["name"]
+        if name in AOSP_EXTRA_REPOS:
+            continue  # Skip: these are handled under aosp-extra
         if not any(keyword in name for keyword in EXCLUDED_KEYWORDS) and (
             not name.startswith("android_device_") and not name.startswith("android_kernel_")
             or name in ALLOWED_REPOS
@@ -89,7 +104,7 @@ def fetch_repositories():
         ):
             filtered.append((name, ORG_NAME))
 
-    # Process Realme-SM6375-devs repos (only android_device_realme* and android_kernel_realme*)
+    # Repos from Realme-SM6375-devs
     for repo in realme_repos:
         name = repo["name"]
         if (
@@ -97,6 +112,12 @@ def fetch_repositories():
             name.startswith("android_kernel_realme")
         ):
             filtered.append((name, ALT_ORG_NAME))
+
+    # Repos from aosp-extra
+    for repo in aosp_extra_repos:
+        name = repo["name"]
+        if name in AOSP_EXTRA_REPOS:
+            filtered.append((name, AOSP_EXTRA_ORG))
 
     return filtered
 
