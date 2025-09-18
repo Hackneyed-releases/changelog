@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       codename:
-        description: 'Select the text files to update'
+        description: 'Select the file to update'
         required: true
         type: choice
         options:
@@ -19,10 +19,10 @@ on:
         description: 'Custom commit message'
         required: true
       fetch_date:
-        description: 'Date in DD-MM-YYYY format for commit filtering'
+        description: 'Last Updated Date in DD-MM-YYYY format'
         required: true
       current_date:
-        description: 'Date in DD-MM-YYYY format for changelog output'
+        description: 'Current Date in DD-MM-YYYY format for output'
         required: true  # Make this required
 
 jobs:
