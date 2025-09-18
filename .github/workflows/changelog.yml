@@ -8,6 +8,7 @@ on:
         required: true
         type: choice
         options:
+          - denver.txt
           - kiev.txt
           - larry.txt
           - luigi.txt
