@@ -2,13 +2,13 @@
      18-09-2025    
 ====================
 
-* android_device_realme_sm6375-common
-ba0b414 sm6375-common: Drop sf layer caching timeout [Vivekachooz]
-c9b813d sm6375-common: Drop debug.sf.disable_client_composition_cache [chandu078]
-d9cc134 sm6375-common: Selectively update display and graphics props from fogos [Vivekachooz]
+* android_device_oneplus_sm6375-common
+d7d1243 sm6375-common: Drop sf layer caching timeout [Vivekachooz]
+17e8a2d sm6375-common: Drop debug.sf.disable_client_composition_cache [chandu078]
+70fe812 sm6375-common: Selectively update display and graphics props from fogos [Vivekachooz]
 
-* android_kernel_realme_sm6375
-6c5f868 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-23.0 [Vivekachooz]
+* android_kernel_oneplus_sm6375
+c6e8373 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-23.0 [Vivekachooz]
 dae3d3e Merge tag 'ASB-2025-09-05_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
 
 * android
