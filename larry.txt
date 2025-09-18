@@ -1,273 +1,180 @@
 ====================
-     07062025    
+     18-09-2025    
 ====================
 
-* android_device_lineage_sepolicy
-f131c06 sepolicy: Support Touch AIDL [Bruno Martins]
-6b4ae94 qcom: Restrict /firmware unmounting to recovery mode [Bruno Martins]
-3c4bf26 qcom: Allow init to unmount /firmware [LuK1337]
-f512d3a common: vendor: add rules for IR HAL [Cosmin Tanislav]
-
-* android_device_motorola_sm7250-common
-7bb7cfa sm7250-common: Set timer trigger for charging LED [dianlujitao]
-
-* android_device_realme_oscar
-f9d207b oscar: Set vendor init lib via soong config [Bruno Martins]
-db540bf oscar: Setup device name and wifi ssid based on prjname [Vivekachooz]
-654b235 oscar: Move /odm/overlayfs/${DEVICE}/${x}/${y} to /vendor/${x}/overlayfs/${DEVICE}/${y} [Yumi Yukimura]
-ebedb08 oscar: Correct pcm id for vi feedback [Albert Tang]
-cb41ac2 oscar: Bump libAlgoProcess android.hardware.graphics.common dep [Michael Bestas]
-
 * android_device_realme_sm6375-common
-652109a sm6375-common: Switch to Touch AIDL [Bruno Martins]
-396b715 sm6375-common: Migrate Lineage Health to soong_config_set [Bruno Martins]
-c57cd0b Revert "sm6375-common: Add AOSP RCS packages" [Vivekachooz]
-d07e02f sm6375-common: Update from RMX3660_15.0.0.830(EX01) [Vivekachooz]
-7faf4a8 Revert "sm6375-common: Drop inclusion of init.oscar.overlay.rc" [Vivekachooz]
-a96abae sm6375-common: overlay: Disable world_mode_enabled_bool [Alexander Koskovich]
-058100a sm6375-common: Delete dhcpcd init entries, since dhcpcd is no more. [Lorenzo Colitti]
-5cdfc38 sm6375-common: Remove wigig components [Ethan Chen]
+ba0b414 sm6375-common: Drop sf layer caching timeout [Vivekachooz]
+c9b813d sm6375-common: Drop debug.sf.disable_client_composition_cache [chandu078]
+d9cc134 sm6375-common: Selectively update display and graphics props from fogos [Vivekachooz]
 
 * android_kernel_realme_sm6375
-19f173d Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.2 [Vivekachooz]
-2cb5a7a fw-api: Make wmi_stats_ext_event_fixed_param::data_type optional [LuK1337]
-
-* android_device_realme_luigi
-95fb066 luigi: Switch to Touch AIDL [Bruno Martins]
-f2793cb luigi: Set global device name as Realme 10 Pro 5G [Vivekachooz]
-408b33f luigi: Replace BTM_DEF_LOCAL_NAME with a sysprop [Sal Savage]
-18ef6d1 luigi: Set USB product string to 'Realme 10 Pro 5G' [Alexander Koskovich]
-4445963 luigi: Set vendor init lib via soong config [Bruno Martins]
-
-* android_device_oneplus_sm6375-common
-1196258 sm6375-common: Switch to Touch AIDL [Bruno Martins]
-97ff337 sm6375-common: Migrate Lineage Health to soong_config_set [Bruno Martins]
-4e9b329 sm6375-common: Set vendor init lib via soong config [Bruno Martins]
-7118c14 sm6375-common: Delete dhcpcd init entries, since dhcpcd is no more. [Lorenzo Colitti]
-d7adac5 sm6375-common: Remove wigig components [Ethan Chen]
-620d0b5 sm6375-common: Update from CPH2467_14.0.0.1800(EX01) [Vivekachooz]
-
-* android_device_oneplus_larry
-7ccfac9 larry: Update status bar and rounded corner overlays [pjgowtham]
-5c2f417 larry: Update from CPH2467_14.0.0.1800(EX01) [Vivekachooz]
-
-* android_kernel_oneplus_sm6375
-4554fbf Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.2 [Vivekachooz]
-e04188f fw-api: Make wmi_stats_ext_event_fixed_param::data_type optional [LuK1337]
-3284098 drivers: oplus_sensor_devinfo: Add FW backwards compatibility [LuK1337]
-
-* android_device_realme_sm6375-common
-80fa3a5 sm6375-common: Switch to Touch AIDL [Bruno Martins]
-f33a7ae sm6375-common: Switch to common device_framework_matrix.xml [LuK1337]
-8bf8576 sm6375-common: Bump libui_sp to android.hardware.graphics.common-V6-ndk [Vivekachooz]
-5b7178e sm6375-common: overlay: Overlay Dolby Atmos profiles [Sugakesshaa]
-9b0eb9f sm6375-common: Inherit and build OplusDolby [Sugakesshaa]
-dfc3d16 sm6375-common: Link dolby blobs against v33 libstagefright_foundation [Fabian Leutenegger]
-0a76de0 sm6375-common: Import Dolby C2 Media service [Sugakesshaa]
-c5eefe2 sm6375-common: Introduce Dolby Atmos support [Omkar Chandorkar]
-f31f0e1 sm6375-common: Switch to NCM USB tethering [LuK1337]
-52689ed sm6375-common: init: Remove USB overriding rules [Bruno Martins]
-8865d42 sm6375-common: Migrate to QTI USB Gadget AIDL HAL [Yumi Yukimura]
-db0927c sm6375-common: Migrate Lineage Health to soong_config_set [Bruno Martins]
-
-* android_kernel_realme_sm6375
-3d18026 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.2 [Vivekachooz]
-6df7207 power: supply: core: Use blocking_notifier_call_chain to avoid RCU complaint [Kai-Heng Feng]
-a12ebb7 qcacld-3.0: Fix potential OOB memory access [Aditya Kodukula]
-f826e1a qcacmn: Avoid incrementing usable channel count for 0 freq [Sheenam Monga]
-8730ad1 Revert "ANDROID: GKI: mm: add struct vm_fault fields for SPECULATIVE_PAGE_FAULTS" [Alexander Winkowski]
-8a8338f Revert "mm: introduce CONFIG_SPECULATIVE_PAGE_FAULT" [Minchan Kim]
-98a9841 Revert "mm: prepare for FAULT_FLAG_SPECULATIVE" [Minchan Kim]
-a1b67e1 Revert "mm: introduce pte_spinlock for FAULT_FLAG_SPECULATIVE" [Minchan Kim]
-cf71c34 Revert "mm: make pte_unmap_same compatible with SPF" [Minchan Kim]
-35bafda Revert "mm: introduce INIT_VMA()" [Minchan Kim]
-6c8ee73 Revert "mm: VMA sequence count" [Minchan Kim]
-bb4e220 Revert "mm: protect VMA modifications using VMA sequence count" [Minchan Kim]
-99a68bf Revert "mm: protect mremap() against SPF hanlder" [Minchan Kim]
-a43fdd5 Revert "mm: protect SPF handler against anon_vma changes" [Minchan Kim]
-6d70787 Revert "mm: cache some VMA fields in the vm_fault structure" [Minchan Kim]
-c1826f5 Revert "mm/migrate: Pass vm_fault pointer to migrate_misplaced_page()" [Minchan Kim]
-9422831 Revert "mm: introduce __lru_cache_add_active_or_unevictable" [Minchan Kim]
-af3517b Revert "mm: introduce __vm_normal_page()" [Minchan Kim]
-7ec1f37 Revert "mm: introduce __page_add_new_anon_rmap()" [Minchan Kim]
-fa0483b Revert "mm: protect mm_rb tree with a rwlock" [Minchan Kim]
-c0e5f94 Revert "mm: provide speculative fault infrastructure" [Minchan Kim]
-fb8981f Revert "mm: adding speculative page fault failure trace events" [Minchan Kim]
-a45b2e0 Revert "mm: speculative page fault handler return VMA" [Minchan Kim]
-f2f6a42 Revert "mm: add speculative page fault vmstats" [Minchan Kim]
-402afac Revert "arm64/mm: define ARCH_SUPPORTS_SPECULATIVE_PAGE_FAULT" [Martin Liu]
-561478b Revert "arm64/mm: add speculative page fault" [Minchan Kim]
-37d40ca Revert "mm: protect against PTE changes done by dup_mmap()" [Martin Liu]
-fb1f97d Revert "mm: don't do swap readahead during speculative page fault" [Minchan Kim]
-6c8feaa Revert "mm: Fix sleeping while atomic during speculative page fault" [Alexander Winkowski]
-a01be3a Revert "mm: allow vmas with vm_ops to be speculatively handled" [Martin Liu]
-a93728d Revert "mm: remove the speculative page fault traces" [Alexander Winkowski]
-d4119e8 Revert "mm: sync rss in speculative page fault path" [Alexander Winkowski]
-8b720d1 Revert "mm: skip speculative path for non-anonymous COW faults" [Alexander Winkowski]
-ec928f7 Revert "mm: fix non-anon COW fault" [Alexander Winkowski]
-5f80d03 Revert "ANDROID: mm: use raw seqcount variants in vm_write_*" [Alexander Winkowski]
-d74f249 Revert "ANDROID: mm: Fix page table lookup in speculative fault path" [Alexander Winkowski]
-f3fcee6 Revert "ANDROID: mm: skip pte_alloc during speculative page fault" [Alexander Winkowski]
-a1d1eb8 Revert "ANDROID: mm: prevent speculative page fault handling for in do_swap_page()" [Alexander Winkowski]
-9c47c01 Revert "ANDROID: mm: prevent reads of unstable pmd during speculation" [Alexander Winkowski]
-9ef3adc Revert "BACKPORT: FROMLIST: mm: implement speculative handling in filemap_fault()" [Alexander Winkowski]
-ee75727 Revert "ANDROID: mm/khugepaged: add missing vm_write_{begin|end}" [Alexander Winkowski]
-924ed52 Revert "ANDROID: mm: remove sequence counting when mmap_lock is not exclusively owned" [Alexander Winkowski]
-1185e5a Revert "ANDROID: mm: assert that mmap_lock is taken exclusively in vm_write_begin" [Alexander Winkowski]
-d45fba0 Revert "ANDROID: disable page table moves when speculative page faults are enabled" [Alexander Winkowski]
-1232620 Revert "ANDROID: mm: fix invalid backport in speculative page fault path" [Alexander Winkowski]
-fa80be5 Revert "ANDROID: Re-enable fast mremap and fix UAF with SPF" [Alexander Winkowski]
-2673354 Revert "ANDROID: mm/filemap: Fix missing put_page() for speculative page fault" [Alexander Winkowski]
-1828476 Revert "BACKPORT: FROMLIST: mm: protect free_pgtables with mmap_lock write lock in exit_mmap" [Alexander Winkowski]
-2f07e8a Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-22.2 [Vivekachooz]
-f5224a8 fw-api: Make wmi_stats_ext_event_fixed_param::data_type optional [LuK1337]
-
-* android_device_realme_luigi
-d495edb luigi: Disable OMX service [Michael Bestas]
-766bc63 luigi: Switch to Touch AIDL [Bruno Martins]
-3b99054 luigi: Set global device name as Realme 10 Pro 5G [Vivekachooz]
-390ebef luigi: Replace BTM_DEF_LOCAL_NAME with a sysprop [Sal Savage]
-c409217 luigi: Set USB product string to 'Realme 10 Pro 5G' [Alexander Koskovich]
-
-* android_device_realme_oscar
-0dd65a4 oscar: overlay: Mark as device_specific [Vivekachooz]
-34a0dad oscar: Switch to Touch AIDL [Bruno Martins]
+6c5f868 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-23.0 [Vivekachooz]
+dae3d3e Merge tag 'ASB-2025-09-05_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
 
 * android
-dd7da33 manifest: June 2025 Security Update [Michael Bestas]
-2265b81 qcom: Track audioreach graphservices repo for pineapple [Alexander Winkowski]
-5aacf38 qcom: Track audioreach graphservices repo for kalama [Bruno Martins]
+32fadd5 manifest: September 2025 Security Update [Michael Bestas]
+2eb6f1c manifest: Remove sdm845 HAL guards [Michael Bestas]
+ec453d1 manifest: Switch to our fork of athletico ST HAL [Michael Bestas]
+c11ed59 manifest: Remove sm8150 HAL guards [Michael Bestas]
+257de19 manifest: Remove sm7250 HAL guards [Michael Bestas]
 
 * android_art
-026b9bd Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+c09a5c7 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/art into lineage-23.0 [Michael Bestas]
 
-* android_build
-7c71ac4 envsetup: Set INLINE_KERNEL_BUILDING based on TARGET_PREBUILT_KERNEL [Aaron Kling]
+* android_external_dtc
+94f2246 dtc: Fix -Wincompatible-pointer-types-discards-qualifiers warnings [Alexander Koskovich]
+411a812 libfdt: overlay_merge: Fix copy_node for multiple phandles [Wasim Nazir]
+ba79589 libfdt: overlay_merge: Fix phandle errors with proper path fix [Wasim Nazir]
+5a2289d libfdt: overlay_merge: Fix incorrect reference to nodes [Srivatsa Vaddagiri]
 
-* android_build_release
-c799ee4 Bump Security String to 2025-06-01 [Michael Bestas]
-
-* android_build_soong
-0c564ed Support prebuilt_kernel_headers [Aaron Kling]
-fa71e46 Add vendor_overlay support to fsgen [Artem Borisov]
-
-* android_external_lk2nd
-5bcc3e7 Merge remote-tracking branch 'origin/main' into lineage-22.2 [Yumi Yukimura]
-d01152f Revert "NOUPSTREAM: dts: msm8952: msm89*-xiaomi-*: Keep only one component on `qcom,board-id`" [Yumi Yukimura]
-ce01196 dts: msm8952: add support for Lenovo Tab M10 HD [glyxambi]
-6d3951d dts: msm8916: add support for vivo-pd1505 [fengjiongmax]
-324dfaf dts: msm8953: Add Billion Capture+ (rimob) [cristianc]
-93e33b7 dts: msm8960: add Casio G'zOne (CA-201L) [Shinjo Park]
-33441c1 dts: msm8952: Add Redmi GO and Redmi 5A (oreo variant) [Barnabás Czémán]
-c34604d dts: msm8952: xiaomi-santoni: fix board-id [Barnabás Czémán]
-d517d06 dts: msm8952: xiaomi-land: fix board-id [Barnabás Czémán]
-66dbdc9 dts: msm8952: xiaomi-riva: fix board-id [Barnabás Czémán]
-ce6bd93 lk2nd: device: dts: msm8226: Add Sony Xperia M2 (eagle) [Giovanni Ricca]
-c009960 lk2nd: display: panel: generated: innolux_qhd_video: Define `panel_orientation` [Giovanni Ricca]
-8878bf6 lk2nd: display: panel: generated: Generate `innolux_qhd_video` panel [Giovanni Ricca]
-
-* android_frameworks_av
-4d36097 Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+* android_external_linux-firmware-mainline
+06e6c04 linux-firmware-mainline: Add bcm4354 nvram for Nvidia [Aaron Kling]
+d7669b6 linux-firmware-mainline: Add bcm4356 firmware [Aaron Kling]
+1bcbfab linux-firmware-mainline: Add bcm4354 firmware [Aaron Kling]
+de0ad30 linux-firmware-mainline: Add bcm43241 firmware [Aaron Kling]
+67f30bd linux-firmware-mainline: Add Tegra194 firmware [Aaron Kling]
+0a45675 linux-firmware-mainline: Add Tegra186 firmware [Aaron Kling]
+c674e17 linux-firmware-mainline: Add Tegra210 firmware [Aaron Kling]
+3d0d1f2 linux-firmware-mainline: Add Tegra124 firmware [Aaron Kling]
 
 * android_frameworks_base
-1efc69e fixup! Introduce high touch polling rate feature control [Michael Bestas]
-bd853b8 fixup! Add high touch sensitivity and hovering to InputService [Oliver Scott]
-ca6aea3 fixup! PowerManager: Add proximity check on wake [Oliver Scott]
-a05ba1f fixup! SystemUI: Add quick settings pull down with one finger [Oliver Scott]
-71dff9b fixup! Keyguard: Add option to scramble pin layout when unlocking (2/2). [Oliver Scott]
-6e47edf Only toggle MainSwitchBar on successful change listener result [Oliver Scott]
-ac5d174 Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
-51f865c Automatic translation import [LineageOS Infra]
-b7b4423 fixup! PowerShareTile: Migrate to AIDL PowerShare HAL [LuK1337]
+f4cd307 Utils: Add util to toggle overlays [Anierin Bliss]
+171cc44 base: Add util function to restart any app [Blaster4385]
+d622b78 base: Add system utils [Pranav Vashi]
+4127973 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+b7b8f29 fixup! SystemUI: Add support for udfps dim layer [Michael Bestas]
+26e0242 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/frameworks/base into lineage-23.0 [Michael Bestas]
+4d206c5 Further reduce notifications bitmap resource usage [minaripenguin]
+df9428a SystemUI: Fix up large clock top margin with pixel-fw [Pranav Vashi]
 
-* android_hardware_interfaces
-e5a4903 compatibility_matrices: Add kernel_config_s_4.14 [Michael Bestas]
+* android_frameworks_native
+c6b5089 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/frameworks/native into lineage-23.0 [Michael Bestas]
 
-* android_hardware_lineage_interfaces
-3427c42 vibrator: Remove no longer used custom HIDL [Bruno Martins]
-6bb297a RIP legacy camera device and provider impl [Bruno Martins]
-5a72233 touch: Add AIDL HAL [Luca Stefani]
+* android_frameworks_opt_telephony
+44377e2 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/frameworks/opt/telephony into lineage-23.0 [Michael Bestas]
+
+* android_hardware_broadcom_libbt
+5d69608 libbt: Convert to Android.bp [Yumi Yukimura]
 
 * android_hardware_motorola
-98e7b74 sepolicy: Additional rules for focaltech fps [Sevenrock]
-2f103ad sepolicy: Label more touchscreen sysfs [Michael Bestas]
+d460731 StylusKeyHandler: Launch StylusSettingsActivity on first removal [AnierinB]
+4537136 StylusKeyHandler: Add pref to turn screen off when inserted [AnierinB]
+4e6537a StylusKeyHandler: Make turning screen on a preference [AnierinB]
+b3f050e StylusKeyHandler: Add seperate categories for removed/inserted [AnierinB]
+f9f68a3 StylusKeyHandler: Refactor Utils [AnierinB]
+c4484bf StylusKeyHandler: Move strings to devicesettings [AnierinB]
 
-* android_hardware_oplus
-ae39496 touch: Enable HighTouchPollingRate by default [Bruno Martins]
-a79e50e touch: Add soong configuration for features [Bruno Martins]
-cfceb7c touch: Migrate to AIDL [Bruno Martins]
-90b33a8 powershare: Use EX_SERVICE_SPECIFIC exception code for setEnabled() [LuK1337]
-8e39a4f configs: Create usb_compositions.conf with OPPO USB IDs [Michael Bestas]
+* android_hardware_qcom_audio
+1b40af4 hal: Convert primary HAL to blueprint [Michael Bestas]
+c895c94 soundfx: Convert to blueprint [Michael Bestas]
 
-* android_lineage-sdk
-b1685ba sdk: Register network callback only if it is enabled. [althafvly]
-75b3ede sdk: Fix UserContentObserver build [Michael Bestas]
-f65d1c0 Wire up AIDL touch HAL [Luca Stefani]
-af0f5c3 sdk: Intent: unhide actions [Alexander Martinz]
-55c5769 sdk: unhide palette utilities [Alexander Martinz]
-c8eeb17 LineageSettings: fix api lint [Alexander Martinz]
+* android_hardware_qcom_bt
+73ebd37 bt: Build with -Werror [Michael Bestas]
+4663baf bt: Remove SSR support [Gabriele M]
+d0dfd8a bt: Remove unused headers [Michael Bestas]
+3668362 bt: Convert libbt-vendor to blueprint [Michael Bestas]
+
+* android_hardware_qcom_sdm845_display
+0d74c81 display: histogram: Add missing epoll_event.h include [razorloves]
+a1cb4c2 Convert remaining Android.mk to blueprint [Michael Bestas]
+8e56e0e sdm: Convert hwcomposer.qcom to soong [Michael Bestas]
+fc078b2 sdm: Remove display_config_version conditionals [Michael Bestas]
+ede92e3 sdm: Remove use_hwc2 conditional [Michael Bestas]
+a04d353 Convert libhistogram/libsdmcore to blueprint [LuK1337]
+ce359a6 Convert gpu_tonemapper to blueprint [EndCredits]
+9f8daaf gralloc: Make MASTER_SIDE_CP as default [Prabhakar Reddy Krishnappa]
+fcef4ae Remove unused libcopybit sources [Michael Bestas]
+
+* android_hardware_qcom_sdm845_gps
+71438e3 Add hardware/qcom/sdm845/gps soong namespace [ChengYou Ho]
+33255a1 Remove obsolete os_pickup.{bp,mk} [Michael Bestas]
+
+* android_hardware_qcom_sm8150_display
+c13de98 Convert remaining Android.mk to blueprint [Michael Bestas]
+ad7078c sdm: Convert hwcomposer.qcom to soong [Michael Bestas]
+2a9e0e9 Revert "sdm/hwc: add display indices property for client id init" [Michael Bestas]
+49c36ba sdm: Remove use_hwc2 conditional [Michael Bestas]
+99e4d3f Convert libhistogram/libsdmcore to blueprint [LuK1337]
+0278765 display: Squashed revert of hypervisor changes [Michael Bestas]
+cd069e1 Convert gpu_tonemapper to blueprint [EndCredits]
+cf6f59d Remove unused libcopybit sources [Michael Bestas]
+
+* android_hardware_qcom_sm8150_gps
+c102eca Remove obsolete os_pickup.{bp,mk} [Michael Bestas]
 
 * android_packages_apps_Aperture
-35d0282 Automatic translation import [LineageOS Infra]
+b173097 Aperture: No more jail escape [Luca Stefani]
+1d9fd29 Aperture: Update CameraX [Sebastiano Barezzi]
+94203e0 Aperture: Move resource IDs out of VideoDynamicRange [Sebastiano Barezzi]
+6ec498c Aperture: QrBottomSheetDialog: Move to SimpleListAdapter [Sebastiano Barezzi]
+c963d17 Aperture: Setup RecyclerView and our utils [Sebastiano Barezzi]
+690ff0f Aperture: Move UI classes into an additional subpackages [Sebastiano Barezzi]
+b4d7a2a Aperture: Reformat code [Sebastiano Barezzi]
+49c70e3 Aperture: Use constant timestamp for RAW+JPEG [Luca Stefani]
+e648a3c Aperture: Add date taken metadata [Luca Stefani]
+d35afdb Aperture: Force set gallery visibility on load success [Luca Stefani]
+c55d653 Aperture: Support JPEG Ultra HDR/RAW/RAW+JPEG capture [Luca Stefani]
+abb7aa1 Aperture: Update CameraX to 1.5.0 [Luca Stefani]
+d7fa247 Aperture: CameraViewModel: Inline useless return [Sebastiano Barezzi]
+84c6cbf Aperture: Move Camera2 options to CameraConfiguration [Sebastiano Barezzi]
+f8a95b3 Aperture: CameraConfiguration: Drop `clone` method [Sebastiano Barezzi]
+bac8471 Aperture: Recreate camera configuration on user preference changes [Sebastiano Barezzi]
+ecbc794 Aperture: Camera models cleanup [Sebastiano Barezzi]
+79cab63 Aperture: Drop `Camera::supportsVideoRecording` [Sebastiano Barezzi]
+81d30b3 Aperture: Improve the flip camera logic [Sebastiano Barezzi]
 
-* android_packages_apps_Dialer
-602c630 Automatic translation import [LineageOS Infra]
+* android_packages_apps_Contacts
+a184e27 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/apps/Contacts into lineage-23.0 [Michael Bestas]
 
-* android_packages_apps_FMRadio
-fcedf0c FMRadio: Fix press and hold media rewind keys [AlexandrKozlovskiy]
-6f90646 FMRadio: Make toggling between headset/speakerphone a function [AlexandrKozlovskiy]
-2d918b2 FMRadio: Display whether headset or speakerphone is selected [AlexandrKozlovskiy]
-9baa562 FMRadio: Add base support for media buttons [AlexandrKozlovskiy]
+* android_packages_apps_DocumentsUI
+b9e58d0 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/apps/DocumentsUI into lineage-23.0 [Michael Bestas]
 
-* android_packages_apps_Gallery2
-c17bdc2 Gallery2: Change harcoded toast string to a resource [Inhishonor]
-
-* android_packages_apps_LineageParts
-000fec6 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_ManagedProvisioning
-8082671 Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
-
-* android_packages_apps_Seedvault
-94eb0f1 Merge tag '15-5.6' of https://github.com/seedvault-app/seedvault into HEAD [Chirayu Desai]
-19228d6 Merge pull request #920 from seedvault-app/cd/15-5.6 [Torsten Grote]
-f357d59 Update CHANGELOG.md [Chirayu Desai]
+* android_packages_apps_Launcher3
+2bc22e7 Trebuchet: Use HiddenAppsFilter for all apps list [LuK1337]
 
 * android_packages_apps_Settings
-8e71a2d Automatic translation import [LineageOS Infra]
+c599502 Revert "Settings: Fix illegal state exception on StorageSelectionPreferenceController" [Vivekachooz]
+5c69418 Revert "Settings: Move blur toggle to Display options." [Vivekachooz]
+80a415c Settings: Support hiding gesture hint in NexusLauncher [AnierinB]
+9bd811d Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+f678426 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/apps/Settings into lineage-23.0 [Michael Bestas]
+6c07a7f Settings: Move blur toggle to Display options. [Jyotiraditya]
 
 * android_packages_apps_Twelve
-6ed5659 Twelve: Fix hashed token authentication for Subsonic [Robin Slot]
-691f4a8 Twelve: Update Jellyfin authentication [Inhishonor]
-ca0427f Twelve: Remove unused import [Inhishonor]
-89c5fcb Automatic translation import [LineageOS Infra]
-3a9bc09 Twelve: Use TwelveRenderersFactory also for local player [Luca Stefani]
-ae26c35 Twelve: Go back to default LoadControl [Luca Stefani]
-d8525b1 Twelve: Add back MIDI support [Luca Stefani]
-dbd8eb9 Twelve: Let ExoPlayer generate an audio session ID for us [Sebastiano Barezzi]
-12701a5 Twelve: Go back to default renderers factory [Sebastiano Barezzi]
-d9d1270 Twelve: Update AGP to 8.10.0 [Luca Stefani]
+e765cd7 Automatic translation import [LineageOS Infra]
 
 * android_packages_inputmethods_LatinIME
-ee57620 LatinIME: Update emojis [George Zacharia]
+2287321 Add Turkish F layout [Berkay Yıldırım]
 
 * android_packages_modules_Bluetooth
-081fe1e Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+0428c10 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/modules/Bluetooth into lineage-23.0 [Michael Bestas]
 
-* android_packages_modules_Connectivity
-42f7754 Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+* android_packages_modules_IntentResolver
+1682d31 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/modules/IntentResolver into lineage-23.0 [Michael Bestas]
 
 * android_packages_modules_Permission
-df15d74 Merge tag 'android-security-15.0.0_r9' into lineage-22.2 [Michael Bestas]
+f7bd9a1 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/modules/Permission into lineage-23.0 [Michael Bestas]
 
-* android_vendor_crowdin
-6179702 Automatic translation import [LineageOS Infra]
+* android_packages_modules_Wifi
+c4a1c5f Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/modules/Wifi into lineage-23.0 [Michael Bestas]
+
+* android_packages_modules_adb
+e37e39f adb: Always report as debuggable when building userdebug/eng [Michael Bestas]
+
+* android_packages_providers_MediaProvider
+0138b50 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/providers/MediaProvider into lineage-23.0 [Michael Bestas]
+
+* android_packages_resources_devicesettings
+81f8a50 devicesettings: Add strings for StylusKeyHandler [AnierinB]
+
+* android_packages_services_Telephony
+03a1c33 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/services/Telephony into lineage-23.0 [Michael Bestas]
 
 * android_vendor_lineage
-722d1ce kernel: Report all modules not found at once [Nikita Savchenko]
-f4a6ff2 Add AIDL touch HAL [Luca Stefani]
-67bbe4a kernel: Stop warnings for prebuilt kernel platform [Aaron Kling]
-cae9b36 soong: Support prebuilt_kernel_headers [Aaron Kling]
-dde831f vars: Update qcom tags [Michael Bestas]
-0782bdf config: BoardConfigReservedSize: Disable via WITHOUT_RESERVED_SIZE=true [LuK1337]
-e1e121b Revert "Add product_launched_with_j{,_mr1,mr2}.mk" [Michael Bestas]
+c0fe4cb Bump Security String to 2025-09-01 [Michael Bestas]
+1c6299c vars: Update qcom tags [Michael Bestas]
+c7a3e36 vars: Point sunfish to archive.org [Michael Bestas]
+616c2ae audio: Add Plasma Mobile alarms & notifications [Inhishonor]
+7cd90ec kernel: Support building from kernel platform [Aaron Kling]
+e9f9f39 merge_dtbs: Use DeviceTreeInfo's hash in get_name() [inferno0230]
+165ebd3 apns: Add BICS [dianlujitao]
