@@ -1,3 +1,18 @@
 ====================
      18-09-2025    
 ====================
+
+* android_art
+c09a5c7 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/art into lineage-23.0 [Michael Bestas]
+
+* android_frameworks_native
+c6b5089 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/frameworks/native into lineage-23.0 [Michael Bestas]
+
+* android_packages_apps_Contacts
+a184e27 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/apps/Contacts into lineage-23.0 [Michael Bestas]
+
+* android_packages_inputmethods_LatinIME
+2287321 Add Turkish F layout [Berkay Yıldırım]
+
+* android_packages_providers_MediaProvider
+0138b50 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/providers/MediaProvider into lineage-23.0 [Michael Bestas]
