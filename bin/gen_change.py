@@ -17,6 +17,9 @@ GITHUB_API_URL = "https://api.github.com"
 ORG_NAME = "LineageOS"
 ALT_ORG_NAME = "Realme-SM6375-devs"
 AOSP_EXTRA_ORG = "aosp-extra"
+TEAMHACKNEYED_ORG = "Teamhackneyed"
+MOTO_SM7250_ORG = "moto-sm7250-devs"
+
 TARGET_GITHUB_TOKEN = os.getenv("TARGET_GITHUB_TOKEN")
 
 # Specify the date to filter commits (user-friendly format)
@@ -25,16 +28,25 @@ CURRENT_DATE = os.getenv("CURRENT_DATE")
 
 # Define allowed repository prefixes and exceptions
 ALLOWED_REPOS = {
+    # Realme sm6375 family
     "android_kernel_realme_sm6375",
     "android_device_realme_sm6375-common",
     "android_device_realme_oscar",
     "android_device_realme_oscarc",
     "android_device_realme_oscarru",
     "android_device_realme_luigi",
+
+    # OnePlus sm6375 family from Teamhackneyed
     "android_kernel_oneplus_sm6375",
     "android_device_oneplus_sm6375-common",
-    "android_device_oneplus_oscao",
+    "android_device_oneplus_oscaro",
     "android_device_oneplus_larry",
+
+    # Motorola sm6375 + denver from Teamhackneyed
+    "android_device_motorola_sm6375-common",
+    "android_device_motorola_denver",
+
+    # Motorola sm7250 + kiev from moto-sm7250-devs
     "android_device_motorola_sm7250-common",
     "android_device_motorola_kiev",
     "android_kernel_motorola_sm7250",
@@ -85,10 +97,12 @@ def fetch_repositories():
             page += 1
         return repos
 
-    # Fetch repos
+    # Fetch repos from all orgs
     lineage_repos = get_repos(ORG_NAME)
     realme_repos = get_repos(ALT_ORG_NAME)
     aosp_extra_repos = get_repos(AOSP_EXTRA_ORG)
+    teamhackneyed_repos = get_repos(TEAMHACKNEYED_ORG)
+    moto_sm7250_repos = get_repos(MOTO_SM7250_ORG)
 
     filtered = []
 
@@ -96,7 +110,7 @@ def fetch_repositories():
     for repo in lineage_repos:
         name = repo["name"]
         if name in AOSP_EXTRA_REPOS:
-            continue  # Skip: these are handled under aosp-extra
+            continue  # Skip: handled under aosp-extra
         if not any(keyword in name for keyword in EXCLUDED_KEYWORDS) and (
             not name.startswith("android_device_") and not name.startswith("android_kernel_")
             or name in ALLOWED_REPOS
@@ -107,11 +121,20 @@ def fetch_repositories():
     # Repos from Realme-SM6375-devs
     for repo in realme_repos:
         name = repo["name"]
-        if (
-            name.startswith("android_device_realme") or
-            name.startswith("android_kernel_realme")
-        ):
+        if name in ALLOWED_REPOS:
             filtered.append((name, ALT_ORG_NAME))
+
+    # Repos from Teamhackneyed
+    for repo in teamhackneyed_repos:
+        name = repo["name"]
+        if name in ALLOWED_REPOS:
+            filtered.append((name, TEAMHACKNEYED_ORG))
+
+    # Repos from moto-sm7250-devs
+    for repo in moto_sm7250_repos:
+        name = repo["name"]
+        if name in ALLOWED_REPOS:
+            filtered.append((name, MOTO_SM7250_ORG))
 
     # Repos from aosp-extra
     for repo in aosp_extra_repos:
