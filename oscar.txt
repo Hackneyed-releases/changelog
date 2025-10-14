@@ -1,294 +1,49 @@
 ====================
-     08-10-2025    
+     13-10-2025    
 ====================
 
-* android_device_realme_oscar
-9d8f509 oscar: overlay: Update deprecated screen power items [Georg Veichtlbauer]
-
 * android_device_realme_sm6375-common
+c1c5b10 sm6375-common: Disable `thumbnail_block_model` of libstagefright [kyasu]
 f0bdd23 sm6375-common: Update media configs from RMX3660_15.0.0.910(EX01) [Vivekachooz]
-b162a9a sm6375-common: overlay: Enable battery cycle count [Michael Bestas]
-ba0b414 sm6375-common: Drop sf layer caching timeout [Vivekachooz]
-c9b813d sm6375-common: Drop debug.sf.disable_client_composition_cache [chandu078]
-d9cc134 sm6375-common: Selectively update display and graphics props from fogos [Vivekachooz]
 
-* android
-9548d9e manifest: Forks for recommended patches [Michael Bestas]
-c088fe2 lineage: Restore os_pickup_aosp.mk [LuK1337]
-7593c1a lineage: Disable AOSP msm8996/8 & QCOM msm8996 HALs [Michael Bestas]
+* android_kernel_realme_sm6375
+11d5e2a power: oplus: optiga: switch to upstream sha256() [basamaryan]
+48bae6e arm64: configs: Regenerate Q/GKI holi defconfigs [Vivekachooz]
+32f7b43 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-23.0 [Vivekachooz]
+b4aa467 Merge branch 'android11-5.4-lts' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
+b31d93f Merge tag 'ASB-2025-10-06_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
+386d490 ANDROID: fix wakeup reason findings [Kelly Rossmoyer]
 
 * android_bootable_recovery
-e30a8e8 recovery: Make OTA safety check A/B package only [LuK1337]
+ebc617e recovery: Mount block map path before checking whether it is canonical [danielml]
+063b583 Revert "Check filepath inside block map file as well" [Ido Ben-Hur]
 
-* android_build
-63edc91 Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
-2961969 build: GSI: Fix syntax issue after "Add a GSI overlay for the framework package" [Yumi Yukimura]
-4bbc522 build: Disable `aosp_system_image` soong target for lineage GSI [Yumi Yukimura]
-6ff15cb build: Add `USE_SOONG_DEFINED_SYSTEM_IMAGE` to `_product_single_value_vars` [Yumi Yukimura]
-
-* android_build_release
-f11d54a Enable temporary_pairing_tracking into 25Q2 FRC [Thomas Girardier]
-324f68f Add flag com.android.graphics.surfaceflinger.flags.disable_synthetic_vsync_for_performance to bp2a. [boq-halyard-service-composite@system.gserviceaccount.com]
-
-* android_external_lk2nd
-cafb998 LINEAGE: lk2nd: Use AOSP libfdt if available [Sebastiano Barezzi]
-90a442b FROMLIST: dts: msm8953-xiaomi-common: sakura: This device uses xiaomi-daisy dtb for kernel [Yumi Yukimura]
-9320196 FROMLIST: lk2nd: dev_tree: Mark as best dtb node if compatible matches with lk2nd dtb [Yumi Yukimura]
-1e097ca FROMLIST: lk2nd: Make dtc command overrideable [Yumi Yukimura]
-7869d6d FROMLIST: lk2nd: Fix ABOOT_STANDALONE code guards [Sebastiano Barezzi]
-ed82da1 FROMLIST: aboot: Fix booting boot image header v2 via `fastboot boot` [Yumi Yukimura]
-903732c FROMLIST: dev_tree: Do not update Android fstab by default [Yumi Yukimura]
-2caa6a3 FROMLIST: lk2nd: Enable `DYNAMIC_PARTITION_SUPPORT` [Yumi Yukimura]
-af27cf9 FROMLIST: aboot: Enable recovery features if the OS is Android [Yumi Yukimura]
-c3ffddb FROMLIST: aboot: Try booting from `real_{boot,recovery}` partition as fallback [Yumi Yukimura]
-16c05be FROMLIST: lk2nd: device: 2nd: Split recovery partition too [Yumi Yukimura]
-51c44f9 FROMLIST: lk2nd: device: 2nd: Backup the partition entry before split [Yumi Yukimura]
-a6fb9c0 LINEAGE: aboot: Prevent booting into lk2nd from mmc repeatly [Yumi Yukimura]
-4c31db9 LINEAGE: lk2nd: device: menu: Print the LK2ND_VERSION message using lineage teal color [Yumi Yukimura]
-4801a1e lk2nd: util: lkfdt: Add more uint32_t/phandle helpers used in qebspil [Stephan Gerhold]
-7cba95c lk2nd: util: lkfdt: Add missing stdint.h include [Stephan Gerhold]
-
-* android_external_mesa
-d600283 LINEAGE: android: Prefer prebuilts/mesa-build-dep over /usr/bin/ [Yumi Yukimura]
-08ac29b LINEAGE: android: Add prebuilts/mesa-build-dep/bin to $PATH in build recipe [Yumi Yukimura]
-b47d26a LINEAGE: android: Include libdrm_intel for i915 too [Yumi Yukimura]
-180adf3 LINEAGE: vmwgfx: Import patches from OpenFyde (FydeOS) [hmtheboy154]
-0cefd18 LINEAGE: util: os_misc: Set android property key buffer size to 50 [Yumi Yukimura]
-8fa0c1c LINEAGE: android: Define a phony package that includes all defined mesa3d libs as dependency [Yumi Yukimura]
-
-* android_frameworks_av
-8a1d0df AudioFlinger: more duplicating mixer fixes [Eric Laurent]
-f19e42d AudioFlinger: duplicating output underrun improvements [Eric Laurent]
+* android_external_linux-firmware-mainline
+02901d2 linux-firmware-mainline: Add r8168 firmware [Aaron Kling]
 
 * android_frameworks_base
-543df5a Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-1da07de UdfpsHelper: Avoid hardcoding 4095 for maximum panel brightness [pjgowtham]
-360a0d0 UdfpsHelper: Exclude dim layer from screenshots [pjgowtham]
-85331b0 Disable concurrent MQ in SysUI [Shai Barack]
-ebf7306 Fix a bug where turning off Bluetooth before CDM BLE device discovery timeout results in a crash. [Raphael Kim]
-f772e45 Register IME back callback on new dispatcher [Cosmin Băieș]
-ca17c13 Remove CompanionServicesRegister [Evan Chen]
-984609d Fix association XML parsing issues [Guojing Yuan]
-406b2d0 Fix deadlock b/w historical and discrete registry in xml implementation [Manjeet Rulhania]
-320067d Automatic translation import [LineageOS Infra]
-
-* android_frameworks_native
-4c953ea Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
-9297ad6 Turn off synthetic VSYNC when adjusting thread scheduling for performance [Dennis Kiilerich]
-
-* android_frameworks_opt_telephony
-dc24303 satellite data service policy fixes [Nagendra Prasad Nagarle Basavaraju]
-4820f09 Update the logic of calling setSatelliteEnabledForCarrier HAL API. [Aishwarya Mallampati]
-
-* android_frameworks_proto_logging
-fcbbaa8 Log UID in wifi toggle metrics [Oscar Shu]
-
-* android_hardware_interfaces
-25fab97 Bluetooth HAL: fix suspend behavior [Eric Laurent]
-
-* android_hardware_libhardware
-2c0db7e Avoid log fatal when converting between pcm_format and audio_format_t. [jiabin]
+02ea054 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+abae1af services: core: wfd: extend check for qualcomm wfd jar [Alexander Martinz]
 
 * android_hardware_lineage_interfaces
-ff5ea6d sensors: Add a sensors 2.0 -> 1.0 subhal wrapper [bengris32]
+a3b99b3 LiveDisplay: sysfs: Add soong configurable HBM path [Marc Bourgoin]
 
 * android_hardware_motorola
-2754b0d sepolicy: Drop more qcom wakeup nodes [Michael Bestas]
-5b7d566 sepolicy: Label AIDL ST NFC service [Marc Bourgoin]
-8095889 sepolicy: Sort file_contexts [Michael Bestas]
-
-* android_hardware_oneplus
-dc46f80 livedisplay: Migrate to AIDL [LuK1337]
-cb5f36b livedisplay: Add soong configuration for features [LuK1337]
-b239cbf oneplus: Add and run clang-format [LuK1337]
-
-* android_lineage-sdk
-f26071c Automatic translation import [LineageOS Infra]
+c956c22 sepolicy: Label missing sepolicies for penang [Deivid21]
 
 * android_packages_apps_Aperture
-58d57e0 Automatic translation import [LineageOS Infra]
-b77a3b0 Aperture: Update kotlin deps to match AOSP 16 [Luca Stefani]
-a64ab07 Aperture: Update SDK to 36 [Luca Stefani]
-2f10484 Automatic translation import [LineageOS Infra]
-e0f3395 Aperture: Update generatebp to v1.28 [Sebastiano Barezzi]
-a650697 Aperture: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-
-* android_packages_apps_AudioFX
-399f30c Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Backgrounds
-e67e42a Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Camelot
-cbb6a81 Camelot: Update kotlin to match AOSP 16 [Luca Stefani]
-9da5e90 Camelot: Update SDK to 36 [Luca Stefani]
-b6cff9a Camelot: Update generatebp to v1.28 [Sebastiano Barezzi]
-bcfa1a7 Camelot: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-
-* android_packages_apps_Catapult
-75fb593 Catapult: Update kotlin to match AOSP 16 [Luca Stefani]
-122b67d Catapult: Update SDK to 36 [Sebastiano Barezzi]
-cde6f68 Catapult: Update generatebp to v1.28 [Sebastiano Barezzi]
-ca5d356 Catapult: Update AGP [Sebastiano Barezzi]
-1986457 Catapult: Sync up Gradle setup with Twelve & co. [Sebastiano Barezzi]
-38dc5a4 Catapult: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-1190f61 Catapult: Update card move overlay drawable dimens [Timi]
-
-* android_packages_apps_Contacts
-3751e5b Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Dialer
-a2c61d6 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_DocumentsUI
-d5fa33e Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_ElmyraService
-842809e Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FMRadio
-7e89b01 FmService: Set RECEIVER_NOT_EXPORTED [Cyber Knight]
-4372899 FMRadio: Start ForegroundService with a type [Cyber Knight]
-
-* android_packages_apps_Glimpse
-b990370 Glimpse: Update kotlin deps to match AOSP 16 [Luca Stefani]
-3978d71 Glimpse: Update SDK to 36 [Luca Stefani]
-6fcd70c Glimpse: Add file size to media info [Luca Stefani]
-fa8b084 Automatic translation import [LineageOS Infra]
-b810f35 Glimpse: Update generatebp to v1.28 [Sebastiano Barezzi]
-a09a223 Glimpse: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-
-* android_packages_apps_Jelly
-384ff77 Jelly: Update Gradle wrapper [Sebastiano Barezzi]
-238436a Jelly: Update kotlin deps to match AOSP 16 [Luca Stefani]
-b0d6afb Jelly: Update SDK to 36 [Luca Stefani]
-2d8559b Jelly: Load scripts once [Luca Stefani]
-67d7b58 Jelly: Implement Web Share API [SaeedDev94]
-fe57ec1 Jelly: Update generatebp to v1.28 [Sebastiano Barezzi]
-16c2153 Jelly: Update AGP [Sebastiano Barezzi]
-2a0c520 Automatic translation import [LineageOS Infra]
-504ab40 Jelly: Bump Kotlin to 1.9.23 [Sebastiano Barezzi]
-eca8410 Jelly: Update gradle-generatebp to 1.26 [Luca Stefani]
-1f01f61 Jelly: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-3bb9fdb Jelly: Sync up Gradle setup with Twelve & co. [Sebastiano Barezzi]
-d7059db Jelly: Move KAPT block to the right place [Sebastiano Barezzi]
-0a8e529 Jelly: Specify KAPT version and add all plugins to classpath [Sebastiano Barezzi]
-
-* android_packages_apps_Launcher3
-e1fcf73 Automatic translation import [LineageOS Infra]
-ef2a639 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_LineageParts
-8e4f963 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Messaging
-1347bcf Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Recorder
-ac959a5 Recorder: Update kotlin deps to match AOSP 16 [Luca Stefani]
-0ed5b1d Recorder: Update SDK to 36 [Luca Stefani]
-13aa044 Recorder: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-6205aaa Recorder: Bump kotlin version [Luca Stefani]
-
-* android_packages_apps_Settings
-e2a1e83 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-a015eb7 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-8fb73c6 Settings: Switch back to udfps_enroll_enrolling_non_scroll layout [LuK1337]
-56a70f8 Settings: Disable clipping in biometrics_glif_content [LuK1337]
-b599b32 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_SetupWizard
-1b36bbd Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Stk
-ffb951e Fxied edge-to-edge UX support for StkLauncherActivity. [arunvoddu]
-
-* android_packages_apps_ThemePicker
-233dbde Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Twelve
-7d3642d Automatic translation import [LineageOS Infra]
-214b513 Twelve: Update kotlin deps to match AOSP 16 [Luca Stefani]
-684ec67 Twelve: Update SDK to 36 [Luca Stefani]
-17169d4 Automatic translation import [LineageOS Infra]
-adc7d1b Twelve: Update generatebp to v1.28 [Sebastiano Barezzi]
-48e5a66 Twelve: `kapt` -> `kotlin-kapt` [Sebastiano Barezzi]
-2829464 Twelve: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-7d3ecde Twelve: Fix spacing around play buttons [Inhishonor]
-3f0ff3d Twelve: ListItem: Declare a new corner radius attribute [Sebastiano Barezzi]
-08bb7f0 Twelve: ListItem: Fix an API issue on older SDK versions [Sebastiano Barezzi]
-77af37e Twelve: ListItem: `Context.getColorStateList` uses the current theme [Sebastiano Barezzi]
-aca4e68 Twelve: Resize the window when using IME [Sebastiano Barezzi]
-14c855f Twelve: Fix FAB text/icon tints [Luca Stefani]
-bb6d425 Twelve: Specify KAPT version and add all plugins to classpath [Sebastiano Barezzi]
-3026c4d Twelve: Play random songs button [Inhishonor]
-8b55929 Twelve: Result: Add `onSuccess`/`onError` methods [Sebastiano Barezzi]
-5131a69 Twelve: MediaDataStore: Add audios method [Sebastiano Barezzi]
-851f87d Twelve: Merge all home page VMs into a single one [Sebastiano Barezzi]
-c167d52 Twelve: Get new random content every time app opens [Inhishonor]
-
-* android_packages_apps_Updater
-9f5af26 Automatic translation import [LineageOS Infra]
-
-* android_packages_inputmethods_LatinIME
-dd0d927 Update Turkish Keyboard Layout XML Files [Ali Riza KESKIN]
-e5f0be6 Automatic translation import [LineageOS Infra]
-
-* android_packages_modules_Bluetooth
-bf95acf Fix the parameter ordering of btm_send_hci_set_scan_params [Ömer Faruk Yılmaz]
-92472d2 Change Android Headtracker Codec ID to 0x0002 [Himanshu Rawat]
-b8a9447 25Q3: Remove sdp_ccb_clean_up_after_l2cap_disc [Jack He]
-b952f1a SDP: Clean up CCBs when L2CAP disconnects [Katherine Lai]
-af64ccc Add flag for cleaning up SDP CCBs when L2CAP disconnects [Katherine Lai]
-89d7050 offload: Make visible to device [Aaron Kling]
-
-* android_packages_modules_Connectivity
-7fe8e56 Remove pending BT request when service disconnects [Quang Anh Luong]
-f94e845 clatd: disable seccomp [Maciej Żenczykowski]
-58323d3 Fix NetworkAgent 4-way binder interlock [Chalard Jean]
-
-* android_packages_modules_Wifi
-f55b2f7 Log caller UID for wifi toggle metrics [Oscar Shu]
-155229e Set minimum connect choice RSSI [Oscar Shu]
-7ad55f0 Enable support for Continuous Nan Ranging [Shreyat Pandey]
-
-* android_packages_providers_DownloadProvider
-400e63d Automatic translation import [LineageOS Infra]
+482abce Aperture: Configure camera after we have camera permissions [Sebastiano Barezzi]
+90c6cd2 Aperture: Fix RAW capture when permissions are granted after app launch [Sebastiano Barezzi]
+c30b723 Aperture: Update CameraX to 1.5.1 [LuK1337]
 
 * android_packages_resources_devicesettings
-a42de6a Automatic translation import [LineageOS Infra]
-35ee180 Automatic translation import [LineageOS Infra]
+24170ff devicesettings: Import doze brightness strings [basamaryan]
+b386bdc devicesettings: Import popupcamera strings [Arian]
 
-* android_packages_services_Mms
-401f873 Automatic translation import [LineageOS Infra]
-
-* android_packages_services_Telecomm
-e61e32f Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-1cfce4f Prevent infinite SPEAKER_OFF looping [Pranav Madapurmath]
-
-* android_prebuilts_mesa-build-dep
-380a9f6 mesa-build-dep: bin: Import meson 1.7.0-1 from debian trixie [Yumi Yukimura]
-30eb92d mesa-build-dep: lib64: Import from latest debian trixie amd64 [Yumi Yukimura]
-89ee171 mesa-build-dep: bin: Add prebuilts from mesa-25.2.3 [Yumi Yukimura]
-a3798a7 mesa-build-dep: lib: Import llvm-19/lib/clang/19/include [Yumi Yukimura]
-92414b7 mesa-build-dep: Initial project structure [Yumi Yukimura]
-
-* android_system_apex
-37a7810 apexd: loosen no-overlap check on install [Jooyung Han]
-
-* android_system_core
-46b76fb Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-d8e680d libprocessgroup: Mount cpuset v1 with cpuset_v2_mode [T.J. Mercier]
-
-* android_vendor_crowdin
-c39be47 Automatic translation import [LineageOS Infra]
-aa73715 Automatic translation import [LineageOS Infra]
-8e73b5e Move translations for 16 folder structure [Michael Bestas]
+* android_tools_extract-utils
+ce77849 extract-utils: Make it REUSE compatible [Michael Bestas]
+c7e9116 extract-utils: Drop LineageOS copyright years [Michael Bestas]
 
 * android_vendor_lineage
-665b11d kernel: Set scmversion for kernel platform [Aaron Kling]
-8885879 kernel: Fix building kernel platform with in-tree out [Aaron Kling]
-9e079ba lineage_generic_*target: Disable soong defined system image for now [Yumi Yukimura]
-
-* android_vendor_qcom_opensource_fm-commonsys
-635a303 Automatic translation import [LineageOS Infra]
+79db563 apns: Update for CTM(Macau) [Flicker372]
+99fed8e release: Bump Security String to 2025-10-01 [Michael Bestas]
