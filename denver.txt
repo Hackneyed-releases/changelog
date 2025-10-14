@@ -1,18 +1,50 @@
 ====================
-     18-09-2025    
+     14-10-2025    
 ====================
 
-* android_art
-c09a5c7 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/art into lineage-23.0 [Michael Bestas]
+* android_bootable_recovery
+ebc617e recovery: Mount block map path before checking whether it is canonical [danielml]
+063b583 Revert "Check filepath inside block map file as well" [Ido Ben-Hur]
+e30a8e8 recovery: Make OTA safety check A/B package only [LuK1337]
+
+* android_build
+63edc91 Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
+2961969 build: GSI: Fix syntax issue after "Add a GSI overlay for the framework package" [Yumi Yukimura]
+4bbc522 build: Disable `aosp_system_image` soong target for lineage GSI [Yumi Yukimura]
+6ff15cb build: Add `USE_SOONG_DEFINED_SYSTEM_IMAGE` to `_product_single_value_vars` [Yumi Yukimura]
+
+* android_frameworks_av
+8a1d0df AudioFlinger: more duplicating mixer fixes [Eric Laurent]
+f19e42d AudioFlinger: duplicating output underrun improvements [Eric Laurent]
 
 * android_frameworks_native
-c6b5089 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/frameworks/native into lineage-23.0 [Michael Bestas]
+4c953ea Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
+9297ad6 Turn off synthetic VSYNC when adjusting thread scheduling for performance [Dennis Kiilerich]
+
+* android_hardware_libhardware
+2c0db7e Avoid log fatal when converting between pcm_format and audio_format_t. [jiabin]
+
+* android_packages_apps_AudioFX
+399f30c Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Contacts
-a184e27 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/apps/Contacts into lineage-23.0 [Michael Bestas]
+3751e5b Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Messaging
+1347bcf Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_SetupWizard
+1b36bbd Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Stk
+ffb951e Fxied edge-to-edge UX support for StkLauncherActivity. [arunvoddu]
 
 * android_packages_inputmethods_LatinIME
-2287321 Add Turkish F layout [Berkay Yıldırım]
+dd0d927 Update Turkish Keyboard Layout XML Files [Ali Riza KESKIN]
+e5f0be6 Automatic translation import [LineageOS Infra]
 
-* android_packages_providers_MediaProvider
-0138b50 Merge branch 'android16-security-release' of https://android.googlesource.com/platform/packages/providers/MediaProvider into lineage-23.0 [Michael Bestas]
+* android_packages_providers_DownloadProvider
+400e63d Automatic translation import [LineageOS Infra]
+
+* android_packages_services_Mms
+401f873 Automatic translation import [LineageOS Infra]
