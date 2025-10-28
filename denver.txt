@@ -1,50 +1,92 @@
 ====================
-     14-10-2025    
+     28-10-2025    
 ====================
 
-* android_bootable_recovery
-ebc617e recovery: Mount block map path before checking whether it is canonical [danielml]
-063b583 Revert "Check filepath inside block map file as well" [Ido Ben-Hur]
-e30a8e8 recovery: Make OTA safety check A/B package only [LuK1337]
+* android_device_lineage_sepolicy
+6810925 Revert "sepolicy: Label ro.telephony.use_old_mnc_mcc_format" [Michael Bestas]
+
+* android_device_motorola_denver
+2b29cc6 denver: Patch vidhance components with libui-v34 [Deivid21]
+
+* android_device_motorola_sm6375-common
+82e372d sm6375-common: Move to QTI health AIDL service [Bruno Martins]
+6cb72e1 Reapply "sm6375-common: Remove moto charger" [Vivekachooz]
+c566f53 Revert "sm6375-common: Include vendor/debugfs.config" [Michael Bestas]
 
 * android_build
-63edc91 Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
-2961969 build: GSI: Fix syntax issue after "Add a GSI overlay for the framework package" [Yumi Yukimura]
-4bbc522 build: Disable `aosp_system_image` soong target for lineage GSI [Yumi Yukimura]
-6ff15cb build: Add `USE_SOONG_DEFINED_SYSTEM_IMAGE` to `_product_single_value_vars` [Yumi Yukimura]
+ae602b8 build: Guard `system_file_diff_timestamp` with `USE_SOONG_DEFINED_SYSTEM_IMAGE` [Yumi Yukimura]
 
 * android_frameworks_av
-8a1d0df AudioFlinger: more duplicating mixer fixes [Eric Laurent]
-f19e42d AudioFlinger: duplicating output underrun improvements [Eric Laurent]
+5e79d5e camera: bypass `isSensorPixelModeConsistent` check for priv-app camera apps [Giovanni Ricca]
 
-* android_frameworks_native
-4c953ea Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
-9297ad6 Turn off synthetic VSYNC when adjusting thread scheduling for performance [Dennis Kiilerich]
+* android_frameworks_base
+dcd9fa3 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+a7624de SystemUI: Fix media section constraints with Smartspace disabled [LuK1337]
+55b704d SystemUI: Add KeyguardSliceViewSection to split shade blueprint [LuK1337]
+779a882 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+87a0af4 Revert "SystemUI: Fix up large clock top margin with pixel-fw" [Vivekachooz]
+07f7fbd Automatic translation import [LineageOS Infra]
+143dbc0 SystemUI: Fix large clock top margin with Smartspace disabled [LuK1337]
 
-* android_hardware_libhardware
-2c0db7e Avoid log fatal when converting between pcm_format and audio_format_t. [jiabin]
+* android_hardware_intel_sensors-iio
+739b305 sensors-iio: Fix `sens` [Yumi Yukimura]
+b95d8de sensors-iio: Move properties to vendor namespace [Yumi Yukimura]
 
-* android_packages_apps_AudioFX
-399f30c Automatic translation import [LineageOS Infra]
+* android_hardware_lineage_interfaces
+7d86725 livedisplay: sysfs: chown on boot as well [Giovanni Ricca]
+3530226 livedisplay: sysfs: Remove non-standard paths [Michael Bestas]
 
-* android_packages_apps_Contacts
-3751e5b Automatic translation import [LineageOS Infra]
+* android_hardware_mainline
+7022c5c mainline: Import GRUB boot control stack from virt-common [Yumi Yukimura]
 
-* android_packages_apps_Messaging
-1347bcf Automatic translation import [LineageOS Infra]
+* android_hardware_motorola
+bd72cbd sepolicy: Drop custom LiveDisplay nodes [Michael Bestas]
+93022ea sepolicy: Fix audio calibration file context path [PavanPadamata]
 
-* android_packages_apps_SetupWizard
-1b36bbd Automatic translation import [LineageOS Infra]
+* android_packages_apps_Aperture
+c9f9831 Automatic translation import [LineageOS Infra]
 
-* android_packages_apps_Stk
-ffb951e Fxied edge-to-edge UX support for StkLauncherActivity. [arunvoddu]
+* android_packages_apps_Camelot
+e8345aa Automatic translation import [LineageOS Infra]
 
-* android_packages_inputmethods_LatinIME
-dd0d927 Update Turkish Keyboard Layout XML Files [Ali Riza KESKIN]
-e5f0be6 Automatic translation import [LineageOS Infra]
+* android_packages_apps_Glimpse
+a0f94e7 Glimpse: Provide our own androidx.navigation libs [LuK1337]
+6b146b8 Glimpse: Upgrade android.navigation to 2.9.5 [LuK1337]
+7d0417c Automatic translation import [LineageOS Infra]
 
-* android_packages_providers_DownloadProvider
-400e63d Automatic translation import [LineageOS Infra]
+* android_packages_apps_LineageParts
+c18b998 Automatic translation import [LineageOS Infra]
 
-* android_packages_services_Mms
-401f873 Automatic translation import [LineageOS Infra]
+* android_packages_apps_Recorder
+ba7e033 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Twelve
+00e6068 Twelve: Provide our own androidx.navigation libs [LuK1337]
+3b25367 Twelve: Upgrade android.navigation to 2.9.5 [LuK1337]
+f6fa65c Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Updater
+29babf1 Automatic translation import [LineageOS Infra]
+
+* android_packages_resources_devicesettings
+36c8f2e Automatic translation import [LineageOS Infra]
+
+* android_packages_services_Car
+51ffd50 Car: Enforce EPPE [Nolen Johnson]
+
+* android_vendor_crowdin
+b2f3871 Automatic translation import [LineageOS Infra]
+
+* android_vendor_lineage
+a13626a apn: Add finetwork [Arian]
+13c5404 apns: Add KKTCell APNs [Atakan]
+7f2f42f apns: Update APNs of Turkish carriers [Atakan]
+327eaca apns: Add Altel and Tele2 [tejas101k]
+48692af apns: Update Vodafone DE [Tim Zimmermann]
+8bf652f Revert "tools: getb64key - print the base64 version of a PEM public key file" [Michael Bestas]
+1e320a9 bootanimation: Drop CleanSpec.mk [pnguyen879]
+402f7e3 lineage: targets: car*: Refactor and update artifact list [Nolen Johnson]
+88d6306 lineage: products: Disable EPPE for cuttlefish targets [LuK1337]
+
+* android_vendor_qcom_opensource_vibrator
+a362998 vibrator: Add support for aw-haptic-hv [Arian]
