@@ -1,49 +1,95 @@
 ====================
-     13-10-2025    
+     29-10-2025    
 ====================
 
+* android_device_lineage_sepolicy
+6810925 Revert "sepolicy: Label ro.telephony.use_old_mnc_mcc_format" [Michael Bestas]
+
 * android_device_realme_sm6375-common
-c1c5b10 sm6375-common: Disable `thumbnail_block_model` of libstagefright [kyasu]
-f0bdd23 sm6375-common: Update media configs from RMX3660_15.0.0.910(EX01) [Vivekachooz]
+b4e9ded sm6375-common: Drop loading adsp for pmic driver logic [Vivekachooz]
+3631428 sm6375-common: overlay: Set default pin amount for home app [Edgar Arriaga]
 
 * android_kernel_realme_sm6375
+78470c3 arm64: kernel: Enter charger mode when startupmode=dc_charger [Vivekachooz]
 11d5e2a power: oplus: optiga: switch to upstream sha256() [basamaryan]
 48bae6e arm64: configs: Regenerate Q/GKI holi defconfigs [Vivekachooz]
 32f7b43 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-23.0 [Vivekachooz]
-b4aa467 Merge branch 'android11-5.4-lts' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
-b31d93f Merge tag 'ASB-2025-10-06_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
-386d490 ANDROID: fix wakeup reason findings [Kelly Rossmoyer]
 
-* android_bootable_recovery
-ebc617e recovery: Mount block map path before checking whether it is canonical [danielml]
-063b583 Revert "Check filepath inside block map file as well" [Ido Ben-Hur]
+* android_build
+ae602b8 build: Guard `system_file_diff_timestamp` with `USE_SOONG_DEFINED_SYSTEM_IMAGE` [Yumi Yukimura]
 
-* android_external_linux-firmware-mainline
-02901d2 linux-firmware-mainline: Add r8168 firmware [Aaron Kling]
+* android_frameworks_av
+5e79d5e camera: bypass `isSensorPixelModeConsistent` check for priv-app camera apps [Giovanni Ricca]
 
 * android_frameworks_base
+dcd9fa3 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+a7624de SystemUI: Fix media section constraints with Smartspace disabled [LuK1337]
+55b704d SystemUI: Add KeyguardSliceViewSection to split shade blueprint [LuK1337]
+779a882 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+87a0af4 Revert "SystemUI: Fix up large clock top margin with pixel-fw" [Vivekachooz]
+07f7fbd Automatic translation import [LineageOS Infra]
+143dbc0 SystemUI: Fix large clock top margin with Smartspace disabled [LuK1337]
 02ea054 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-abae1af services: core: wfd: extend check for qualcomm wfd jar [Alexander Martinz]
+
+* android_hardware_intel_sensors-iio
+739b305 sensors-iio: Fix `sens` [Yumi Yukimura]
+b95d8de sensors-iio: Move properties to vendor namespace [Yumi Yukimura]
 
 * android_hardware_lineage_interfaces
-a3b99b3 LiveDisplay: sysfs: Add soong configurable HBM path [Marc Bourgoin]
+7d86725 livedisplay: sysfs: chown on boot as well [Giovanni Ricca]
+3530226 livedisplay: sysfs: Remove non-standard paths [Michael Bestas]
+
+* android_hardware_mainline
+7022c5c mainline: Import GRUB boot control stack from virt-common [Yumi Yukimura]
 
 * android_hardware_motorola
-c956c22 sepolicy: Label missing sepolicies for penang [Deivid21]
+bd72cbd sepolicy: Drop custom LiveDisplay nodes [Michael Bestas]
+93022ea sepolicy: Fix audio calibration file context path [PavanPadamata]
 
 * android_packages_apps_Aperture
-482abce Aperture: Configure camera after we have camera permissions [Sebastiano Barezzi]
-90c6cd2 Aperture: Fix RAW capture when permissions are granted after app launch [Sebastiano Barezzi]
-c30b723 Aperture: Update CameraX to 1.5.1 [LuK1337]
+c9f9831 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Camelot
+e8345aa Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Glimpse
+a0f94e7 Glimpse: Provide our own androidx.navigation libs [LuK1337]
+6b146b8 Glimpse: Upgrade android.navigation to 2.9.5 [LuK1337]
+7d0417c Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_LineageParts
+c18b998 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Recorder
+ba7e033 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Twelve
+00e6068 Twelve: Provide our own androidx.navigation libs [LuK1337]
+3b25367 Twelve: Upgrade android.navigation to 2.9.5 [LuK1337]
+f6fa65c Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Updater
+29babf1 Automatic translation import [LineageOS Infra]
 
 * android_packages_resources_devicesettings
-24170ff devicesettings: Import doze brightness strings [basamaryan]
-b386bdc devicesettings: Import popupcamera strings [Arian]
+36c8f2e Automatic translation import [LineageOS Infra]
 
-* android_tools_extract-utils
-ce77849 extract-utils: Make it REUSE compatible [Michael Bestas]
-c7e9116 extract-utils: Drop LineageOS copyright years [Michael Bestas]
+* android_packages_services_Car
+51ffd50 Car: Enforce EPPE [Nolen Johnson]
+
+* android_vendor_crowdin
+b2f3871 Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
-79db563 apns: Update for CTM(Macau) [Flicker372]
-99fed8e release: Bump Security String to 2025-10-01 [Michael Bestas]
+a13626a apn: Add finetwork [Arian]
+13c5404 apns: Add KKTCell APNs [Atakan]
+7f2f42f apns: Update APNs of Turkish carriers [Atakan]
+327eaca apns: Add Altel and Tele2 [tejas101k]
+48692af apns: Update Vodafone DE [Tim Zimmermann]
+8bf652f Revert "tools: getb64key - print the base64 version of a PEM public key file" [Michael Bestas]
+1e320a9 bootanimation: Drop CleanSpec.mk [pnguyen879]
+402f7e3 lineage: targets: car*: Refactor and update artifact list [Nolen Johnson]
+88d6306 lineage: products: Disable EPPE for cuttlefish targets [LuK1337]
+
+* android_vendor_qcom_opensource_vibrator
+a362998 vibrator: Add support for aw-haptic-hv [Arian]
