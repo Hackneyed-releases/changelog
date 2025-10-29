@@ -1,512 +1,94 @@
 ====================
-     14-10-2025    
+     29-10-2025    
 ====================
 
-* android_device_oneplus_larry
-aade07a larry: overlay: Update deprecated screen power items [Georg Veichtlbauer]
+* android_device_lineage_sepolicy
+6810925 Revert "sepolicy: Label ro.telephony.use_old_mnc_mcc_format" [Michael Bestas]
 
 * android_device_oneplus_sm6375-common
-525ec73 sm6375-common: Disable `thumbnail_block_model` of libstagefright [kyasu]
-18810d1 sm6375-common: Update media configs from CPH2467_15.0.0.1350(EX01) [Vivekachooz]
-b2a3df4 sm6375-common: overlay: Enable battery cycle count [Michael Bestas]
-4ca8fda sm6375-common: Update from CPH2467_15.0.0.1350(EX01) [Vivekachooz]
+764dfe0 sm6375-common: Drop loading adsp for pmic driver logic [Vivekachooz]
+70e1fc8 sm6375-common: overlay: Set default pin amount for home app [Edgar Arriaga]
+91c1754 sm6375-common: Update from CPH2467_15.0.0.1360(EX01) [Vivekachooz]
 
 * android_kernel_oneplus_sm6375
+6192ca5 arm64: kernel: Enter charger mode when startupmode=dc_charger [Vivekachooz]
+ba52fa7 arm64: kernel: Fix offline charging [LuK1337]
 f70362d power: oplus: optiga: switch to upstream sha256() [basamaryan]
-21a09da arm64: configs: Regenerate Q/GKI holi defconfigs [Vivekachooz]
-ed250f4 Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-23.0 [Vivekachooz]
-b4aa467 Merge branch 'android11-5.4-lts' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
-b31d93f Merge tag 'ASB-2025-10-06_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
-386d490 ANDROID: fix wakeup reason findings [Kelly Rossmoyer]
-4055235 Revert "genirq: Provide new interfaces for affinity hints" [Greg Kroah-Hartman]
-2592ee6 Revert "i40e: Use irq_update_affinity_hint()" [Greg Kroah-Hartman]
-463637b Revert "i40e: fix IRQ freeing in i40e_vsi_request_irq_msix error path" [Greg Kroah-Hartman]
-901ffda Merge 5.4.300 into android11-5.4-lts [Greg Kroah-Hartman]
-86b57fd Linux 5.4.300 [Greg Kroah-Hartman]
-bc1c9ce mm/hugetlb: fix folio is still mapped when deleted [Jinjiang Tu]
-0a3f66f i40e: add mask to apply valid bits for itr_idx [Lukasz Czapnik]
-185745d i40e: fix validation of VF state in get resources [Lukasz Czapnik]
-a6ff2af i40e: fix idx validation in config queues msg [Lukasz Czapnik]
-0543d40 i40e: add validation for ring_len param [Lukasz Czapnik]
-ad80e71 i40e: increase max descriptors for XL710 [Justin Bronder]
-61fa824 mm/migrate_device: don't add folio to be freed to LRU in migrate_device_finalize() [David Hildenbrand]
-4bcf5f7 fbcon: Fix OOB access in font allocation [Thomas Zimmermann]
-994bdc2 fbcon: fix integer overflow in fbcon_do_set_font [Samasth Norway Ananda]
-9176e18 i40e: add max boundary check for VF filters [Lukasz Czapnik]
-a88c1b2 i40e: fix input validation logic for action_meta [Lukasz Czapnik]
-b6cb93a i40e: fix idx validation in i40e_validate_queue_map [Lukasz Czapnik]
-70b0c11 drm/gma500: Fix null dereference in hdmi teardown [Zabelin Nikita]
-572c656 can: peak_usb: fix shift-out-of-bounds issue [Stéphane Grosjean]
-0fa9303 can: mcba_usb: populate ndo_change_mtu() to prevent buffer overflow [Vincent Mailhol]
-063539d can: sun4i_can: populate ndo_change_mtu() to prevent buffer overflow [Vincent Mailhol]
-f2c247e can: hi311x: populate ndo_change_mtu() to prevent buffer overflow [Vincent Mailhol]
-967c5ab can: rcar_can: rcar_can_resume(): fix s2ram with PSCI [Geert Uytterhoeven]
-f979a5d IB/mlx5: Fix obj_type mismatch for SRQ event subscriptions [Or Har-Toov]
-f5fcec3 usb: core: Add 0x prefix to quirks debug output [Jiayi Li]
-d6d69ae ALSA: usb-audio: Fix build with CONFIG_INPUT=n [Takashi Iwai]
-3d8878d ALSA: usb-audio: Convert comma to semicolon [Chen Ni]
-104ad9b ALSA: usb-audio: Add mixer quirk for Sony DualSense PS5 [Cristian Ciocaltea]
-731e676 ALSA: usb-audio: Remove unneeded wmb() in mixer_quirks [Cristian Ciocaltea]
-7aa869f ALSA: usb-audio: Simplify NULL comparison in mixer_quirks [Cristian Ciocaltea]
-f6d990d ALSA: usb-audio: Avoid multiple assignments in mixer_quirks [Cristian Ciocaltea]
-ad4a18c ALSA: usb-audio: Fix block comments in mixer_quirks [Cristian Ciocaltea]
-3aa9dae KVM: SVM: Sync TPR from LAPIC into VMCB::V_TPR even if AVIC is active [Maciej S. Szmigiero]
-184f608 net: rfkill: gpio: Fix crash due to dereferencering uninitialized pointer [Hans de Goede]
-7a174d1 net: rfkill: gpio: add DT support [Philipp Zabel]
-26606c5 serial: sc16is7xx: fix bug in flow control levels init [Hugo Villeneuve]
-ea748eb USB: gadget: dummy-hcd: Fix locking bug in RT-enabled kernels [Alan Stern]
-6070c74 usb: gadget: dummy_hcd: remove usage of list iterator past the loop body [Jakob Koschel]
-8a82e3a ASoC: SOF: Intel: hda-stream: Fix incorrect variable used in error message [Colin Ian King]
-8b19c81 ASoC: wm8974: Correct PLL rate rounding [Charles Keepax]
-cbeccd0 ASoC: wm8940: Correct typo in control name [Charles Keepax]
-b0aabb6 rds: ib: Increment i_fastreg_wrs before bailing out [Håkon Bugge]
-e7b3519 mmc: mvsdio: Fix dma_unmap_sg() nents value [Thomas Fourier]
-2ef1649 power: supply: bq27xxx: restrict no-battery detection to bq27000 [H. Nikolaus Schaller]
-49b7640 power: supply: bq27xxx: fix error return in case of no bq27000 hdq battery [H. Nikolaus Schaller]
-a685684 nilfs2: fix CFI failure when accessing /sys/fs/nilfs2/features/* [Nathan Chancellor]
-fde6e73 cnic: Fix use-after-free bugs in cnic_delete_task [Duoming Zhou]
-34f9bda net: liquidio: fix overflow in octeon_init_instr_queue() [Alexey Nepomnyashih]
-d5cda88 Revert "net/mlx5e: Update and set Xon/Xoff upon port speed set" [Tariq Toukan]
-7ec092a tcp: Clear tcp_sk(sk)->fastopen_rsk in tcp_disconnect(). [Kuniyuki Iwashima]
-6b32f38 i40e: remove redundant memory barrier when cleaning Tx descs [Maciej Fijalkowski]
-6b8577b net: natsemi: fix `rx_dropped` double accounting on `netif_rx()` failure [Yeounsu Moon]
-cabadd7 cgroup: split cgroup_destroy_wq into 3 workqueues [Chen Ridong]
-99830c9 pcmcia: omap_cf: Mark driver struct with __refdata to prevent section mismatch [Geert Uytterhoeven]
-a710686 wifi: mac80211: fix incorrect type for ret [Liao Yuanhong]
-6e0b8d9 ALSA: firewire-motu: drop EPOLLOUT from poll return values as write is not supported [Takashi Sakamoto]
-8e01ea1 mm/memory-failure: fix VM_BUG_ON_PAGE(PagePoisoned(page)) when unpoison memory [Miaohe Lin]
-64faf7d soc: qcom: mdt_loader: Deal with zero e_shentsize [Bjorn Andersson]
-289a414 phy: ti-pipe3: fix device leak at unbind [Johan Hovold]
-2e257a6 dmaengine: qcom: bam_dma: Fix DT error handling for num-channels/ees [Stephan Gerhold]
-7d4de60 dmaengine: ti: edma: Fix memory allocation size for queue_priority_map [Anders Roxell]
-ed4d612 can: j1939: j1939_local_ecu_get(): undo increment when j1939_local_ecu_get() fails [Tetsuo Handa]
-f23fe24 can: j1939: j1939_sk_bind(): call j1939_priv_put() immediately when j1939_local_ecu_get() failed [Tetsuo Handa]
-13ab9ad i40e: fix IRQ freeing in i40e_vsi_request_irq_msix error path [Michal Schmidt]
-18c4c35 i40e: Use irq_update_affinity_hint() [Nitesh Narayan Lal]
-7b2a673 genirq: Provide new interfaces for affinity hints [Thomas Gleixner]
-4dbabe8 genirq: Export affinity setter for modules [Thomas Gleixner]
-6fe90f6 genirq/affinity: Add irq_update_affinity_desc() [John Garry]
-4a069b1 igb: fix link test skipping when interface is admin down [Kohei Enju]
-8c60d12 net: fec: Fix possible NPD in fec_enet_phy_reset_after_clk_enable() [Stefan Wahren]
-2f28d51 USB: serial: option: add Telit Cinterion LE910C4-WWX new compositions [Fabio Porcedda]
-b896501 USB: serial: option: add Telit Cinterion FN990A w/audio compositions [Fabio Porcedda]
-931ee32 tty: hvc_console: Call hvc_kick in hvc_write unconditionally [Fabian Vogt]
-8016e5f mtd: nand: raw: atmel: Respect tAR, tCLR in read setup timing [Alexander Sverdlin]
-d5c6321 mtd: nand: raw: atmel: Fix comment in timings preparation [Alexander Dahl]
-dc1c6e6 mtd: rawnand: stm32_fmc2: avoid overlapping mappings on ECC buffer [Christophe Kerello]
-b6590e4 mm/khugepaged: fix the address passed to notifier on testing young [Wei Yang]
-5c9f447 fuse: prevent overflow in copy_file_range return value [Miklos Szeredi]
-8d63276 fuse: check if copy_file_range() returns larger than requested size [Miklos Szeredi]
-18630c3 mtd: rawnand: stm32_fmc2: fix ECC overwrite [Christophe Kerello]
-16e518c ocfs2: fix recursive semaphore deadlock in fiemap call [Mark Tinguely]
-c97018c EDAC/altera: Delete an inappropriate dma_free_coherent() call [Salah Triki]
-08f58d1 tcp_bpf: Call sk_msg_free() when tcp_bpf_send_verdict() fails to allocate psock->cork. [Kuniyuki Iwashima]
-85817fe NFSv4: Don't clear capabilities that won't be reset [Trond Myklebust]
-83083c5 net: Fix null-ptr-deref by sock_lock_init_class_and_name() and rmmod. [Kuniyuki Iwashima]
-6ddde3e usb: hub: Fix flushing of delayed work used for post resume purposes [Mathias Nyman]
-5e9e19c FROMLIST: kbuild: Add environment variables for userprogs flags [Elliot Berman]
-aff7958 kbuild: add infrastructure to build userspace programs [Masahiro Yamada]
-df493f2 kbuild: add -Wall to KBUILD_HOSTCXXFLAGS [Masahiro Yamada]
-a2dab3f kbuild: fix CONFIG_CC_CAN_LINK(_STATIC) for cross-compilation with Clang [Masahiro Yamada]
-69cfb20 bpfilter: check if $(CC) can link static libc in Kconfig [Masahiro Yamada]
-5732d37 Merge android11-5.4 into android11-5.4-lts [Greg Kroah-Hartman]
-c81e05c Merge branch 'wireguard' into lineage-20 [Alexander Martinz]
-4e4e452 UPSTREAM: wireguard: send: annotate intentional data race in checking empty queue [Jason A. Donenfeld]
-66a1bb6 UPSTREAM: wireguard: queueing: annotate intentional data race in cpu round robin [Jason A. Donenfeld]
-1bf7ab1 UPSTREAM: wireguard: allowedips: avoid unaligned 64-bit memory accesses [Helge Deller]
-e11c52e UPSTREAM: wireguard: netlink: access device through ctx instead of peer [Jason A. Donenfeld]
-4b23659 UPSTREAM: wireguard: netlink: check for dangling peer via is_dead instead of empty list [Jason A. Donenfeld]
-abdad2c UPSTREAM: wireguard: receive: annotate data-race around receiving_counter.counter [Nikita Zhandarovich]
-0c0d4ed UPSTREAM: wireguard: allowedips: expand maximum node depth [Jason A. Donenfeld]
-bf427f6 UPSTREAM: wireguard: netlink: send staged packets when setting initial private key [Jason A. Donenfeld]
-422093b UPSTREAM: wireguard: queueing: use saner cpu selection wrapping [Jason A. Donenfeld]
-db1126d UPSTREAM: wireguard: netlink: avoid variable-sized memcpy on sockaddr [Jason A. Donenfeld]
-44dfacb UPSTREAM: wireguard: ratelimiter: disable timings test by default [Jason A. Donenfeld]
-b9b7d2e UPSTREAM: wireguard: allowedips: don't corrupt stack when detecting overflow [Jason A. Donenfeld]
-043b97b UPSTREAM: wireguard: ratelimiter: use hrtimer in selftest [Jason A. Donenfeld]
-185e933 UPSTREAM: crypto: arm64/poly1305 - fix a read out-of-bound [GUO Zihua]
-24e860a UPSTREAM: wireguard: device: check for metadata_dst with skb_valid_dst() [Nikolay Aleksandrov]
-5793235 UPSTREAM: wireguard: socket: ignore v6 endpoints when ipv6 is disabled [Jason A. Donenfeld]
-db613c4 UPSTREAM: wireguard: socket: free skb in send6 when ipv6 is disabled [Wang Hai]
-2d22a4d UPSTREAM: wireguard: queueing: use CFI-safe ptr_ring cleanup function [Jason A. Donenfeld]
-b361744 UPSTREAM: wireguard: allowedips: add missing __rcu annotation to satisfy sparse [Jason A. Donenfeld]
-74f5a93 UPSTREAM: wireguard: ratelimiter: use kvcalloc() instead of kvzalloc() [Gustavo A. R. Silva]
-9b93450 UPSTREAM: wireguard: receive: drop handshakes if queue lock is contended [Jason A. Donenfeld]
-a6af89b ANDROID: properly copy the scm_io_uring field in struct sk_buff [Greg Kroah-Hartman]
-6008c95 UPSTREAM: wireguard: receive: use ring buffer for incoming handshakes [Jason A. Donenfeld]
-d418d61 UPSTREAM: wireguard: device: reset peer src endpoint when netns exits [Jason A. Donenfeld]
-2621d5f UPSTREAM: wireguard: selftests: actually test for routing loops [Jason A. Donenfeld]
-cf1e18a UPSTREAM: wireguard: selftests: increase default dmesg log size [Jason A. Donenfeld]
-0b02e13 UPSTREAM: crypto: x86/curve25519 - fix cpu feature checking logic in mod_exit [Hangbin Liu]
-73606bf BACKPORT: wireguard: peer: allocate in kmem_cache [Jason A. Donenfeld]
-21eebd6 UPSTREAM: crypto: mips: add poly1305-core.S to .gitignore [Ilya Lipnitskiy]
-0369ef0 UPSTREAM: crypto: poly1305 - fix poly1305_core_setkey() declaration [Arnd Bergmann]
-f94ffe6 UPSTREAM: crypto: mips/poly1305 - enable for all MIPS processors [Maciej W. Rozycki]
-6654b69 UPSTREAM: wireguard: kconfig: use arm chacha even with no neon [Jason A. Donenfeld]
-aec3593 UPSTREAM: wireguard: queueing: get rid of per-peer ring buffers [Jason A. Donenfeld]
-4ad2e30 UPSTREAM: wireguard: device: do not generate ICMP for non-IP packets [Jason A. Donenfeld]
-2cc91ec UPSTREAM: wireguard: selftests: test multiple parallel streams [Jason A. Donenfeld]
-5b5f5dd UPSTREAM: crypto: Kconfig - CRYPTO_MANAGER_EXTRA_TESTS requires the manager [Jason A. Donenfeld]
-b8275b7 UPSTREAM: wireguard: allowedips: free empty intermediate nodes when removing single node [Jason A. Donenfeld]
-e9f9773 UPSTREAM: wireguard: allowedips: allocate nodes in kmem_cache [Jason A. Donenfeld]
-6e373c3 UPSTREAM: wireguard: selftests: remove old conntrack kconfig value [Jason A. Donenfeld]
-c84c32a UPSTREAM: wireguard: allowedips: remove nodes in O(1) [Jason A. Donenfeld]
-57337a9 UPSTREAM: wireguard: allowedips: initialize list head in selftest [Jason A. Donenfeld]
-d84c54b UPSTREAM: wireguard: selftests: make sure rp_filter is disabled on vethc [Jason A. Donenfeld]
-de7e69e UPSTREAM: wireguard: use synchronize_net rather than synchronize_rcu [Jason A. Donenfeld]
-f174e86 UPSTREAM: wireguard: do not use -O3 [Jason A. Donenfeld]
-16d0068 UPSTREAM: crypto: arm/curve25519 - Move '.fpu' after '.arch' [Nathan Chancellor]
-be3e660 UPSTREAM: crypto: jitter - SP800-90B compliance [Stephan Müller]
-30e961d UPSTREAM: crypto: jitter - add header to fix buildwarnings [Ben Dooks]
-4734d10 UPSTREAM: crypto: jitter - fix comments [Alexander E. Patrakov]
-7e54d6d UPSTREAM: wireguard: Kconfig: select CRYPTO_BLAKE2S_ARM [Eric Biggers]
-4fc615a FROMLIST: crypto: arm64/poly1305-neon - reorder PAC authentication with SP update [Ard Biesheuvel]
-d248214 crypto: lib/sha256 - add sha256() function [Eric Biggers]
-7c323ce crypto: lib/sha256 - return void [Eric Biggers]
-74336cc UPSTREAM: wireguard: peerlookup: take lock before checking hash in replace operation [Jason A. Donenfeld]
-9fa9458 UPSTREAM: wireguard: noise: take lock when removing handshake entry from table [Jason A. Donenfeld]
-7576027 UPSTREAM: netlink: consistently use NLA_POLICY_MIN_LEN() [Johannes Berg]
-5c5a71a UPSTREAM: netlink: consistently use NLA_POLICY_EXACT_LEN() [Johannes Berg]
-8f6f0a9 UPSTREAM: wireguard: queueing: make use of ip_tunnel_parse_protocol [Jason A. Donenfeld]
-8096410 UPSTREAM: wireguard: implement header_ops->parse_protocol for AF_PACKET [Jason A. Donenfeld]
-897c06f UPSTREAM: net: ip_tunnel: add header_ops for layer 3 devices [Jason A. Donenfeld]
-4639db4 UPSTREAM: wireguard: receive: account for napi_gro_receive never returning GRO_DROP [Jason A. Donenfeld]
-441367e UPSTREAM: wireguard: device: avoid circular netns references [Jason A. Donenfeld]
-1ee42be UPSTREAM: wireguard: noise: do not assign initiation time in if condition [Frank Werner-Krippendorf]
-82c2f46 UPSTREAM: wireguard: noise: separate receive counter from send counter [Jason A. Donenfeld]
-a84759d UPSTREAM: wireguard: queueing: preserve flow hash across packet scrubbing [Jason A. Donenfeld]
-a5fe2d6 UPSTREAM: wireguard: noise: read preshared key while taking lock [Jason A. Donenfeld]
-337cac5 UPSTREAM: wireguard: selftests: use newer iproute2 for gcc-10 [Jason A. Donenfeld]
-0f36849 UPSTREAM: wireguard: send/receive: use explicit unlikely branch instead of implicit coalescing [Jason A. Donenfeld]
-e59b0d5 UPSTREAM: wireguard: selftests: initalize ipv6 members to NULL to squelch clang warning [Jason A. Donenfeld]
-a229378 UPSTREAM: wireguard: send/receive: cond_resched() when processing worker ringbuffers [Jason A. Donenfeld]
-1956371 UPSTREAM: wireguard: socket: remove errant restriction on looping to self [Jason A. Donenfeld]
-62e2513 UPSTREAM: wireguard: selftests: use normal kernel stack size on ppc64 [Jason A. Donenfeld]
-796d135 UPSTREAM: wireguard: receive: use tunnel helpers for decapsulating ECN markings [Toke Høiland-Jørgensen]
-88e5a84 UPSTREAM: wireguard: queueing: cleanup ptr_ring in error path of packet_queue_init [Jason A. Donenfeld]
-3935510 UPSTREAM: wireguard: send: remove errant newline from packet_encrypt_worker [Sultan Alsawaf]
-d58b60a UPSTREAM: wireguard: noise: error out precomputed DH during handshake rather than config [Jason A. Donenfeld]
-9d444e6 UPSTREAM: wireguard: receive: remove dead code from default packet type case [Jason A. Donenfeld]
-f703c02 UPSTREAM: wireguard: queueing: account for skb->protocol==0 [Jason A. Donenfeld]
-8bc8826 UPSTREAM: wireguard: selftests: remove duplicated include <sys/types.h> [YueHaibing]
-f2c6be8 UPSTREAM: wireguard: socket: remove extra call to synchronize_net [Jason A. Donenfeld]
-a2801d4 UPSTREAM: wireguard: send: account for mtu=0 devices [Jason A. Donenfeld]
-6001f51 UPSTREAM: wireguard: receive: reset last_under_load to zero [Jason A. Donenfeld]
-e30a3bf UPSTREAM: wireguard: selftests: reduce complexity and fix make races [Jason A. Donenfeld]
-1063c83 UPSTREAM: wireguard: device: use icmp_ndo_send helper [Jason A. Donenfeld]
-4f1be83 UPSTREAM: wireguard: selftests: tie socket waiting to target pid [Jason A. Donenfeld]
-b0cb773 UPSTREAM: wireguard: selftests: ensure non-addition of peers with failed precomputation [Jason A. Donenfeld]
-1ce95fd UPSTREAM: wireguard: noise: reject peers with low order public keys [Jason A. Donenfeld]
-ab458d8 UPSTREAM: wireguard: allowedips: fix use-after-free in root_remove_peer_lists [Eric Dumazet]
-24fa299 UPSTREAM: wireguard: socket: mark skbs as not on list when receiving via gro [Jason A. Donenfeld]
-fbc15b8 UPSTREAM: wireguard: queueing: do not account for pfmemalloc when clearing skb header [Jason A. Donenfeld]
-228d851 UPSTREAM: wireguard: selftests: remove ancient kernel compatibility code [Jason A. Donenfeld]
-a43fa5d UPSTREAM: wireguard: allowedips: use kfree_rcu() instead of call_rcu() [Wei Yongjun]
-b6aaaea UPSTREAM: wireguard: main: remove unused include <linux/version.h> [YueHaibing]
-6ad870d ANDROID: GKI: enable CONFIG_WIREGUARD [Greg Kroah-Hartman]
-f390537 UPSTREAM: wireguard: global: fix spelling mistakes in comments [Josh Soref]
-66ae3dc UPSTREAM: wireguard: Kconfig: select parent dependency for crypto [Jason A. Donenfeld]
-4961b76 UPSTREAM: wireguard: selftests: import harness makefile for test suite [Jason A. Donenfeld]
-e200761 lib/crypto: blake2s: move hmac construction into wireguard [Jason A. Donenfeld]
-6e9bb7f UPSTREAM: net: introduce skb_list_walk_safe for skb segment walking [Jason A. Donenfeld]
-472f7ff UPSTREAM: net: WireGuard secure network tunnel [Jason A. Donenfeld]
-4ab2863 UPSTREAM: crypto: poly1305-x86_64 - Use XORL r32,32 [Uros Bizjak]
-df85edb UPSTREAM: crypto: curve25519-x86_64 - Use XORL r32,32 [Uros Bizjak]
-f715766 UPSTREAM: crypto: arm/poly1305 - Add prototype for poly1305_blocks_neon [Herbert Xu]
-d3421c4 UPSTREAM: crypto: arm/curve25519 - include <linux/scatterlist.h> [Fabio Estevam]
-3805cb1 UPSTREAM: crypto: x86/curve25519 - Remove unused carry variables [Herbert Xu]
-b4e1f85 UPSTREAM: crypto: x86/chacha-sse3 - use unaligned loads for state array [Ard Biesheuvel]
-2ca1028 UPSTREAM: crypto: lib/chacha20poly1305 - Add missing function declaration [Herbert Xu]
-31d675e UPSTREAM: crypto: arch/lib - limit simd usage to 4k chunks [Jason A. Donenfeld]
-22cf6bf UPSTREAM: crypto: arm[64]/poly1305 - add artifact to .gitignore files [Jason A. Donenfeld]
-20845c0 UPSTREAM: crypto: x86/curve25519 - leave r12 as spare register [Jason A. Donenfeld]
-bc3bd7f UPSTREAM: crypto: x86/curve25519 - replace with formally verified implementation [Jason A. Donenfeld]
-8bd9fc0 UPSTREAM: crypto: arm64/chacha - correctly walk through blocks [Jason A. Donenfeld]
-171e071 UPSTREAM: crypto: x86/curve25519 - support assemblers with no adx support [Jason A. Donenfeld]
-1093c0c UPSTREAM: crypto: chacha20poly1305 - prevent integer overflow on large input [Jason A. Donenfeld]
-8f5de05 UPSTREAM: crypto: Kconfig - allow tests to be disabled when manager is disabled [Jason A. Donenfeld]
-17ca12e UPSTREAM: crypto: arm/chacha - fix build failured when kernel mode NEON is disabled [Ard Biesheuvel]
-0541b66 UPSTREAM: crypto: x86/poly1305 - emit does base conversion itself [Jason A. Donenfeld]
-c726013 UPSTREAM: crypto: chacha20poly1305 - add back missing test vectors and test chunking [Jason A. Donenfeld]
-69247d6 UPSTREAM: crypto: x86/poly1305 - fix .gitignore typo [Jason A. Donenfeld]
-c451260 UPSTREAM: crypto: curve25519 - Fix selftest build error [Herbert Xu]
-c20cd88 UPSTREAM: crypto: {arm,arm64,mips}/poly1305 - remove redundant non-reduction from emit [Jason A. Donenfeld]
-da0d33c UPSTREAM: crypto: x86/poly1305 - wire up faster implementations for kernel [Jason A. Donenfeld]
-4996bc3 UPSTREAM: crypto: x86/poly1305 - import unmodified cryptogams implementation [Jason A. Donenfeld]
-0f31caf UPSTREAM: crypto: poly1305 - add new 32 and 64-bit generic versions [Jason A. Donenfeld]
-2419413 UPSTREAM: crypto: lib/curve25519 - re-add selftests [Jason A. Donenfeld]
-cfac8b1 UPSTREAM: crypto: arm/curve25519 - add arch-specific key generation function [Jason A. Donenfeld]
-5db3e9d UPSTREAM: crypto: chacha - fix warning message in header file [Valdis Klētnieks]
-1e9d59e BACKPORT: crypto: arch - conditionalize crypto api in arch glue for lib code [Jason A. Donenfeld]
-b2d92e8 UPSTREAM: crypto: lib/chacha20poly1305 - use chacha20_crypt() [Eric Biggers]
-e132539 UPSTREAM: crypto: x86/chacha - only unregister algorithms if registered [Eric Biggers]
-b07a43d UPSTREAM: crypto: chacha_generic - remove unnecessary setkey() functions [Eric Biggers]
-ef6d83b UPSTREAM: crypto: lib/chacha20poly1305 - reimplement crypt_from_sg() routine [Ard Biesheuvel]
-fdb0e29 UPSTREAM: crypto: chacha20poly1305 - import construction and selftest from Zinc [Ard Biesheuvel]
-21f52ec UPSTREAM: crypto: arm/curve25519 - wire up NEON implementation [Jason A. Donenfeld]
-d2fd264 UPSTREAM: crypto: arm/curve25519 - import Bernstein and Schwabe's Curve25519 ARM implementation [Jason A. Donenfeld]
-076cb4f UPSTREAM: crypto: curve25519 - x86_64 library and KPP implementations [Jason A. Donenfeld]
-eec352a UPSTREAM: crypto: lib/curve25519 - work around Clang stack spilling issue [Ard Biesheuvel]
-e218f1d UPSTREAM: crypto: curve25519 - implement generic KPP driver [Ard Biesheuvel]
-a01703f UPSTREAM: crypto: curve25519 - add kpp selftest [Ard Biesheuvel]
-f4d1713 UPSTREAM: crypto: curve25519 - generic C library implementations [Jason A. Donenfeld]
-0374a15 UPSTREAM: crypto: mips/poly1305 - incorporate OpenSSL/CRYPTOGAMS optimized implementation [Ard Biesheuvel]
-c877d19 UPSTREAM: crypto: arm/poly1305 - incorporate OpenSSL/CRYPTOGAMS NEON implementation [Ard Biesheuvel]
-588c015 UPSTREAM: crypto: arm64/poly1305 - incorporate OpenSSL/CRYPTOGAMS NEON implementation [Ard Biesheuvel]
-4a902e4 UPSTREAM: crypto: x86/poly1305 - expose existing driver as poly1305 library [Ard Biesheuvel]
-0ed6aae UPSTREAM: crypto: x86/poly1305 - depend on generic library not generic shash [Ard Biesheuvel]
-5f380b6 UPSTREAM: crypto: poly1305 - expose init/update/final library interface [Ard Biesheuvel]
-26781db UPSTREAM: crypto: x86/poly1305 - unify Poly1305 state struct with generic code [Ard Biesheuvel]
-cc6aec0 UPSTREAM: crypto: poly1305 - move core routines into a separate library [Ard Biesheuvel]
-e7beea8 UPSTREAM: crypto: chacha - unexport chacha_generic routines [Ard Biesheuvel]
-6e6d588 UPSTREAM: crypto: mips/chacha - wire up accelerated 32r2 code from Zinc [Ard Biesheuvel]
-95370a3 UPSTREAM: crypto: mips/chacha - import 32r2 ChaCha code from Zinc [Jason A. Donenfeld]
-abfb992 UPSTREAM: crypto: arm/chacha - expose ARM ChaCha routine as library function [Ard Biesheuvel]
-52aff54 UPSTREAM: crypto: arm/chacha - remove dependency on generic ChaCha driver [Ard Biesheuvel]
-591b5cb UPSTREAM: crypto: arm/chacha - import Eric Biggers's scalar accelerated ChaCha code [Ard Biesheuvel]
-56cc9b4 UPSTREAM: crypto: arm64/chacha - expose arm64 ChaCha routine as library function [Ard Biesheuvel]
-389b966 UPSTREAM: crypto: arm64/chacha - depend on generic chacha library instead of crypto driver [Ard Biesheuvel]
-ddb77ae UPSTREAM: crypto: x86/chacha - expose SIMD ChaCha routine as library function [Ard Biesheuvel]
-20630d0 UPSTREAM: crypto: x86/chacha - depend on generic chacha library instead of crypto driver [Ard Biesheuvel]
-7dfbe55 UPSTREAM: crypto: chacha - move existing library code into lib/crypto [Ard Biesheuvel]
-fa5e800 Revert "BACKPORT: crypto: arch - conditionalize crypto api in arch glue for lib code" [Alexander Martinz]
-
-* android
-9548d9e manifest: Forks for recommended patches [Michael Bestas]
-
-* android_bootable_recovery
-ebc617e recovery: Mount block map path before checking whether it is canonical [danielml]
-063b583 Revert "Check filepath inside block map file as well" [Ido Ben-Hur]
-e30a8e8 recovery: Make OTA safety check A/B package only [LuK1337]
 
 * android_build
-63edc91 Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
-2961969 build: GSI: Fix syntax issue after "Add a GSI overlay for the framework package" [Yumi Yukimura]
-4bbc522 build: Disable `aosp_system_image` soong target for lineage GSI [Yumi Yukimura]
-6ff15cb build: Add `USE_SOONG_DEFINED_SYSTEM_IMAGE` to `_product_single_value_vars` [Yumi Yukimura]
-
-* android_build_release
-f11d54a Enable temporary_pairing_tracking into 25Q2 FRC [Thomas Girardier]
-324f68f Add flag com.android.graphics.surfaceflinger.flags.disable_synthetic_vsync_for_performance to bp2a. [boq-halyard-service-composite@system.gserviceaccount.com]
-
-* android_external_linux-firmware-mainline
-02901d2 linux-firmware-mainline: Add r8168 firmware [Aaron Kling]
-
-* android_external_mesa
-d600283 LINEAGE: android: Prefer prebuilts/mesa-build-dep over /usr/bin/ [Yumi Yukimura]
+ae602b8 build: Guard `system_file_diff_timestamp` with `USE_SOONG_DEFINED_SYSTEM_IMAGE` [Yumi Yukimura]
 
 * android_frameworks_av
-8a1d0df AudioFlinger: more duplicating mixer fixes [Eric Laurent]
-f19e42d AudioFlinger: duplicating output underrun improvements [Eric Laurent]
+5e79d5e camera: bypass `isSensorPixelModeConsistent` check for priv-app camera apps [Giovanni Ricca]
 
 * android_frameworks_base
-02ea054 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-abae1af services: core: wfd: extend check for qualcomm wfd jar [Alexander Martinz]
-543df5a Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-1da07de UdfpsHelper: Avoid hardcoding 4095 for maximum panel brightness [pjgowtham]
-360a0d0 UdfpsHelper: Exclude dim layer from screenshots [pjgowtham]
-85331b0 Disable concurrent MQ in SysUI [Shai Barack]
-ebf7306 Fix a bug where turning off Bluetooth before CDM BLE device discovery timeout results in a crash. [Raphael Kim]
-f772e45 Register IME back callback on new dispatcher [Cosmin Băieș]
-ca17c13 Remove CompanionServicesRegister [Evan Chen]
-984609d Fix association XML parsing issues [Guojing Yuan]
-406b2d0 Fix deadlock b/w historical and discrete registry in xml implementation [Manjeet Rulhania]
-320067d Automatic translation import [LineageOS Infra]
+dcd9fa3 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+a7624de SystemUI: Fix media section constraints with Smartspace disabled [LuK1337]
+55b704d SystemUI: Add KeyguardSliceViewSection to split shade blueprint [LuK1337]
+779a882 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+87a0af4 Revert "SystemUI: Fix up large clock top margin with pixel-fw" [Vivekachooz]
+07f7fbd Automatic translation import [LineageOS Infra]
+143dbc0 SystemUI: Fix large clock top margin with Smartspace disabled [LuK1337]
 
-* android_frameworks_native
-4c953ea Mark "disable_synthetic_vsync_for_performance" flag as exported [Dennis Kiilerich]
-9297ad6 Turn off synthetic VSYNC when adjusting thread scheduling for performance [Dennis Kiilerich]
-
-* android_frameworks_opt_telephony
-dc24303 satellite data service policy fixes [Nagendra Prasad Nagarle Basavaraju]
-4820f09 Update the logic of calling setSatelliteEnabledForCarrier HAL API. [Aishwarya Mallampati]
-
-* android_frameworks_proto_logging
-fcbbaa8 Log UID in wifi toggle metrics [Oscar Shu]
-
-* android_hardware_interfaces
-25fab97 Bluetooth HAL: fix suspend behavior [Eric Laurent]
-
-* android_hardware_libhardware
-2c0db7e Avoid log fatal when converting between pcm_format and audio_format_t. [jiabin]
+* android_hardware_intel_sensors-iio
+739b305 sensors-iio: Fix `sens` [Yumi Yukimura]
+b95d8de sensors-iio: Move properties to vendor namespace [Yumi Yukimura]
 
 * android_hardware_lineage_interfaces
-a3b99b3 LiveDisplay: sysfs: Add soong configurable HBM path [Marc Bourgoin]
-ff5ea6d sensors: Add a sensors 2.0 -> 1.0 subhal wrapper [bengris32]
+7d86725 livedisplay: sysfs: chown on boot as well [Giovanni Ricca]
+3530226 livedisplay: sysfs: Remove non-standard paths [Michael Bestas]
+
+* android_hardware_mainline
+7022c5c mainline: Import GRUB boot control stack from virt-common [Yumi Yukimura]
 
 * android_hardware_motorola
-c956c22 sepolicy: Label missing sepolicies for penang [Deivid21]
-2754b0d sepolicy: Drop more qcom wakeup nodes [Michael Bestas]
-
-* android_hardware_oneplus
-dc46f80 livedisplay: Migrate to AIDL [LuK1337]
-cb5f36b livedisplay: Add soong configuration for features [LuK1337]
-b239cbf oneplus: Add and run clang-format [LuK1337]
-
-* android_lineage-sdk
-f26071c Automatic translation import [LineageOS Infra]
+bd72cbd sepolicy: Drop custom LiveDisplay nodes [Michael Bestas]
+93022ea sepolicy: Fix audio calibration file context path [PavanPadamata]
 
 * android_packages_apps_Aperture
-482abce Aperture: Configure camera after we have camera permissions [Sebastiano Barezzi]
-90c6cd2 Aperture: Fix RAW capture when permissions are granted after app launch [Sebastiano Barezzi]
-c30b723 Aperture: Update CameraX to 1.5.1 [LuK1337]
-58d57e0 Automatic translation import [LineageOS Infra]
-b77a3b0 Aperture: Update kotlin deps to match AOSP 16 [Luca Stefani]
-a64ab07 Aperture: Update SDK to 36 [Luca Stefani]
-2f10484 Automatic translation import [LineageOS Infra]
-e0f3395 Aperture: Update generatebp to v1.28 [Sebastiano Barezzi]
-a650697 Aperture: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-
-* android_packages_apps_AudioFX
-399f30c Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Backgrounds
-e67e42a Automatic translation import [LineageOS Infra]
+c9f9831 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Camelot
-cbb6a81 Camelot: Update kotlin to match AOSP 16 [Luca Stefani]
-9da5e90 Camelot: Update SDK to 36 [Luca Stefani]
-b6cff9a Camelot: Update generatebp to v1.28 [Sebastiano Barezzi]
-bcfa1a7 Camelot: Update Gradle wrapper and AGP [Sebastiano Barezzi]
-
-* android_packages_apps_Catapult
-75fb593 Catapult: Update kotlin to match AOSP 16 [Luca Stefani]
-122b67d Catapult: Update SDK to 36 [Sebastiano Barezzi]
-cde6f68 Catapult: Update generatebp to v1.28 [Sebastiano Barezzi]
-ca5d356 Catapult: Update AGP [Sebastiano Barezzi]
-
-* android_packages_apps_Contacts
-3751e5b Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Dialer
-a2c61d6 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_DocumentsUI
-d5fa33e Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_ElmyraService
-842809e Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_FMRadio
-7e89b01 FmService: Set RECEIVER_NOT_EXPORTED [Cyber Knight]
-4372899 FMRadio: Start ForegroundService with a type [Cyber Knight]
+e8345aa Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Glimpse
-b990370 Glimpse: Update kotlin deps to match AOSP 16 [Luca Stefani]
-3978d71 Glimpse: Update SDK to 36 [Luca Stefani]
-6fcd70c Glimpse: Add file size to media info [Luca Stefani]
-fa8b084 Automatic translation import [LineageOS Infra]
-b810f35 Glimpse: Update generatebp to v1.28 [Sebastiano Barezzi]
-
-* android_packages_apps_Jelly
-384ff77 Jelly: Update Gradle wrapper [Sebastiano Barezzi]
-238436a Jelly: Update kotlin deps to match AOSP 16 [Luca Stefani]
-b0d6afb Jelly: Update SDK to 36 [Luca Stefani]
-2d8559b Jelly: Load scripts once [Luca Stefani]
-67d7b58 Jelly: Implement Web Share API [SaeedDev94]
-fe57ec1 Jelly: Update generatebp to v1.28 [Sebastiano Barezzi]
-16c2153 Jelly: Update AGP [Sebastiano Barezzi]
-2a0c520 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Launcher3
-e1fcf73 Automatic translation import [LineageOS Infra]
-ef2a639 Automatic translation import [LineageOS Infra]
+a0f94e7 Glimpse: Provide our own androidx.navigation libs [LuK1337]
+6b146b8 Glimpse: Upgrade android.navigation to 2.9.5 [LuK1337]
+7d0417c Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_LineageParts
-8e4f963 Automatic translation import [LineageOS Infra]
+c18b998 Automatic translation import [LineageOS Infra]
 
-* android_packages_apps_Messaging
-1347bcf Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Settings
-e2a1e83 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-a015eb7 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-8fb73c6 Settings: Switch back to udfps_enroll_enrolling_non_scroll layout [LuK1337]
-56a70f8 Settings: Disable clipping in biometrics_glif_content [LuK1337]
-b599b32 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_SetupWizard
-1b36bbd Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Stk
-ffb951e Fxied edge-to-edge UX support for StkLauncherActivity. [arunvoddu]
-
-* android_packages_apps_ThemePicker
-233dbde Automatic translation import [LineageOS Infra]
+* android_packages_apps_Recorder
+ba7e033 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Twelve
-7d3642d Automatic translation import [LineageOS Infra]
-214b513 Twelve: Update kotlin deps to match AOSP 16 [Luca Stefani]
-684ec67 Twelve: Update SDK to 36 [Luca Stefani]
-17169d4 Automatic translation import [LineageOS Infra]
-adc7d1b Twelve: Update generatebp to v1.28 [Sebastiano Barezzi]
-48e5a66 Twelve: `kapt` -> `kotlin-kapt` [Sebastiano Barezzi]
-2829464 Twelve: Update Gradle wrapper and AGP [Sebastiano Barezzi]
+00e6068 Twelve: Provide our own androidx.navigation libs [LuK1337]
+3b25367 Twelve: Upgrade android.navigation to 2.9.5 [LuK1337]
+f6fa65c Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Updater
-9f5af26 Automatic translation import [LineageOS Infra]
-
-* android_packages_inputmethods_LatinIME
-dd0d927 Update Turkish Keyboard Layout XML Files [Ali Riza KESKIN]
-e5f0be6 Automatic translation import [LineageOS Infra]
-
-* android_packages_modules_Bluetooth
-bf95acf Fix the parameter ordering of btm_send_hci_set_scan_params [Ömer Faruk Yılmaz]
-92472d2 Change Android Headtracker Codec ID to 0x0002 [Himanshu Rawat]
-b8a9447 25Q3: Remove sdp_ccb_clean_up_after_l2cap_disc [Jack He]
-b952f1a SDP: Clean up CCBs when L2CAP disconnects [Katherine Lai]
-af64ccc Add flag for cleaning up SDP CCBs when L2CAP disconnects [Katherine Lai]
-
-* android_packages_modules_Connectivity
-7fe8e56 Remove pending BT request when service disconnects [Quang Anh Luong]
-f94e845 clatd: disable seccomp [Maciej Żenczykowski]
-58323d3 Fix NetworkAgent 4-way binder interlock [Chalard Jean]
-
-* android_packages_modules_Wifi
-f55b2f7 Log caller UID for wifi toggle metrics [Oscar Shu]
-155229e Set minimum connect choice RSSI [Oscar Shu]
-7ad55f0 Enable support for Continuous Nan Ranging [Shreyat Pandey]
-
-* android_packages_providers_DownloadProvider
-400e63d Automatic translation import [LineageOS Infra]
+29babf1 Automatic translation import [LineageOS Infra]
 
 * android_packages_resources_devicesettings
-24170ff devicesettings: Import doze brightness strings [basamaryan]
-b386bdc devicesettings: Import popupcamera strings [Arian]
-a42de6a Automatic translation import [LineageOS Infra]
-35ee180 Automatic translation import [LineageOS Infra]
+36c8f2e Automatic translation import [LineageOS Infra]
 
-* android_packages_services_Mms
-401f873 Automatic translation import [LineageOS Infra]
-
-* android_packages_services_Telecomm
-e61e32f Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-1cfce4f Prevent infinite SPEAKER_OFF looping [Pranav Madapurmath]
-
-* android_prebuilts_mesa-build-dep
-380a9f6 mesa-build-dep: bin: Import meson 1.7.0-1 from debian trixie [Yumi Yukimura]
-
-* android_system_apex
-37a7810 apexd: loosen no-overlap check on install [Jooyung Han]
-
-* android_system_core
-46b76fb Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-d8e680d libprocessgroup: Mount cpuset v1 with cpuset_v2_mode [T.J. Mercier]
-
-* android_tools_extract-utils
-ce77849 extract-utils: Make it REUSE compatible [Michael Bestas]
-c7e9116 extract-utils: Drop LineageOS copyright years [Michael Bestas]
+* android_packages_services_Car
+51ffd50 Car: Enforce EPPE [Nolen Johnson]
 
 * android_vendor_crowdin
-c39be47 Automatic translation import [LineageOS Infra]
-aa73715 Automatic translation import [LineageOS Infra]
+b2f3871 Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
-79db563 apns: Update for CTM(Macau) [Flicker372]
-99fed8e release: Bump Security String to 2025-10-01 [Michael Bestas]
-665b11d kernel: Set scmversion for kernel platform [Aaron Kling]
-8885879 kernel: Fix building kernel platform with in-tree out [Aaron Kling]
-9e079ba lineage_generic_*target: Disable soong defined system image for now [Yumi Yukimura]
+a13626a apn: Add finetwork [Arian]
+13c5404 apns: Add KKTCell APNs [Atakan]
+7f2f42f apns: Update APNs of Turkish carriers [Atakan]
+327eaca apns: Add Altel and Tele2 [tejas101k]
+48692af apns: Update Vodafone DE [Tim Zimmermann]
+8bf652f Revert "tools: getb64key - print the base64 version of a PEM public key file" [Michael Bestas]
+1e320a9 bootanimation: Drop CleanSpec.mk [pnguyen879]
+402f7e3 lineage: targets: car*: Refactor and update artifact list [Nolen Johnson]
+88d6306 lineage: products: Disable EPPE for cuttlefish targets [LuK1337]
 
-* android_vendor_qcom_opensource_fm-commonsys
-635a303 Automatic translation import [LineageOS Infra]
+* android_vendor_qcom_opensource_vibrator
+a362998 vibrator: Add support for aw-haptic-hv [Arian]
