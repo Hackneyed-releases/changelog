@@ -1,94 +1,161 @@
 ====================
-     29-10-2025    
+     11-11-2025    
 ====================
 
 * android_device_lineage_sepolicy
-6810925 Revert "sepolicy: Label ro.telephony.use_old_mnc_mcc_format" [Michael Bestas]
+c0a6ee1 qcom: hal_soter -> vendor_hal_soter [LuK1337]
+8b89a12 qcom: Allow platform_app to use Soter HAL [dianlujitao]
 
 * android_device_oneplus_sm6375-common
+d63c8c0 sm6375-common: wifi: Disable RX wakelock feature [Luk1337]
 764dfe0 sm6375-common: Drop loading adsp for pmic driver logic [Vivekachooz]
-70e1fc8 sm6375-common: overlay: Set default pin amount for home app [Edgar Arriaga]
-91c1754 sm6375-common: Update from CPH2467_15.0.0.1360(EX01) [Vivekachooz]
 
 * android_kernel_oneplus_sm6375
+f4ee3cf Merge branch 'lineage-20' of github.com:LineageOS/android_kernel_qcom_sm8350 into lineage-23.0 [Vivekachooz]
+92d61f8 Merge tag 'LA.UM.9.14.r1-26500-LAHAINA.QSSI16.0' of https://git.codelinaro.org/clo/la/kernel/msm-5.4 into android13-5.4-lahaina [Michael Bestas]
+50786b5 Merge tag 'ASB-2025-11-03_11-5.4' of https://android.googlesource.com/kernel/common into android13-5.4-lahaina [Michael Bestas]
 6192ca5 arm64: kernel: Enter charger mode when startupmode=dc_charger [Vivekachooz]
 ba52fa7 arm64: kernel: Fix offline charging [LuK1337]
-f70362d power: oplus: optiga: switch to upstream sha256() [basamaryan]
+
+* android_bootable_recovery
+c9d9b51 fixup! recovery: Get a proper shell environment in recovery [LuK1337]
 
 * android_build
-ae602b8 build: Guard `system_file_diff_timestamp` with `USE_SOONG_DEFINED_SYSTEM_IMAGE` [Yumi Yukimura]
+083aa4a Merge commit 'cda08bfbf55aed1e4c79efe6a66bb930d19a8a13' into lineage-23.0 [Michael Bestas]
 
-* android_frameworks_av
-5e79d5e camera: bypass `isSensorPixelModeConsistent` check for priv-app camera apps [Giovanni Ricca]
+* android_external_drm_hwcomposer-upstream
+182034d drm_hwcomposer-upstream: Add property to disable planes [Yumi Yukimura]
+91d29a1 drm_hwcomposer-upstream: avoid using alpha bits for the framebuffer [Mauro Rossi]
+3c3d5e8 drm_hwcomposer-upstream: Switch to libdisplay_info_upstream [Yumi Yukimura]
+255a58e drm_hwcomposer-upstream: Add "upstream" suffix to module names [Yumi Yukimura]
+5ee173b Rename DrmKmsPlan to LayerToPlaneJoiningPlan [Andrew Wolfers]
+6c2df0c Move CompositionPlanner from backend/ to compositor/ [Andrew Wolfers]
+a890ccd Add atom reporting for flattening controller state [Andrew Wolfers]
+460ef8d Add explicit mappings from HwcStats enums to atom types [Andrew Wolfers]
+9a89cef Rename PipelineCreator interface to Backend [Drew Davenport]
+7a69d55 Make generic and client backends private static [Drew Davenport]
+bf7f0df Remove obsolete class member [Drew Davenport]
+0afe783 Override Planner for GenericPipelineCreator [Drew Davenport]
+d04968b Extract GenericPipelineCreator to its own files [Drew Davenport]
+47fab44 Extract abstract CompositionPlanner interface [Drew Davenport]
+f119d34 Rename Backend to CompositionPlanner [Drew Davenport]
+645d83d Log an error for a Backend name conflict [Drew Davenport]
+0e8dc3e Move some Backend functions to protected scope [Drew Davenport]
+3c2106f Allow Backend to create DrmDisplayPipeline [Drew Davenport]
+0f5244e Create DrmDisplayPipeline through BackendManager [Drew Davenport]
+043be2b Make BackendManager function private [Drew Davenport]
+786939d Make Backend a member of DrmDisplayPipeline [Drew Davenport]
+b112216 Use new BackendManager::CreateBackendForConnector [Drew Davenport]
+fbd684e Add BackendManager::CreateBackendForPipeline [Drew Davenport]
+caa94f9 drm_hwcomposer: Update Content Protection prop on Uevents [Manasi Navare]
+
+* android_external_vim
+129616c Merge tag 'v9.1.1896' of https://github.com/vim/vim into lineage-23.0 [Thomas Turner]
+1ead1b5 patch 9.1.1896: tests: patch v9.1.1895 breaks CI [Christian Brabandt]
+213109a runtime(doc): clarify W11 warning and possible options [Christian Brabandt]
+8707b7a patch 9.1.1895: OSC terminal response hard to detect [Foxe Chen]
+7c418c7 patch 9.1.1894: global_runtime_dir appends /after directory when using XDG [Christian Brabandt]
+0405665 patch 9.1.1893: ICCF charity will dissolve [Christian Brabandt]
+294bce2 patch 9.1.1892: Not possible to know once Vim is done with sourcing vimrc [Evgeni Chasnovski]
+fe71c56 runtime(netrw): NetrwChgPerm for files not in cwd [Mohammad Reza Karimi]
+28f7582 runtime(log): syntax file update [Mao-Yining]
+07da267 runtime(doc): Fix a few typos [Hirohito Higashi]
+adc8515 patch 9.1.1891: g<End> does not move to last non-blank in visual mode [varsidry]
+958393b translation: regenerate po/vim.pot after 73a0de4a04b48cca [Christian Brabandt]
+73a0de4 patch 9.1.1890: %P in 'statusline' doesn't behave as documented [zeertzjq]
+69dd590 patch 9.1.1889: filetype: not all AppleScript files are recognized [Samuel Huang]
+4105ef1 Drop superfluous execute permissions for readable files [Aliaksei Budavei]
+5f10e71 vim: Update srcs[] [Thomas Turner]
+8f551a7 runtime: regenerate helptags, update last-change header in tombi compiler [Christian Brabandt]
+5c3e762 patch 9.1.1888: Wrong display with cpo+=$, matchparen and wrapped line [zeertzjq]
+14e7203 runtime(compiler): Fix escaping in Windows shell command for tombi [Konfekt]
 
 * android_frameworks_base
-dcd9fa3 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-a7624de SystemUI: Fix media section constraints with Smartspace disabled [LuK1337]
-55b704d SystemUI: Add KeyguardSliceViewSection to split shade blueprint [LuK1337]
-779a882 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
-87a0af4 Revert "SystemUI: Fix up large clock top margin with pixel-fw" [Vivekachooz]
-07f7fbd Automatic translation import [LineageOS Infra]
-143dbc0 SystemUI: Fix large clock top margin with Smartspace disabled [LuK1337]
+6189ee4 Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+2dc97cf SystemUI: Hide HEVC screen recording when no HW codec is available [Ido Ben-Hur]
 
-* android_hardware_intel_sensors-iio
-739b305 sensors-iio: Fix `sens` [Yumi Yukimura]
-b95d8de sensors-iio: Move properties to vendor namespace [Yumi Yukimura]
-
-* android_hardware_lineage_interfaces
-7d86725 livedisplay: sysfs: chown on boot as well [Giovanni Ricca]
-3530226 livedisplay: sysfs: Remove non-standard paths [Michael Bestas]
-
-* android_hardware_mainline
-7022c5c mainline: Import GRUB boot control stack from virt-common [Yumi Yukimura]
+* android_hardware_libhardware
+d8e910c Revert "hardware/libhw: Add display_defs.h to declare custom enums/flags" [Michael Bestas]
 
 * android_hardware_motorola
-bd72cbd sepolicy: Drop custom LiveDisplay nodes [Michael Bestas]
-93022ea sepolicy: Fix audio calibration file context path [PavanPadamata]
+614c8d6 sepolicy: Remove commonized vendor_nfc_prop rules [Michael Bestas]
+a4564a5 sepolicy: Remove commonized ST NFC labels [Marc Bourgoin]
+4b264b2 sepolicy: Label racer vibrator node [Giovanni Ricca]
+c91cc20 sepolicy: Label racer wakeup nodes [Giovanni Ricca]
+ad58be3 sepolicy: Label vl53l1 sysfs node [Giovanni Ricca]
+84894c2 sepolicy: Label racer goodix interface [Giovanni Ricca]
+e234b80 sepolicy: Move Soter HAL rule to common [dianlujitao]
+
+* android_hardware_qcom-caf_common
+95c5d93 fcm: Add entry for version 2 of ASR AIDL interface [Ankit Mishra]
+
+* android_hardware_qcom_thermal
+a4298a2 Merge tag 'LA.VENDOR.15.4.0.r1-19500-pakala.QSSI16.0' into staging/lineage-23.0_merge-LA.VENDOR.15.4.0.r1-19500-pakala.QSSI16.0 [Michael Bestas]
+
+* android_lineage-sdk
+d518e8d Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Aperture
-c9f9831 Automatic translation import [LineageOS Infra]
+998f355 Automatic translation import [LineageOS Infra]
 
-* android_packages_apps_Camelot
-e8345aa Automatic translation import [LineageOS Infra]
+* android_packages_apps_ElmyraService
+d7450b3 Automatic translation import [LineageOS Infra]
 
 * android_packages_apps_Glimpse
-a0f94e7 Glimpse: Provide our own androidx.navigation libs [LuK1337]
-6b146b8 Glimpse: Upgrade android.navigation to 2.9.5 [LuK1337]
-7d0417c Automatic translation import [LineageOS Infra]
+6a365d1 Automatic translation import [LineageOS Infra]
+
+* android_packages_apps_Launcher3
+47681de Launcher3: Add resource to enable rotation by default [AnierinB]
 
 * android_packages_apps_LineageParts
-c18b998 Automatic translation import [LineageOS Infra]
-
-* android_packages_apps_Recorder
-ba7e033 Automatic translation import [LineageOS Infra]
+3c69df4 Regenerate contributors cloud (2025-11-05) [Kevin F. Haggerty]
+ce809c3 Regenerate contributors cloud (2025-11-02) [Kevin F. Haggerty]
 
 * android_packages_apps_Twelve
-00e6068 Twelve: Provide our own androidx.navigation libs [LuK1337]
-3b25367 Twelve: Upgrade android.navigation to 2.9.5 [LuK1337]
-f6fa65c Automatic translation import [LineageOS Infra]
+516d1f4 Automatic translation import [LineageOS Infra]
 
-* android_packages_apps_Updater
-29babf1 Automatic translation import [LineageOS Infra]
+* android_packages_inputmethods_LatinIME
+5253c60 Automatic translation import [LineageOS Infra]
 
 * android_packages_resources_devicesettings
-36c8f2e Automatic translation import [LineageOS Infra]
+28a3378 Automatic translation import [LineageOS Infra]
 
-* android_packages_services_Car
-51ffd50 Car: Enforce EPPE [Nolen Johnson]
+* android_system_apex
+740076a Merge branch 'android16-security-release' of https://android.googlesource.com/platform/system/apex into lineage-23.0 [Michael Bestas]
+
+* android_system_core
+40edd0e Merge branch 'LineageOS:lineage-23.0' into lineage-23.0 [vivekachooz]
+914a773 core: Fix host_init_verifier for devices with overriding services [Alexander Koskovich]
+
+* android_tools_extract-utils
+4bbc4b9 extract_utils: update pre-commit hooks to the latest versions [LuK1337]
+4e62c34 extract_utils: sort-blobs-list.py: Use a single regex to get source name [Sebastiano Barezzi]
+ceaf573 extract_utils: sort-blobs-list.py: Handle sha1sum argument [Sebastiano Barezzi]
+4afac1d extract_utils: sort-blobs-list.py: Fix lint warning [Sebastiano Barezzi]
+
+* android_vendor_codeaurora_telephony
+522eeb1 Merge tag 'LA.QSSI.16.0.r1-10300-qssi.0' into staging/lineage-23.0_merge-LA.QSSI.16.0.r1-10300-qssi.0 [Michael Bestas]
 
 * android_vendor_crowdin
-b2f3871 Automatic translation import [LineageOS Infra]
+208c135 Automatic translation import [LineageOS Infra]
 
 * android_vendor_lineage
-a13626a apn: Add finetwork [Arian]
-13c5404 apns: Add KKTCell APNs [Atakan]
-7f2f42f apns: Update APNs of Turkish carriers [Atakan]
-327eaca apns: Add Altel and Tele2 [tejas101k]
-48692af apns: Update Vodafone DE [Tim Zimmermann]
-8bf652f Revert "tools: getb64key - print the base64 version of a PEM public key file" [Michael Bestas]
-1e320a9 bootanimation: Drop CleanSpec.mk [pnguyen879]
-402f7e3 lineage: targets: car*: Refactor and update artifact list [Nolen Johnson]
-88d6306 lineage: products: Disable EPPE for cuttlefish targets [LuK1337]
+52a3abe vars: Update qcom tags [Michael Bestas]
+d40f38d release: Bump Security String to 2025-11-01 [Michael Bestas]
+0f3d6ea config: Set ro.debuggable=0 for userdebug builds [LuK1337]
+c84fb58 Revert "overlay: Don't allow toggling camera" [Aryan]
+5216d72 apns: Revert US Mobile Warp changes [_]
+4339301 overlay: Don't allow toggling camera [Hridaya Prajapati]
+d186241 wipe-frp: Allow overriding FRP_BLOCK [LuK1337]
+45094fb apns: Add APN for Netgsm [Doğancan yılmazer]
+2426bf9 kernel: Satisfy Rust bindgen for v6.12 [Sebastiano Barezzi]
+751459e envsetup: Add build_kernel function for Pixel OOT kernel build [Michael Bestas]
 
-* android_vendor_qcom_opensource_vibrator
-a362998 vibrator: Add support for aw-haptic-hv [Arian]
+* android_vendor_qcom_opensource_audio-commonsys-intf
+7d983f8 Merge tag 'LA.QSSI.16.0.r1-10300-qssi.0' into staging/lineage-23.0_merge-LA.QSSI.16.0.r1-10300-qssi.0 [Michael Bestas]
+
+* android_vendor_qcom_opensource_display-commonsys-intf
+7cbc3cb Merge tag 'LA.QSSI.16.0.r1-10300-qssi.0' into staging/lineage-23.0_merge-LA.QSSI.16.0.r1-10300-qssi.0 [Michael Bestas]
+
+* android_vendor_qcom_opensource_usb
+827db65 Merge tag 'LA.VENDOR.15.4.0.r1-19500-pakala.QSSI16.0' into staging/lineage-23.0_merge-LA.VENDOR.15.4.0.r1-19500-pakala.QSSI16.0 [Michael Bestas]
